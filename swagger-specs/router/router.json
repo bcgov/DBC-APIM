@@ -239,7 +239,7 @@
             "get": {
                 "description": "Computes the shortest path between given start and end points and returns turns by turn directions, route geometry, and total length",
                 "tags": [
-                    "route"
+                    "directions"
                 ],
                 "parameters": [
                     {
