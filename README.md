@@ -1,5 +1,5 @@
 # API-Management
-DataBC is implementing an API Management Toolset to support public RESTful APIs owned and managed by the Province of BC. 
+DataBC is implementing an API Management toolset to support public RESTful APIs owned and managed by the Province of BC. 
 
 This repo contains working copies of Swagger definitions for APIs along with code to support the API Management toolset. The master copies of Swagger definitions are included in the respective metadata records for APIs in the BC Data Catalogue.
 http://catalogue.data.gov.bc.ca/dataset?type=WebService
