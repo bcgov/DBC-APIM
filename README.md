@@ -1,9 +1,9 @@
-<a rel="Exploration" href="https://github.com/BCDevExchange/docs/blob/master/discussion/projectstates.md"><img alt="Being designed and built, but in the lab. May change, disappear, or be buggy." style="border-width:0" src="http://bcdevexchange.org/badge/2.svg" title="Being designed and built, but in the lab. May change, disappear, or be buggy." /></a>
-
 # API-Management
-BCDevExchange has been investigating the use of an API Management Tool to help provide various functions for managing APIs. This project involves using BCLaws as a pathfinder to illustrate how the API Management tool would be integrated with other BCDevExchange components.
+DataBC is implementing an API Management Toolset to support public RESTful APIs owned and managed by the Province of BC. 
 
-This repo contains minimal information about the process of getting this done (the 'project'), but has been created to help illustrate how repos in GitHub can be flagged with certain tags (see bottom of readme.md) to be returned by a BCDevExchange.org function.
+This repo contains working copies of Swagger definitions for APIs along with code to support the API Management toolset. The master copies of Swagger definitions are included in the respective metadata records for APIs in the BC Data Catalogue.
+http://catalogue.data.gov.bc.ca/dataset?type=WebService
+
 
 ###License
 
@@ -22,7 +22,3 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 ```
-
-####BCDevExchange Search Tags
-
-BCDevExchange-Project
