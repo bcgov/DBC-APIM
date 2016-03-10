@@ -5,10 +5,10 @@
         "description": "Geographical names are more than labels on maps and road signs. They can reveal patterns of settlement, exploration and migration, and mirror outside influences to our history - aspects of the heritage and promise of an area that might otherwise be overlooked or forgotten by visitors and later generations.",
         "version": "1.0.0"
     },
-    "host": "apps.gov.bc.ca",
+    "host": "test.apps.gov.bc.ca",
     "basePath": "/pub/bcgnws",
     "schemes": [
-        "http"
+        "https"
     ],
     "produces": [
         "text/xml",
