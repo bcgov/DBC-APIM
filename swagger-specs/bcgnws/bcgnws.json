@@ -1,0 +1,203 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "BC Geographical Names Web Service",
+        "description": "Geographical names are more than labels on maps and road signs. They can reveal patterns of settlement, exploration and migration, and mirror outside influences to our history - aspects of the heritage and promise of an area that might otherwise be overlooked or forgotten by visitors and later generations.",
+        "version": "1.0.0"
+    },
+    "host": "apps.gov.bc.ca",
+    "basePath": "/pub/bcgnws",
+    "schemes": [
+        "http"
+    ],
+    "produces": [
+        "text/xml",
+        "text/csv"
+    ],
+    "paths": {
+        "/names/search": {
+            "get": {
+                "description": "Searches all names or all official names by name; wildcard characters “*” are allowed.",
+                "parameters": [
+                    {
+                        "name": "name",
+                        "in": "query",
+                        "description": "Feature Name (can include wildcards *)",
+                        "type": "string",
+                        "required": false
+                    },
+                    {
+                        "name": "exactSpelling",
+                        "in": "query",
+                        "description": "possible values include: 0 - (default) use partial smart matching, 1 - edit and swap distance matching not performed.",
+                        "type": "integer",
+                        "required": false,
+                        "default": 0,
+                        "enum": [
+                            0,
+                            1
+                        ]
+                    },
+                    {
+                        "name": "featureClass",
+                        "in": "query",
+                        "description": "BCGNIS Feature Class",
+                        "type": "string",
+                        "required": false,
+                        "default": "undefined",
+                        "enum": [
+                            "undefined",
+                            "1 - Populated",
+                            "2 - Administrative Areas",
+                            "3 - Water Features",
+                            "4 - Terrain Features",
+                            "5 - Features Associated with Vegetation",
+                            "6 - Constructed & Other Features",
+                            "7 - Unclassified"
+                        ]
+                    },
+                    {
+                        "name": "featureCategory",
+                        "in": "query",
+                        "description": "BCGNIS Feature Category",
+                        "type": "string",
+                        "required": false
+                    },
+                    {
+                        "name": "sortBy",
+                        "in": "query",
+                        "description": "Sort Results",
+                        "type": "string",
+                        "required": false
+                    },
+                    {
+                        "name": "official",
+                        "in": "query",
+                        "description": "Limit to official or unofficial names",
+                        "type": "string",
+                        "required": false,
+                        "default": "undefined",
+                        "enum": [
+                            "undefined",
+                            "official",
+                            "not official"
+                        ]
+                    },
+                    {
+                        "name": "startIndex",
+                        "in": "query",
+                        "description": "Defines 'page' in selected records",
+                        "type": "integer",
+                        "required": false
+                    },
+                    {
+                        "name": "itemsPerPage",
+                        "in": "query",
+                        "description": "Defines 'page' in selected records",
+                        "type": "integer",
+                        "required": false,
+                        "default": 25,
+                        "enum": [
+                            25,
+                            50,
+                            100,
+                            200
+                        ]
+                    },
+                    {
+                        "name": "outputFormat",
+                        "in": "query",
+                        "description": "Defines output format",
+                        "type": "string",
+                        "required": false,
+                        "default": "xml",
+                        "enum": [
+                            "xml",
+                            "csv",
+                            "rdf",
+                            "json",
+                            "kml",
+                            "uri"
+                        ]
+                    },
+                    {
+                        "name": "outputStyle",
+                        "in": "query",
+                        "description": "Defines output format",
+                        "type": "string",
+                        "required": false,
+                        "default": "summary",
+                        "enum": [
+                            "summary",
+                            "detail"
+                        ]
+                    },
+                    {
+                        "name": "outputSRS",
+                        "in": "query",
+                        "description": "Defines output EPSG CRS",
+                        "type": "integer",
+                        "required": true,
+                        "default": 3005,
+                        "enum": [
+                            3005,
+                            3857,
+                            4326,
+                            26907,
+                            26908,
+                            26909,
+                            26910,
+                            26911,
+                            32607,
+                            32608,
+                            32609,
+                            32610,
+                            32611,
+                            26707,
+                            26708,
+                            26709,
+                            26710,
+                            26711
+                        ]
+                    },
+                    {
+                        "name": "asAttachment",
+                        "in": "query",
+                        "description": "Defines set of fields included in results",
+                        "type": "integer",
+                        "required": true,
+                        "default": 0,
+                        "enum": [
+                            0,
+                            1
+                        ]
+                    },
+                    {
+                        "name": "embed",
+                        "in": "query",
+                        "description": "When 1 Feature records are embeded in results",
+                        "type": "integer",
+                        "required": true,
+                        "default": 0,
+                        "enum": [
+                            0,
+                            1
+                        ]
+                    },
+                    {
+                        "name": "nameAuthority",
+                        "in": "query",
+                        "description": "Limit results to names that are authorized by a given name authority. The value of this parameter should be the numeric ID of the name authority. Note: only official names are associated with a name authority",
+                        "type": "string",
+                        "required": false
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Name search result"
+                    }
+                }
+            }
+        }
+    }
+}
