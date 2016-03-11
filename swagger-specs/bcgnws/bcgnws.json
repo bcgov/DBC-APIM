@@ -201,7 +201,7 @@
                 }
             }
         },
-        "/names/soundlike": {
+        "/names/official/soundlike": {
             "get": {
                 "description": "Ranks the phonetic similarity of each name against the search text, and returns the names ordered by their relevance.",
                 "parameters": [
@@ -273,6 +273,14 @@
                             100,
                             200
                         ]
+                    },
+                    {
+                        "name": "maxResults",
+                        "in": "query",
+                        "description": "Maximum records",
+                        "type": "integer",
+                        "required": false,
+                        "default": 100
                     },
                     {
                         "name": "outputFormat",
