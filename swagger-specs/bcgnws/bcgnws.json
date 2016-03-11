@@ -61,14 +61,22 @@
                         "in": "query",
                         "description": "BCGNIS Feature Category",
                         "type": "string",
-                        "required": false
+                        "required": false,
+                        "default": "undefined"
                     },
                     {
                         "name": "sortBy",
                         "in": "query",
                         "description": "Sort Results",
                         "type": "string",
-                        "required": false
+                        "required": false,
+                        "default": "relevance",
+                        "enum": [
+                            "relevance",
+                            "name",
+                            "featureType",
+                            "decisionDate"
+                        ]
                     },
                     {
                         "name": "official",
@@ -88,7 +96,8 @@
                         "in": "query",
                         "description": "Defines 'page' in selected records",
                         "type": "integer",
-                        "required": false
+                        "required": false,
+                        "default": 0
                     },
                     {
                         "name": "itemsPerPage",
@@ -233,7 +242,8 @@
                         "in": "query",
                         "description": "BCGNIS Feature Category",
                         "type": "string",
-                        "required": false
+                        "required": false,
+                        "default": "undefined"
                     },
                     {
                         "name": "official",
@@ -253,7 +263,8 @@
                         "in": "query",
                         "description": "Defines 'page' in selected records",
                         "type": "integer",
-                        "required": false
+                        "required": false,
+                        "default": 0
                     },
                     {
                         "name": "itemsPerPage",
@@ -391,7 +402,22 @@
                         "in": "query",
                         "description": "BCGNIS Feature Category",
                         "type": "string",
-                        "required": false
+                        "required": false,
+                        "default": "undefined"
+                    },
+                    {
+                        "name": "sortBy",
+                        "in": "query",
+                        "description": "Sort Results",
+                        "type": "string",
+                        "required": false,
+                        "default": "undefined",
+                        "enum": [
+                            "undefined",
+                            "name",
+                            "featureType",
+                            "decisionDate"
+                        ]
                     },
                     {
                         "name": "official",
@@ -411,7 +437,8 @@
                         "in": "query",
                         "description": "Defines 'page' in selected records",
                         "type": "integer",
-                        "required": false
+                        "required": false,
+                        "default": 0
                     },
                     {
                         "name": "itemsPerPage",
@@ -557,7 +584,8 @@
                         "in": "query",
                         "description": "BCGNIS Feature Category",
                         "type": "string",
-                        "required": false
+                        "required": false,
+                        "default": "undefined"
                     },
                     {
                         "name": "official",
@@ -577,7 +605,8 @@
                         "in": "query",
                         "description": "Defines 'page' in selected records",
                         "type": "integer",
-                        "required": false
+                        "required": false,
+                        "default": 0
                     },
                     {
                         "name": "itemsPerPage",
@@ -716,7 +745,8 @@
                         "in": "query",
                         "description": "BCGNIS Feature Category",
                         "type": "string",
-                        "required": false
+                        "required": false,
+                        "default": "undefined"
                     },
                     {
                         "name": "official",
@@ -736,7 +766,8 @@
                         "in": "query",
                         "description": "Defines 'page' in selected records",
                         "type": "integer",
-                        "required": false
+                        "required": false,
+                        "default": 0
                     },
                     {
                         "name": "itemsPerPage",
@@ -875,7 +906,8 @@
                         "in": "query",
                         "description": "BCGNIS Feature Category",
                         "type": "string",
-                        "required": false
+                        "required": false,
+                        "default": "undefined"
                     },
                     {
                         "name": "official",
@@ -895,7 +927,8 @@
                         "in": "query",
                         "description": "Defines 'page' in selected records",
                         "type": "integer",
-                        "required": false
+                        "required": false,
+                        "default": 0
                     },
                     {
                         "name": "itemsPerPage",
@@ -1042,7 +1075,8 @@
                         "in": "query",
                         "description": "BCGNIS Feature Category",
                         "type": "string",
-                        "required": false
+                        "required": false,
+                        "default": "undefined"
                     },
                     {
                         "name": "official",
@@ -1062,7 +1096,8 @@
                         "in": "query",
                         "description": "Defines 'page' in selected records",
                         "type": "integer",
-                        "required": false
+                        "required": false,
+                        "default": 0
                     },
                     {
                         "name": "itemsPerPage",
