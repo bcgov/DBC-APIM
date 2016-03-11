@@ -871,7 +871,7 @@
                 }
             }
         },
-        "/names/year": {
+        "/names/decisions/year": {
             "get": {
                 "description": "Returns all naming decisions made in a given year. Note, this resource only reports decisions by the BC Geographical Names Office, and therefore does not offer the ‘nameAuthority’ filter.",
                 "parameters": [
