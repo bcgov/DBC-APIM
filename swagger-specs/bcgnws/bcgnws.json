@@ -239,16 +239,17 @@
                         "default": "undefined"
                     },
                     {
-                        "name": "official",
+                        "name": "sortBy",
                         "in": "query",
-                        "description": "Limit to official or unofficial names",
+                        "description": "Sort Results",
                         "type": "string",
                         "required": false,
-                        "default": "undefined",
+                        "default": "name",
                         "enum": [
                             "undefined",
-                            "official",
-                            "not official"
+                            "name",
+                            "featureType",
+                            "decisionDate"
                         ]
                     },
                     {
