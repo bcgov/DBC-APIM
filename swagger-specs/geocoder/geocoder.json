@@ -645,7 +645,7 @@
         },
         "/sites/nearest.{outputFormat}": {
             "get": {
-                "description": "Represents the site nearest to a given point",
+                "description": "Represents the site nearest a given point",
                 "tags": [
                     "sites"
                 ],
@@ -680,8 +680,7 @@
                         "in": "query",
                         "description": "The maximum distance (in metres) to search from the given point.  If not specified, the search distance is unlimited.",
                         "type": "integer",
-                        "required": false,
-                        "default": 10
+                        "required": false
                     },
                     {
                         "name": "outputSRS",
@@ -700,22 +699,6 @@
                             26910,
                             26911
                         ]
-                    },
-                    {
-                        "name": "minDegree",
-                        "in": "query",
-                        "description": "The minimum degree of the intersection. A dead-end has a degree of 1.",
-                        "type": "integer",
-                        "required": true,
-                        "default": 2
-                    },
-                    {
-                        "name": "maxDegree",
-                        "in": "query",
-                        "description": "The maximum degree of the intersection. A four-way stop has a degree of 4.",
-                        "type": "integer",
-                        "required": true,
-                        "default": 100
                     },
                     {
                         "name": "locationDescriptor",
@@ -787,8 +770,7 @@
                         "in": "query",
                         "description": "The maximum distance (in metres) to search from the given point.  If not specified, the search distance is unlimited.",
                         "type": "integer",
-                        "required": false,
-                        "default": 10
+                        "required": false
                     },
                     {
                         "name": "outputSRS",
@@ -807,22 +789,6 @@
                             26910,
                             26911
                         ]
-                    },
-                    {
-                        "name": "minDegree",
-                        "in": "query",
-                        "description": "The minimum degree of the intersection. A dead-end has a degree of 1.",
-                        "type": "integer",
-                        "required": true,
-                        "default": 2
-                    },
-                    {
-                        "name": "maxDegree",
-                        "in": "query",
-                        "description": "The maximum degree of the intersection. A four-way stop has a degree of 4.",
-                        "type": "integer",
-                        "required": true,
-                        "default": 100
                     },
                     {
                         "name": "locationDescriptor",
@@ -939,7 +905,7 @@
         },
         "/sites/near.{outputFormat}": {
             "get": {
-                "description": "Represents all sites near a given point in the order of closest to farthest",
+                "description": "Represents sites near a given point in the order of closest to farthest",
                 "tags": [
                     "sites"
                 ],
@@ -974,8 +940,7 @@
                         "in": "query",
                         "description": "The maximum distance (in metres) to search from the given point.  If not specified, the search distance is unlimited.",
                         "type": "integer",
-                        "required": false,
-                        "default": 10
+                        "required": false
                     },
                     {
                         "name": "outputSRS",
@@ -1037,7 +1002,7 @@
         },
         "/occupants/near.{outputFormat}": {
             "get": {
-                "description": "Represents all occupants near a given point in order of closest to farthest",
+                "description": "Represents occupants near a given point in order of closest to farthest",
                 "tags": [
                     "occupants"
                 ],
@@ -1072,8 +1037,7 @@
                         "in": "query",
                         "description": "The maximum distance (in metres) to search from the given point.  If not specified, the search distance is unlimited.",
                         "type": "integer",
-                        "required": false,
-                        "default": 10
+                        "required": false
                     },
                     {
                         "name": "outputSRS",
@@ -1135,7 +1099,7 @@
         },
         "/intersections/near.{outputFormat}": {
             "get": {
-                "description": "Represents all intersections near a given point",
+                "description": "Represents intersections near a given point",
                 "tags": [
                     "intersections"
                 ],
@@ -1225,7 +1189,7 @@
         },
         "/sites/within.{outputFormat}": {
             "get": {
-                "description": "Represents all sites within a given area",
+                "description": "Represents sites within a given area",
                 "tags": [
                     "sites"
                 ],
@@ -1279,7 +1243,7 @@
                         "description": "The number of search results to return",
                         "type": "integer",
                         "required": false,
-                        "default": 10
+                        "default": 200
                     },
                     {
                         "name": "locationDescriptor",
@@ -1459,7 +1423,7 @@
                         "description": "The maximum number of search results",
                         "type": "integer",
                         "required": false,
-                        "default": 10
+                        "default": 200
                     },
                     {
                         "name": "minDegree",
