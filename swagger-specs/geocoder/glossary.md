@@ -1,1 +1,1 @@
-<a name="addressString">addressString</a>Civic address or intersection address in Single-line Address Format or a recognized alternative format. If left empty, individual address elements must be provided (e.g., civicNumber, streetName, streetType, locality)
+<a name="addressString">addressString</a>  - Civic address or intersection address in Single-line Address Format or a recognized alternative format. If left empty, individual address elements must be provided (e.g., civicNumber, streetName, streetType, locality)
