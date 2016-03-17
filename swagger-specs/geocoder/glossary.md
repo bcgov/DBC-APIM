@@ -8,9 +8,9 @@ Term | Definition
 <a name="accessPointRetireDate">accessPointRetireDate</a> | The date the access point was retired.
 <a name="accessPointStatus">accessPointStatus</a> | The status of the access point (active, or retired). A civic access point is usually only Retired if the associated site is renumbered, destroyed, or combined with another site. A non-civic access point is usually retired when its associated site is assigned a civic number or the site becomes unoccupied.
 
-Adaptive Address Interpolation (adaptiveInterpolation)
+####Adaptive Address Interpolation | The process of inferring the location of a site with a given civic number using a road centreline, an address range, and other known site locations for a given block face.
 
-The process of inferring the location of a site with a given civic number using a road centreline, an address range, and other known site locations for a given block face.
+
 Address (addressString)
 
 A geocoder input parameter that contains a single string representing a civic address or intersection address to be geocoded.
