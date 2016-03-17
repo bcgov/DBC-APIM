@@ -23,7 +23,6 @@ Term | Definition
 <a name="fullSiteDescriptor">fullSiteDescriptor</a> | The portion of fullAddress that precedes the civic number (in the case of a civic address) or the locality (in the case of a non-civic address). For example, RM 104, Student Union Building -- University of Victoria.
 <a name="geomark">geomark</a> | A point, line, or polygon of interest that can be shared in a variety of formats and map projections. Geomarks are created by the <a href="https://apps.gov.bc.ca/pub/geomark/">Geomark Service</a>.
 <a name="geomarkURL">geomarkURL</a> | The URL of a polygon geomark that should be used by the geocoder as a bounding box in the /bgeo/sites/within query. Point and line geomarks will not work. When specifying this URL programmatically, it should be url-encoded without format and projection parameters.
-
 <a name="interpolatedSite">Interpolated Site</a> | A site whose civic number is assumed to be valid because it lies within a known address range and whose location was interpolated using the address range (e.g., linear address interpolation) or the address range plus the locations of known sites (e.g., adaptive address interpolation).
 
 <a name="interpolation">interpolation</a> | Interpolation method to use to determine location of matching site (adaptive, linear, none).
