@@ -12,22 +12,20 @@ Term | Definition
 <a name="blockID">blockID</a> | The unique, immutable identifier of a road segment in the Integrated Transportation Network that a matched address is located on.
 <a name="bbox">bbox</a> | A rectangular geographic area used to filter results of a query. Coordinates are specified as xmin,ymin,xmax,ymax . By default, coordinates are longitude minimum, latitude minimum, longitude maximum, latitude maximum in the default output SRS, 4326 (WGS84).
 <a name="changeDate">changeDate</a> | The date a site or intersection address was last changed.
-<a name="Civic address">Civic Address</a> | The address of a site as assigned by an addressing authority such as a municipality. A civic address includes a civicNumber, civicNumberPrefix, and the localityName is that assigned by the address authority, not Canada Post.
+<a name="Civic address">Civic Address</a> | The address of a site as assigned by an addressing authority such as a municipality (e.g., 840 Esquimalt Rd, Esquimalt, BC). A civic address includes a civicNumber, civicNumberPrefix, and the localityName is that assigned by the address authority, not Canada Post.
 <a name="civicNumber">civicNumber</a> | The number assigned to a site on a street by an address authority (e.g., the 1175 in 1175 Douglas St, Victoria, BC).
 <a name="civicNumberSuffix">civicNumberSuffix</a> | A single letter that follows the civic number as in 103A, or a fraction as in as in 103 1/2
 <a name="echo">echo</a> | Include unmatched address details such as site name in results.
 <a name="endDate">endDate</a> | The ending date of a time period formatted as YYYY-MM-DD .
 <a name="faults">faults</a> | A list of faults the geocoder found with a given address match. Each fault contains the nature of the fault, the address element affected, and the fault penalty. For a complete list of faults, see .
 <a name="frontDoorPoint">aName</a> | A point representing the position of the front door or main entrance to a house or building.
-<a name="fullAddress">fullAddress</a> | The cleaned, standardized address of a site in a single string (e.g., RM 104, Student Union Building -- University of Victoria -- 3800 Finnerty Rd, Saanich, BC
-<a name="aName">aName</a> | 
+<a name="fullAddress">fullAddress</a> | The cleaned, standardized address of a site in a single string (e.g., RM 104, Student Union Building -- University of Victoria -- 3800 Finnerty Rd, Saanich, BC)
+<a name="fullSiteDescriptor">fullSiteDescriptor</a> | The portion of fullAddress that precedes the civic number (in the case of a civic address) or the locality (in the case of a non-civic address). For example, RM 104, Student Union Building -- University of Victoria.
 
 
-<a name="aName">aName</a> | 
+<a name="geomark">geomark</a> | A point, line, or polygon of interest that can be shared in a variety of formats and map projections. Geomarks are created by the Geomark Service.
 
-Full Site Descriptor (fullSiteDescriptor)
 
-The portion of fullAddress that precedes the civic number (in the case of a civic address) or the locality (in the case of a non-civic address).
 Geomark (geomark)
 
 A point, line, or polygon of interest that can be shared in a variety of formats and map projections. Geomarks are created by the Geomark Service.
