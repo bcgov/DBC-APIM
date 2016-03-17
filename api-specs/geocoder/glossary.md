@@ -31,38 +31,16 @@ Term | Definition
 <a name="intersectionName">intersectionName</a> | The street name, type, direction, and qualifier of all streets that meet at a given intersection. Here are some examples:<br>Douglas St and Gorge Rd E and Hillside Ave<br>48th Ave W and Marine Dr SW
 <a name="isPrimary">isPrimary</a> | True if primary accessPoint of the associated site.
 <a name="linearAddressInterpolation">linearAddressInterpolation</a> | The process of inferring the location of a site with a given civic number using a road centreline and address range for a given block face.
-<a name="localityName">localityName</a> | The name of the locality assigned to a given site by an address authority such as a municipality, regional district, Indian Reservation, First Nations government, or the federal Defense Department. It may also be an official name of a natural feature from the BC Geographical Names Information System (BCGNIS). A locality name that starts with a directional is not abbreviated (e.g., North Vancouver, not N Vancouver). Spelling of localities that are place names or natural feature names MUST match that published by BCGNIS.
+<a name="localityName">localityName</a> | The name of the locality assigned to a given site by an address authority such as a municipality, Regional District, Indian Reservation, First Nations government, or the Department of National Defense. It may also be an official name of a natural feature from the BC Geographical Names Information System (BCGNIS). A locality name that starts with a directional is not abbreviated (e.g., North Vancouver, not N Vancouver). Spelling of localities that are place names or natural feature names MUST match that published by BCGNIS.
+<a name="localityType">localityType</a> | The type of address authority that assigned the localityName to the address. 
+<a name="location">location</a> | The coordinate pair of the matched location in the requested projection.
+<a name="locationPositionalAccuracy">locationPositionalAccuracy</a> | The positional accuracy of the location of a site as follows:<br>high – observed or measured using GPS or survey instruments, or digitized off imagery with a resolution of 1m or better<br>medium – derived from parcel boundaries or from a point known to be inside a parcel<br>low – interpolated along a block face address range<br>Coarse – position represents an entire street, locality, or province
 <a name="fullAddress">fullAddress</a> | 
 <a name="fullAddress">fullAddress</a> | 
 <a name="fullAddress">fullAddress</a> | 
 <a name="fullAddress">fullAddress</a> | 
 <a name="fullAddress">fullAddress</a> | 
 <a name="fullAddress">fullAddress</a> | 
-<a name="fullAddress">fullAddress</a> | 
-<a name="fullAddress">fullAddress</a> | 
-<a name="fullAddress">fullAddress</a> | 
-
-Locality Name (localityName)
-
-The name of the municipality, community, Indian reservation, subdivision, regional district, aboriginal lands, or natural feature the site is located in. Since this standard is about geocoding, not mail delivery, the locality of a civic address is that defined by the civic address authority, not Canada Post. A locality name that starts with a directional is not abbreviated (e.g., North Vancouver, not N Vancouver). Spelling of localities that are place names or natural feature names MUST match that published by the BC Geographical Names Information System.
-Locality Not Matched (locality.notMatched)
-
-A given locality does not contain a given civic number and street but another locality was found that does. 
-Locality Spelled Wrong (locality.spelledWrong)
-
-A given locality was spelled wrong but was successfully corrected to match a known locality.
-Locality Type (localityType)
-
-Can be a municipality, community, Indian reservation, subdivision, regional district, aboriginal lands, forward sortation area, or natural feature.
-Location (location)
-
-The coordinate pair of the matched location in the requested projection.
-Location Accuracy (locationPositionalAccuracy)
-
-    high – observed or measured using GPS or survey instruments, or digitized off imagery with a resolution of 1m or better
-    medium – derived from parcel boundaries or from a point known to be inside a parcel
-    low – interpolated along a block face address range
-    coarse – position represents an entire street, locality, or province
 
 Location descriptor (locationDescriptor)
 
