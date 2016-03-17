@@ -1,4 +1,4 @@
-#:Geocoder Glossary of Terms:
+#Geocoder Glossary of Terms
 
 Term | Definition
 ----: | -----------
