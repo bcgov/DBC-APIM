@@ -2,30 +2,18 @@
 
 Term | Definition
 ----: | -----------
-<a name="addressString">addressString</a> | Civic address or intersection address as a single string in Single-line Address Format or a recognized alternative format.
 <a name="accessNotes">accessNotes</a> | Contains additional information that is helpful in determining the access location and any restrictions on mode of access (e.g., boat only, floatplane only).
 <a name="accessPoint">accessPoint</a> | The point on the curb or road edge and in the middle of the site’s driveway, access lane, or front entrance (if the site has no vehicle access).
 <a name="accessPointRetireDate">accessPointRetireDate</a> | The date the access point was retired.
 <a name="accessPointStatus">accessPointStatus</a> | The status of the access point (active, or retired). A civic access point is usually only Retired if the associated site is renumbered, destroyed, or combined with another site. A non-civic access point is usually retired when its associated site is assigned a civic number or the site becomes unoccupied.
-<a name="Adaptive Address Interpolation">Adaptive Address Interpolation</a> | The process of inferring the location of a site with a given civic number using a road centreline, an address range, and other known site locations for a given block face.
+<a name="Adaptive address interpolation">Adaptive Address Interpolation</a> | The process of inferring the location of a site with a given civic number using a road centreline, an address range, and other known site locations for a given block face.
+<a name="addressString">addressString</a> | Civic address or intersection address as a single string in Single-line Address Format or a recognized alternative format.
+<a name="Address match">Address match</a> | Conveys site address match quality through score, precision, and faults properties. faults is a data type that defines a list of faults. Each fault contains the nature of the fault, the address property affected, and the fault penalty. precisionPoints defines the points assigned to each match precision level. MatchPrecision is an enumeration of all precision levels. MatchFaultPenalty defines the penalty value of each possible fault. Penalties are subtracted from the appropriate precision level points to arrive at a match score.
+<a name="blockID">blockID<\a> | The unique, immutable identifier of a road segment in the Integrated Transportation Network that a matched address is located on.
+<a name="aName">aName<\a> | 
 
+<a name="aName">aName<\a> | 
 
-Address (addressString)
-
-A geocoder input parameter that contains a single string representing a civic address or intersection address to be geocoded.
-Address Match (addressMatch)
-
-Conveys site address match quality through score, precision, and faults properties. faults is a data type that defines a list of faults. Each fault contains the nature of the fault, the address property affected, and the fault penalty. precisionPoints defines the points assigned to each match precision level. MatchPrecision is an enumeration of all precision levels. MatchFaultPenalty defines the penalty value of each possible fault. Penalties are subtracted from the appropriate precision level points to arrive at a match score.
-As Attachment (asAttachment)
-
-Specifies the way attachments created by the geocoder and other queries should be handled. Allowed values are:
-
-    1: (default for CSV), requests the content disposition field in the HTTP response header to attachment which will trigger a Save As dialogue in a web browser
-    0: (default for other formats) will set the content disposition field to inline.
-
-Block ID (blockID)
-
-The unique, immutable identifier of a road segment in the Digital Road Atlas that a matched address is located on.
 Bounding Box (boundingBoxCoordinates)
 
 A rectangular geographic area used to constrain a query such as /bgeo/sites/within. Coordinates are specified as xmin,ymin,xmax,ymax . By default, coordinates are longitude minimum, latitude minimum, longitude maximum, latitude maximum in the default output SRS, 4326 (WGS84).
