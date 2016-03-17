@@ -42,8 +42,8 @@
             "name": "fastest route"
         }
     ],
-    "host": "sandbox1.apis.gov.bc.ca",
-    "basePath": "/router/tst",
+    "host": "api-router.api.gov.bc.ca",
+    "basePath": "",
     "schemes": [
         "https"
     ],
