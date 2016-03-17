@@ -18,7 +18,7 @@ Term | Definition
 <a name="echo">echo</a> | Include unmatched address details such as site name in results.
 <a name="endDate">endDate</a> | The ending date of a time period formatted as YYYY-MM-DD .
 <a name="faults">faults</a> | A list of faults the geocoder found with a given address match. Each fault contains the nature of the fault, the address element affected, and the fault penalty. For a complete list of faults, see .
-<a name="frontDoorPoint">aName</a> | A point representing the position of the front door or main entrance to a house or building.
+<a name="frontDoorPoint">frontDoorPoint</a> | A point representing the position of the front door or main entrance to a house or building.
 <a name="fullAddress">fullAddress</a> | The cleaned, standardized address of a site in a single string as in the following:<br>RM 104, Student Union Building -- University of Victoria -- 3800 Finnerty Rd, Saanich, BC
 <a name="fullSiteDescriptor">fullSiteDescriptor</a> | The portion of fullAddress that precedes the civic number (in the case of a civic address) or the locality (in the case of a non-civic address). Here is an example:<br>RM 104, Student Union Building -- University of Victoria.
 <a name="geomark">geomark</a> | A point, line, or polygon of interest that can be shared in a variety of formats and map projections. Geomarks are created by the <a href="https://apps.gov.bc.ca/pub/geomark/">Geomark Service</a>.
@@ -35,7 +35,7 @@ Term | Definition
 <a name="localityType">localityType</a> | The type of address authority that assigned the localityName to the address. 
 <a name="location">location</a> | The coordinate pair of the matched location in the requested projection.
 <a name="locationPositionalAccuracy">locationPositionalAccuracy</a> | The positional accuracy of the location of a site as follows:<br>high – observed or measured using GPS or survey instruments, or digitized off imagery with a resolution of 1m or better<br>medium – derived from parcel boundaries or from a point known to be inside a parcel that contains the site<br>low – interpolated along a block face address range<br>Coarse – position represents an entire street, locality, or province
-<a name="locationDescriptor">locationDescriptor</a> | Describes the nature of the address location. Values include [accessPoint](#accessPoint), frontDoorPoint, parcelPoint, rooftopPoint, and routingPoint
+<a name="locationDescriptor">locationDescriptor</a> | Describes the nature of the address location. Values include [accessPoint](#accessPoint), [frontDoorPoint](#frontDoorPoint), parcelPoint, rooftopPoint, and routingPoint
 
 One of any, aA value of 'any' will return a point type other than accessPoint if one is defined; otherwise, it will return an accessPoint. An accessPoint is a point that lies on the curb or road edge of the site's assigned street and in the middle of a site’s driveway or access lane. If a site has no driveway or access lane, the accessPoint will be located in the middle of the entrance walkway. A parcelPoint is a point that is known to lie within the boundaries of a land parcel that contains the site being addressed. A routingPoint is a point that lies on a road centreline and directly in front of a site's accessPoint. A frontDoorPoint is a point represents the location of the front door or main entrance to a house or building. A rooftopPoint is a point representing the location of the roof of a house or building
 <a name="fullAddress">fullAddress</a> | 
