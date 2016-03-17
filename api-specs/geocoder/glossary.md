@@ -28,41 +28,20 @@ Term | Definition
 <a name="intersection">Intersection</a> | A dead-end or the intersection of two or more roads. 
 <a name="intersectionID">intersectionID</a> | A unique and immutable identifier assigned to a given intersection in the Integrated Transportation Network.
 <a name="intersectionAddress">Intersection Address</a> | The intersection of two or more named streets as a single string. Here are some examples: <br>Douglas St and Gorge Rd E and Hillside Ave, Victoria, BC<br>48th Ave W and Marine Dr SW, Vancouver, BC 
+<a name="intersectionName">intersectionName</a> | The street name, type, direction, and qualifier of all streets that meet at a given intersection. Here are some examples:<br>Douglas St and Gorge Rd E and Hillside Ave<br>48th Ave W and Marine Dr SW
+<a name="isPrimary">isPrimary</a> | True if primary accessPoint of the associated site.
+<a name="linearAddressInterpolation">linearAddressInterpolation</a> | The process of inferring the location of a site with a given civic number using a road centreline and address range for a given block face.
+<a name="localityName">localityName</a> | The name of the locality assigned to a given site by an address authority such as a municipality, regional district, Indian Reservation, First Nations government, or the federal Defense Department. It may also be an official name of a natural feature from the BC Geographical Names Information System (BCGNIS). A locality name that starts with a directional is not abbreviated (e.g., North Vancouver, not N Vancouver). Spelling of localities that are place names or natural feature names MUST match that published by BCGNIS.
 <a name="fullAddress">fullAddress</a> | 
 <a name="fullAddress">fullAddress</a> | 
 <a name="fullAddress">fullAddress</a> | 
 <a name="fullAddress">fullAddress</a> | 
+<a name="fullAddress">fullAddress</a> | 
+<a name="fullAddress">fullAddress</a> | 
+<a name="fullAddress">fullAddress</a> | 
+<a name="fullAddress">fullAddress</a> | 
+<a name="fullAddress">fullAddress</a> | 
 
-
-Intersection Address (intersectionAddress)
-
-The intersection of two or more named streets as a single string. Here are some examples:
-
-    Douglas St and Gorge Rd E and Hillside Ave, Victoria, BC
-    48th Ave W and Marine Dr SW, Vancouver, BC
-
-Intersection Name (intersectionName)
-
-The street name, type, and direction of all streets that meet at a given intersection. Here are some examples:
-
-    Douglas St and Gorge Rd E and Hillside Ave
-    48th Ave W and Marine Dr SW
-
-Is Primary (isPrimary)
-
-Is true if this is the primary (or official) access point of the associated site; false otherwise.
-Items Per Page (itemsPerPage)
-
-The number of results returned per page by the geocoder or other query. The default is 10. The last page returned may have fewer than this number.
-Linear Address Interpolation (linearAddressInterpolation)
-
-The process of inferring the location of a site with a given civic number using a road centreline and address range for a given block face.
-Locality Is Alias (locality.isAlias)
-
-A given civic number and street were found in an alias of the given locality but not the locality itself.
-Locality Missing (locality.missing)
-
-A given address didn’t contain a locality name but one was found that contains the given civic number and street.
 Locality Name (localityName)
 
 The name of the municipality, community, Indian reservation, subdivision, regional district, aboriginal lands, or natural feature the site is located in. Since this standard is about geocoding, not mail delivery, the locality of a civic address is that defined by the civic address authority, not Canada Post. A locality name that starts with a directional is not abbreviated (e.g., North Vancouver, not N Vancouver). Spelling of localities that are place names or natural feature names MUST match that published by the BC Geographical Names Information System.
