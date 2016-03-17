@@ -10,44 +10,21 @@ Term | Definition
 <a name="addressString">addressString</a> | Civic address or intersection address as a single string in Single-line Address Format or a recognized alternative format.
 <a name="Address match">Address match</a> | Conveys site address match quality through score, precision, and faults properties. faults is a data type that defines a list of faults. Each fault contains the nature of the fault, the address property affected, and the fault penalty. precisionPoints defines the points assigned to each match precision level. MatchPrecision is an enumeration of all precision levels. MatchFaultPenalty defines the penalty value of each possible fault. Penalties are subtracted from the appropriate precision level points to arrive at a match score.
 <a name="blockID">blockID</a> | The unique, immutable identifier of a road segment in the Integrated Transportation Network that a matched address is located on.
-<a name="bbox">bbox</a> | A rectangular geographic area used to constrain a query such as /bgeo/sites/within. Coordinates are specified as xmin,ymin,xmax,ymax . By default, coordinates are longitude minimum, latitude minimum, longitude maximum, latitude maximum in the default output SRS, 4326 (WGS84).
-
+<a name="bbox">bbox</a> | A rectangular geographic area used to filter results of a query. Coordinates are specified as xmin,ymin,xmax,ymax . By default, coordinates are longitude minimum, latitude minimum, longitude maximum, latitude maximum in the default output SRS, 4326 (WGS84).
+<a name="changeDate">changeDate</a> | The date a site or intersection address was last changed.
+<a name="Civic address">Civic Address</a> | The address of a site as assigned by an addressing authority such as a municipality. A civic address includes a civicNumber, civicNumberPrefix, and the localityName is that assigned by the address authority, not Canada Post.
+<a name="civicNumber">civicNumber</a> | The number assigned to a site on a street by an address authority (e.g., the 1175 in 1175 Douglas St, Victoria, BC).
+<a name="civicNumberSuffix">civicNumberSuffix</a> | 
+<a name="aName">aName</a> | 
+<a name="aName">aName</a> | 
+<a name="aName">aName</a> | 
+<a name="aName">aName</a> | 
+<a name="aName">aName</a> | 
 <a name="aName">aName</a> | 
 
 
-Change Date (changeDate)
+<a name="aName">aName</a> | 
 
-The date a site or intersection address was last changed.
-Civic Address (civicAddress)
-
-The address of a site as assigned by an addressing authority such as a municipality. For best matching performance, a civic address should be entered in the following form (a term in square brackets is optional:
-
-[ unitDesignator unitNumber[unitNumberSuffix] ] [siteName], civicNumber[civicNumberSuffix] streetName streetType [streetDirection], localityName, provinceCode
-
-Here are some examples of civic addresses:
-
-    2317 MOODY AVE Kamloops, BC
-    APT 1 1207 Douglas St, Victoria, BC
-    525 Superior St, Victoria,BC
-    4251A ROCKBANK PL, WEST VANCOUVER,BC
-    4450 HAPPY VALLEY RD, METCHOSIN,BC
-    2050 SW MARINE DR,VANCOUVER,BC
-    420 GORGE RD E,VICTORIA,BC
-    130A HALL ST,NELSON,BC
-    UNIT 1, 7467 ASPEN BLVD,PEMBERTON,BC
-    PAD 2, 2097 WILDFLOWER RD,SHAWNIGAN LAKE,BC
-    PORT ALICE HEALTH CENTRE, 1090 MARINE DRIVE,PORT ALICE,BC
-    ROYAL ATHLETIC PARK, 1014 CALEDONIA AVE,VICTORIA,BC
-
-Civic Number (civicNumber)
-
-The official number assigned to a site by a municipality.
-Civic Number Not In Any Block (civicNumber.notInAnyBlock)
-
-A given civic number is not in any known address range for a given street in a given locality. The street within the given locality is returned with a match precision of STREET.
-Civic Number Suffix Not Matched (civicNumberSuffix.notMatched)
-
-A given civic number suffix for a given civic number and street was not found in a given locality.
 Civic Number Suffix (civicNumberSuffix)
 
 Usually takes the form of a letter (e.g., as in 103A) or a fraction (as in 103 1/2).
