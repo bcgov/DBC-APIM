@@ -9,14 +9,12 @@ Term | Definition
 <a name="Adaptive address interpolation">Adaptive Address Interpolation</a> | The process of inferring the location of a site with a given civic number using a road centreline, an address range, and other known site locations for a given block face.
 <a name="addressString">addressString</a> | Civic address or intersection address as a single string in Single-line Address Format or a recognized alternative format.
 <a name="Address match">Address match</a> | Conveys site address match quality through score, precision, and faults properties. faults is a data type that defines a list of faults. Each fault contains the nature of the fault, the address property affected, and the fault penalty. precisionPoints defines the points assigned to each match precision level. MatchPrecision is an enumeration of all precision levels. MatchFaultPenalty defines the penalty value of each possible fault. Penalties are subtracted from the appropriate precision level points to arrive at a match score.
-<a name="blockID">blockID<\a> | The unique, immutable identifier of a road segment in the Integrated Transportation Network that a matched address is located on.
-<a name="aName">aName<\a> | 
+<a name="blockID">blockID</a> | The unique, immutable identifier of a road segment in the Integrated Transportation Network that a matched address is located on.
+<a name="bbox">bbox</a> | A rectangular geographic area used to constrain a query such as /bgeo/sites/within. Coordinates are specified as xmin,ymin,xmax,ymax . By default, coordinates are longitude minimum, latitude minimum, longitude maximum, latitude maximum in the default output SRS, 4326 (WGS84).
 
-<a name="aName">aName<\a> | 
+<a name="aName">aName</a> | 
 
-Bounding Box (boundingBoxCoordinates)
 
-A rectangular geographic area used to constrain a query such as /bgeo/sites/within. Coordinates are specified as xmin,ymin,xmax,ymax . By default, coordinates are longitude minimum, latitude minimum, longitude maximum, latitude maximum in the default output SRS, 4326 (WGS84).
 Change Date (changeDate)
 
 The date a site or intersection address was last changed.
