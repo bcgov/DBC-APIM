@@ -3,12 +3,16 @@
 Term | Definition
 ----: | -----------
 <a name="addressString">addressString</a> | Civic address or intersection address as a single string in Single-line Address Format or a recognized alternative format.
+
 <a name="accessNotes">accessNotes</a> | Contains additional information that is helpful in determining the access location and any restrictions on mode of access (e.g., boat only, floatplane only).
+
 <a name="accessPoint">accessPoint</a> | The point on the curb or road edge and in the middle of the site’s driveway, access lane, or front entrance (if the site has no vehicle access).
+
 <a name="accessPointRetireDate">accessPointRetireDate</a> | The date the access point was retired.
+
 <a name="accessPointStatus">accessPointStatus</a> | The status of the access point (active, or retired). A civic access point is usually only Retired if the associated site is renumbered, destroyed, or combined with another site. A non-civic access point is usually retired when its associated site is assigned a civic number or the site becomes unoccupied.
 
-####Adaptive Address Interpolation | The process of inferring the location of a site with a given civic number using a road centreline, an address range, and other known site locations for a given block face.
+<a name="Adaptive Address Interpolation">Adaptive Address Interpolation</a> | The process of inferring the location of a site with a given civic number using a road centreline, an address range, and other known site locations for a given block face.
 
 
 Address (addressString)
