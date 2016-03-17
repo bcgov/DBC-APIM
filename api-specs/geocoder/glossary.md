@@ -19,7 +19,7 @@ Term | Definition
 <a name="endDate">endDate</a> | The ending date of a time period formatted as YYYY-MM-DD .
 <a name="faults">faults</a> | A list of faults the geocoder found with a given address match. Each fault contains the nature of the fault, the address element affected, and the fault penalty. For a complete list of faults, see .
 <a name="frontDoorPoint">aName</a> | A point representing the position of the front door or main entrance to a house or building.
-<a name="fullAddress">fullAddress</a> | The cleaned, standardized address of a site in a single string (e.g., RM 104, Student Union Building -- University of Victoria -- 3800 Finnerty Rd, Saanich, BC)
+<a name="fullAddress">fullAddress</a> | The cleaned, standardized address of a site in a single string as in the following:<br>RM 104, Student Union Building -- University of Victoria -- 3800 Finnerty Rd, Saanich, BC
 <a name="fullSiteDescriptor">fullSiteDescriptor</a> | The portion of fullAddress that precedes the civic number (in the case of a civic address) or the locality (in the case of a non-civic address). Here is an example:<br>RM 104, Student Union Building -- University of Victoria.
 <a name="geomark">geomark</a> | A point, line, or polygon of interest that can be shared in a variety of formats and map projections. Geomarks are created by the <a href="https://apps.gov.bc.ca/pub/geomark/">Geomark Service</a>.
 <a name="geomarkURL">geomarkURL</a> | The URL of a polygon geomark that should be used by the geocoder as a bounding box in the /bgeo/sites/within query. Point and line geomarks will not work. When specifying this URL programmatically, it should be url-encoded without format and projection parameters.
