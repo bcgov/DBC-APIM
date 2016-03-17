@@ -6,13 +6,13 @@ Term | Definition
 <a name="accessPoint">accessPoint</a> | The point on the curb or road edge and in the middle of the site’s driveway, access lane, or front entrance (if the site has no vehicle access).
 <a name="accessPointRetireDate">accessPointRetireDate</a> | The date the access point was retired.
 <a name="accessPointStatus">accessPointStatus</a> | The status of the access point (active, or retired). A civic access point is usually only Retired if the associated site is renumbered, destroyed, or combined with another site. A non-civic access point is usually retired when its associated site is assigned a civic number or the site becomes unoccupied.
-<a name="Adaptive address interpolation">Adaptive Address Interpolation</a> | The process of inferring the location of a site with a given civic number using a road centreline, an address range, and other known site locations for a given block face.
+<a name="adaptiveAddressInterpolation">Adaptive Address Interpolation</a> | The process of inferring the location of a site with a given civic number using a road centreline, an address range, and other known site locations for a given block face.
 <a name="addressString">addressString</a> | Civic address or intersection address as a single string in Single-line Address Format or a recognized alternative format.
-<a name="Address match">Address match</a> | Conveys site address match quality through score, precision, and faults properties. faults is a data type that defines a list of faults. Each fault contains the nature of the fault, the address property affected, and the fault penalty. precisionPoints defines the points assigned to each match precision level. MatchPrecision is an enumeration of all precision levels. MatchFaultPenalty defines the penalty value of each possible fault. Penalties are subtracted from the appropriate precision level points to arrive at a match score.
+<a name="addressMatch">Address match</a> | Conveys site address match quality through score, precision, and faults properties. faults is a data type that defines a list of faults. Each fault contains the nature of the fault, the address property affected, and the fault penalty. precisionPoints defines the points assigned to each match precision level. MatchPrecision is an enumeration of all precision levels. MatchFaultPenalty defines the penalty value of each possible fault. Penalties are subtracted from the appropriate precision level points to arrive at a match score.
 <a name="blockID">blockID</a> | The unique, immutable identifier of a road segment in the Integrated Transportation Network that a matched address is located on.
 <a name="bbox">bbox</a> | A rectangular geographic area used to filter results of a query. Coordinates are specified as xmin,ymin,xmax,ymax . By default, coordinates are longitude minimum, latitude minimum, longitude maximum, latitude maximum in the default output SRS, 4326 (WGS84).
 <a name="changeDate">changeDate</a> | The date a site or intersection address was last changed.
-<a name="Civic address">Civic Address</a> | The address of a site as assigned by an addressing authority such as a municipality (e.g., 840 Esquimalt Rd, Esquimalt, BC). A civic address includes a civicNumber, civicNumberPrefix, and the localityName is that assigned by the address authority, not Canada Post.
+<a name="civicAddress">Civic Address</a> | The address of a site as assigned by an addressing authority such as a municipality (e.g., 840 Esquimalt Rd, Esquimalt, BC). A civic address includes a civicNumber, civicNumberPrefix, and the localityName is that assigned by the address authority, not Canada Post.
 <a name="civicNumber">civicNumber</a> | The number assigned to a site on a street by an address authority (e.g., the 1175 in 1175 Douglas St, Victoria, BC).
 <a name="civicNumberSuffix">civicNumberSuffix</a> | A single letter that follows the civic number as in 103A, or a fraction as in as in 103 1/2
 <a name="echo">echo</a> | Include unmatched address details such as site name in results.
@@ -22,35 +22,20 @@ Term | Definition
 <a name="fullAddress">fullAddress</a> | The cleaned, standardized address of a site in a single string (e.g., RM 104, Student Union Building -- University of Victoria -- 3800 Finnerty Rd, Saanich, BC)
 <a name="fullSiteDescriptor">fullSiteDescriptor</a> | The portion of fullAddress that precedes the civic number (in the case of a civic address) or the locality (in the case of a non-civic address). For example, RM 104, Student Union Building -- University of Victoria.
 <a name="geomark">geomark</a> | A point, line, or polygon of interest that can be shared in a variety of formats and map projections. Geomarks are created by the <a href="https://apps.gov.bc.ca/pub/geomark/">Geomark Service</a>.
+<a name="geomarkURL">geomarkURL</a> | The URL of a polygon geomark that should be used by the geocoder as a bounding box in the /bgeo/sites/within query. Point and line geomarks will not work. When specifying this URL programmatically, it should be url-encoded without format and projection parameters.
 
-<a name="fullAddress">fullAddress</a> | 
-<a name="fullAddress">fullAddress</a> | 
-<a name="fullAddress">fullAddress</a> | 
-<a name="fullAddress">fullAddress</a> | 
-<a name="fullAddress">fullAddress</a> | 
-<a name="fullAddress">fullAddress</a> | 
+<a name="interpolatedSite">Interpolated Site</a> | A site whose civic number is assumed to be valid because it lies within a known address range and whose location was interpolated using the address range (e.g., linear address interpolation) or the address range plus the locations of known sites (e.g., adaptive address interpolation).
+
+<a name="interpolation">interpolation</a> | Interpolation method to use to determine location of matching site (adaptive, linear, none).
+<a name="intersection">Intersection</a> | A dead-end or the intersection of two or more roads. 
+<a name="intersectionID">intersectionID</a> | A unique and immutable identifier assigned to a given intersection in the Integrated Transportation Network.
+<a name="intersectionAddress">Intersection Address</a> | The intersection of two or more named streets as a single string. Here are some examples: <br>Douglas St and Gorge Rd E and Hillside Ave, Victoria, BC<br>48th Ave W and Marine Dr SW, Vancouver, BC 
 <a name="fullAddress">fullAddress</a> | 
 <a name="fullAddress">fullAddress</a> | 
 <a name="fullAddress">fullAddress</a> | 
 <a name="fullAddress">fullAddress</a> | 
 
 
-
-Geomark URL (geomarkURL)
-
-The URL of a polygon geomark that should be used by the geocoder as a bounding box in the /bgeo/sites/within query. Point and line geomarks will not work. When specifying this URL programmatically, it should be url-encoded without format and projection parameters.
-Interpolated Site (interpolatedSite)
-
-A site whose civic number is assumed to be valid because it lies within a known address range and whose location was interpolated using the address range (e.g., linear address interpolation) or the address range plus the locations of known sites (e.g., adaptive address interpolation).
-Interpolation method (interpolation)
-
-Interpolation method to use to determine location of matching site (adaptive, linear, none). Default is adaptive.
-Intersection (intersection)
-
-The intersection of two or more roads.
-Intersection ID (intersectionID)
-
-A unique and immutable identifier assigned to a given intersection in B.C.
 Intersection Address (intersectionAddress)
 
 The intersection of two or more named streets as a single string. Here are some examples:
