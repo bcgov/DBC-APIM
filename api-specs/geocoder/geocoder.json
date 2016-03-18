@@ -47,9 +47,7 @@
             "get": {
                 "description": "Represents the set of geocoded and standardized sites and intersections whose address best matches a given query address.",
                 "tags": [
-                    "addresses",
-                    "intersections",
-                    "geocode"
+                    "addresses"
                 ],
                 "parameters": [
                     {
@@ -351,7 +349,7 @@
             "get": {
                 "description": "Represents the set of occupants whose addresses best match a given query address. Every occupant has an associated site which has a standardized address and a coordinate location on the Earth.",
                 "tags": [
-                    "addresses"
+                    "occupants"
                 ],
                 "parameters": [
                     {
@@ -736,8 +734,7 @@
             "get": {
                 "description": "Represents the closest occupant to a given point",
                 "tags": [
-                    "occupants",
-                    "nearest"
+                    "occupants"
                 ],
                 "parameters": [
                     {
@@ -1534,7 +1531,7 @@
             "get": {
                 "description": "Represents an individual occupant",
                 "tags": [
-                    "sites"
+                    "occupants"
                 ],
                 "parameters": [
                     {
