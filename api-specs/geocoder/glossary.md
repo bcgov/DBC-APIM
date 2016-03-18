@@ -1,4 +1,4 @@
-#Geocoder Glossary of Terms
+#Glossary of Terms
 
 Term | Definition
 ----: | -----------
@@ -43,30 +43,18 @@ Term | Definition
 <a name="maxResults">maxResults</a> | Maximum number of matched addresses to return for each input address. The default is 1.
 <a name="minScore">minScore</a> | The minimum score an address match must have before it is included in the results. Scores range between 0 and 100 inclusive. The default is 0.
 <a name="narrativeLocation">narrativeLocation</a> | Turn-by-turn directions to the site. A narrative typically starts at the closest known, named physical feature to the site as in the following:<br>From Tlell, travel north on highway 16 till you see a big golden spruce tree on your left, hike west for about one kilometre.
+<a name="outputFormat">outputFormat</a> | Format of request results. Allowed values are xhtml, kml, csv, shpz, geojson, geojsonp, gml
+<a name="outputSRS">outputSRS</a> | The EPSG code of the spatial reference system used to state the coordination location of a named feature. It is ignored if KML output is specified since KML only supports 4326 (WGS84). Allowed values are:<br>3005: BC Albers<br>4326: WGS 84 (default)<br>26907-26911: NAD83/UTM Zones 7N through 11N<br>32607-32611: WGS84/UTM Zones 7N through 11N<br>26707-26711: NAD27/UTM Zones 7N through 11N
+<a name="parcelPoint">parcelPoint</a> | A point representing a position known to be within the boundaries of a land parcel, usually the parcel centroid.
+<a name="pointCoordinates">pointCoordinates</a> | The coordinates of the centre point used to define a bounding box in the bgeo/sites/nearest and bgeo/intersections/nearest queries . Format is x,y where x and y are coordinates in the specified outputSRS projection. By default, x is longitude and y is latitude in the default outputSRS projection of 4326 (WGS84).
+<a name="precisionPoints">precisionPoints</a> | Defines the points assigned to each match precision level.
+
 
 
 One of any, aA value of 'any' will return a point type other than accessPoint if one is defined; otherwise, it will return an accessPoint. An accessPoint is a point that lies on the curb or road edge of the site's assigned street and in the middle of a site’s driveway or access lane. If a site has no driveway or access lane, the accessPoint will be located in the middle of the entrance walkway. A parcelPoint is a point that is known to lie within the boundaries of a land parcel that contains the site being addressed. A routingPoint is a point that lies on a road centreline and directly in front of a site's accessPoint. A frontDoorPoint is a point represents the location of the front door or main entrance to a house or building. A rooftopPoint is a point representing the location of the roof of a house or building
 
 
-Output Format (outputFormat)
 
-Output file format (xhtml, kml, csv, shpz, geojson, geojsonp, gml)
-Output SRS (outputSRS)
-
-The EPSG code of the spatial reference system used to state the coordination location of a named feature. It is ignored if KML output is specified since KML only supports 4326 (WGS84). Allowed values are:
-
-    3005: BC Albers
-    4326: WGS 84 (default)
-    26907-26911: NAD83/UTM Zones 7N through 11N
-    32607-32611: WGS84/UTM Zones 7N through 11N
-    26707-26711: NAD27/UTM Zones 7N through 11N
-
-Parcel Point (parcelPoint)
-
-A point representing a position known to be within the boundaries of a land parcel, usually the parcel centroid.
-Point (pointCoordinates)
-
-The coordinates of the centre point used to define a bounding box in the bgeo/sites/nearest and bgeo/intersections/nearest queries . Format is x,y where x and y are coordinates in the specified outputSRS projection. By default, x is longitude and y is latitude in the default outputSRS projection of 4326 (WGS84).
 Precision Points (precisionPoints)
 Defines the points assigned to each match precision level.
 
