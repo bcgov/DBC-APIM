@@ -36,48 +36,18 @@ Term | Definition
 <a name="location">location</a> | The coordinate pair of the matched location in the requested projection.
 <a name="locationPositionalAccuracy">locationPositionalAccuracy</a> | The positional accuracy of the location of a site as follows:<br>high – observed or measured using GPS or survey instruments, or digitized off imagery with a resolution of 1m or better<br>medium – derived from parcel boundaries or from a point known to be inside a parcel that contains the site<br>low – interpolated along a block face address range<br>Coarse – position represents an entire street, locality, or province
 <a name="locationDescriptor">locationDescriptor</a> | Describes the nature of the address location. Values include [accessPoint](#accessPoint), [frontDoorPoint](#frontDoorPoint), parcelPoint, rooftopPoint, and routingPoint
+<a name="mainLocation">Main Location</a> | A geometric point representing the rooftop, front door, or centre of the property.
+<a name="matchFaultPenalty">matchFaultPenalty</a> | Defines the penalty value of each possible fault. Penalties are subtracted from the appropriate precision level points to arrive at a match score.
+<a name="matchPrecision">matchPrecision</a> | The level of precision of an address match. Here are the seven levels from the most precise to least precise:<br>site – the site name matched<br>unit – the unit number, unit number suffix, and unit designator matched<br>civicNumber – the civic number matched<br>intersection – the intersection matched<br>block – the civic number falls within a known block range<br>street – the street name, street direction, and street type matched<br>locality – the locality matched<br>Province - no match<br>
+<a name="maxDistance">maxDistance</a> | The maximum distance (in metres) to search from the given point.  If not specified, the maximum distance is unlimited.
+<a name="maxResults">maxResults</a> | Maximum number of matched addresses to return for each input address. The default is 1.
+<a name="minScore">minScore</a> | The minimum score an address match must have before it is included in the results. Scores range between 0 and 100 inclusive. The default is 0.
+<a name="narrativeLocation">narrativeLocation</a> | Written directions to the site. A narrative typically starts at the closest known, named physical feature to the site as in the following:<br>from Tlell, travel north on highway 16 to the big golden spruce tree on your left, hike west for about one kilometre.
+
 
 One of any, aA value of 'any' will return a point type other than accessPoint if one is defined; otherwise, it will return an accessPoint. An accessPoint is a point that lies on the curb or road edge of the site's assigned street and in the middle of a site’s driveway or access lane. If a site has no driveway or access lane, the accessPoint will be located in the middle of the entrance walkway. A parcelPoint is a point that is known to lie within the boundaries of a land parcel that contains the site being addressed. A routingPoint is a point that lies on a road centreline and directly in front of a site's accessPoint. A frontDoorPoint is a point represents the location of the front door or main entrance to a house or building. A rooftopPoint is a point representing the location of the roof of a house or building
-<a name="fullAddress">fullAddress</a> | 
-<a name="fullAddress">fullAddress</a> | 
-<a name="fullAddress">fullAddress</a> | 
-<a name="fullAddress">fullAddress</a> | 
-<a name="fullAddress">fullAddress</a> | 
 
-Location descriptor (locationDescriptor)
 
-Describes the nature of the address location. Values include accessPoint, frontDoorPoint, parcelPoint, rooftopPoint, and routingPoint.
-Main Location (mainLocation)
-
-A geometric point representing the rooftop, front door, or centre of the property.
-Match Fault Penalty (matchFaultPenalty)
-
-Defines the penalty value of each possible fault. Penalties are subtracted from the appropriate precision level points to arrive at a match score.
-Match Precision (matchPrecision)
-
-The level of precision of an address match. Here are the seven levels from the most precise to least precise:
-
-    site – the site name matched
-    unit – the unit number, unit number suffix, and unit designator matched
-    civicNumber – the civic number matched
-    intersection – the intersection matched
-    block – the civic number falls within a known block range
-    street – the street name, street direction, and street type matched
-    locality – the locality matched
-    Province - no match
-
-Max distance (maxDistance)
-
-The radius (in meters) used to define a bounding box in the bgeo/sites/nearest and bgeo/intersections/nearest queries.
-Maximum Search Results (maxResults)
-
-Maximum number of matched addresses to return for each input address. Default is 1.
-Minimum Score (minScore)
-
-Min score a match must have before it is included in the results. Default is 0. Scores range between 0 and 100 inclusive.
-Narrative Location (narrativeLocation)
-
-Contains written directions to access the site. The narrative should start at the closest known, named physical feature to the site (e.g. from Tlell, travel north on highway 16 to the big golden spruce tree on your left, hike west for about one kilometre).
 Output Format (outputFormat)
 
 Output file format (xhtml, kml, csv, shpz, geojson, geojsonp, gml)
