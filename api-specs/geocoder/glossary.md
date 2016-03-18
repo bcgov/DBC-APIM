@@ -48,55 +48,25 @@ Term | Definition
 <a name="parcelPoint">parcelPoint</a> | A point representing a position known to be within the boundaries of a land parcel, usually the parcel centroid.
 <a name="pointCoordinates">pointCoordinates</a> | The coordinates of the centre point used to define a bounding box in the bgeo/sites/nearest and bgeo/intersections/nearest queries . Format is x,y where x and y are coordinates in the specified outputSRS projection. By default, x is longitude and y is latitude in the default outputSRS projection of 4326 (WGS84).
 <a name="precisionPoints">precisionPoints</a> | Defines the points assigned to each match precision level.
-
-
+<a name="provinceCode">provinceCode</a> | The ISO 3166-2 Sub-Country Code for British Columbia, which is BC.
+<a name="rooftopPoint">rooftopPoint</a> | A point representing the roof of a house or building.
+<a name="routingPoint">routingPoint</a> | A point lying on a road centreline and directly in front of a site's accessPoint. A routing point is intended for use by routing algorithms to finding routes between addresses.
+<a name="score">score</a> | A number between 0 and 100 representing the quality of an address match; 100 is a perfect match; 0 means no match. Score is computed by taking the precision points and subtracting penalty points for each fault found.
+<a name="setBack">setBack</a> | The distance to move the accessPoint away from the curb and towards the inside of the parcel (in metres). Ignored if locationDescriptor not set to accessPoint.
+<a name="site">site</a> | A constructed geographic feature in British Columbia with known coordinates (latitude/longitude) and a site address that is needed in the conduct of provincial business. Examples of constructed geographic features include houses, cabins, permanent campsites, mobile home and RV parks, units within houses and buildings, buildings within complexes, stores, malls, offices, industrial plants, bandshell, golf courses, hospitals, universities, recreation centres, places of worship, parks, municipal pumping stations, hydro sub-stations, wharves, airports, train stations, and landmarks.
+<a name="siteID">siteID</a> | A unique identifier assigned to every site in B.C. They are currently not immutable. matchPrecision levels other than unit, site, and civicNumber don’t return a siteID.
+<a name="siteName">siteName</a> | A string containing the name of the building, facility, or institution (e.g., Duck Building, Casa Del Mar, Crystal Garden, Bluebird House). A business name should only be used if it is permanently affixed to the site and the site has no other, more generic name. If a site is a unit within a complex, it may have a sitename in addition to a unitNumber and unitSuffix.
+<a name="siteRetireDate">siteRetireDate</a> | The date the site was retired.
+<a name="siteStatus">siteStatus</a> | A site is usually retired when it is destroyed or combined with another site. Allowed values are active or retired.
+<a name="spatialReferenceSystem">spatialReferenceSystem</a> | The EPSG code of the spatial reference system used to state the coordination location of a named feature. It is ignored if KML output is specified since KML only supports 4326 (WGS84). Allowed values are:<br>3005: BC Albers<br>4326: WGS 84 (default)<br>26907-26911: NAD83/UTM Zones 7N through 11N<br>32607-32611: WGS84/UTM Zones 7N through 11N<br>26707-26711: NAD27/UTM Zones 7N through 11N
+<a name="startDate">startDate</a> | The starting date of a time period formatted as YYYY-MM-DD
+<a name="streetCentreline">Street Centreline</a> | A line that is parallel to the street edges and located in the middle of the roadway. A street centreline exists even on streets that have no painted lines on them (e.g., a residential or unpaved street). A street centreline is oriented in the direction of increasing civic numbers. In the case of blocks that have continuous numbering that goes up on one side and down the other the street centreline is oriented in the direction of the lowest block range.
+<a name="siteID">siteID</a> | 
+<a name="siteID">siteID</a> | 
+<a name="siteID">siteID</a> | 
+<a name="siteID">siteID</a> | 
 
 One of any, aA value of 'any' will return a point type other than accessPoint if one is defined; otherwise, it will return an accessPoint. An accessPoint is a point that lies on the curb or road edge of the site's assigned street and in the middle of a site’s driveway or access lane. If a site has no driveway or access lane, the accessPoint will be located in the middle of the entrance walkway. A parcelPoint is a point that is known to lie within the boundaries of a land parcel that contains the site being addressed. A routingPoint is a point that lies on a road centreline and directly in front of a site's accessPoint. A frontDoorPoint is a point represents the location of the front door or main entrance to a house or building. A rooftopPoint is a point representing the location of the roof of a house or building
-
-
-
-Precision Points (precisionPoints)
-Defines the points assigned to each match precision level.
-
-Province Code (provinceCode)
-The ISO 3166-2 Sub-Country Code for British Columbia, which is BC.
-
-Rooftop Point (rooftopPoint)
-A point representing the roof of a house or building.
-
-Routing Point (routingPoint)
-A point lying on a road centreline and directly in front of a site's accessPoint. A routing point is intended for use by routing algorithms to finding routes between addresses.
-
-Score (score)
-A number between 0 and 100 representing the quality of an address match; 100 is a perfect match; 0 means no match. Score is computed by taking the precision points and subtracting penalty points for each fault found.
-
-Setback (setBack)
-The distance to set back the returned point location from the curb(in meters). A positive setback moves the location toward the interior of the parcel, a setback of zero returns the location of the curb, and a negative setback returns the location of the street centreline. Setback is only used for interpolated site results.
-
-Site (site)
-A constructed geographic feature in British Columbia with known coordinates (latitude/longitude) and a site address that is needed in the conduct of provincial business. Examples of constructed geographic features include houses, cabins, permanent campsites, mobile home and RV parks, units within houses and buildings, buildings within complexes, stores, malls, offices, industrial plants, bandshell, golf courses, hospitals, universities, recreation centres, places of worship, parks, municipal pumping stations, hydro sub-stations, wharves, airports, train stations, and landmarks.
-
-Site ID (siteID)
-A unique identifier assigned to every site in B.C. They are currently not immutable. Poor matches and interpolated results don’t return a siteID.
-
-Site Name (siteName)
-A string containing the name of the building, facility, or institution (e.g., Duck Building, Casa Del Mar, Crystal Garden, Bluebird House). A business name should only be used if it is permanently affixed to the site and the site has no other, more generic name. If a site is a unit within a complex, it may have a sitename in addition to a unitNumber and unitSuffix. siteName may be empty.
-
-Site Retire Date (siteRetireDate)
-The date the site was retired.
-
-Site Status (siteStatus)
-The status of the site (active, or retired). A site is usually retired when it is destroyed or combined with another site.
-
-SRS Code (spatialReferenceSystem)
-The code of the spatial referencing system that Location is defined in. Supported codes are:
-
-    4326 - lat/lon
-    3005 - BC Albers
-    26907-26911 - NAD83 UTM zones 7 - 11
-
-Start Date (startDate)
-The starting date of a time period formatted as YYYY-MM-DD
 
 
 Street Centreline (streetCentreline)
