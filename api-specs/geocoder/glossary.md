@@ -66,12 +66,3 @@ Term | Definition
 <a name="streetType">streetType</a> | The type of street as assigned by a municipality (e.g., the ST in 1175 DOUGLAS ST) and is abbreviated if such an abbreviation exists. The set of all street types is defined by the provincial Digital Road Atlas program.
 <a name="unitNumberSuffix)">unitNumberSuffix)</a> | A letter that follows the unit number as in Unit 1A.
 <a name="unitDesignator">unitDesignator</a> | The type of unit(e.g., APT, SUITE, and UNIT) and is abbreviated if such an abbreviation is defined. The set of all unit designators MUST include those defined in the Addressing Guidelines by Canada Post and is the responsibility of DataBC to maintain this set.
-<a name="unitNumber">unitNumber</a> | The number of the unit, suite, or apartment within a house or building.
-<a name="unitNumber">unitNumber</a> | The number of the unit, suite, or apartment within a house or building.
-<a name="unitNumber">unitNumber</a> | The number of the unit, suite, or apartment within a house or building.
-<a name="unitNumber">unitNumber</a> | The number of the unit, suite, or apartment within a house or building.
-<a name="unitNumber">unitNumber</a> | The number of the unit, suite, or apartment within a house or building.
-<a name="unitNumber">unitNumber</a> | The number of the unit, suite, or apartment within a house or building.
-<a name="unitNumber">unitNumber</a> | The number of the unit, suite, or apartment within a house or building.
-<a name="unitNumber">unitNumber</a> | The number of the unit, suite, or apartment within a house or building.
-<a name="unitNumber">unitNumber</a> | The number of the unit, suite, or apartment within a house or building.
