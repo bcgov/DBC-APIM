@@ -42,7 +42,7 @@ Term | Definition
 <a name="maxDistance">maxDistance</a> | The maximum distance (in metres) to search from the given point.  If not specified, the maximum distance is unlimited.
 <a name="maxResults">maxResults</a> | Maximum number of matched addresses to return for each input address. The default is 1.
 <a name="minScore">minScore</a> | The minimum score an address match must have before it is included in the results. Scores range between 0 and 100 inclusive. The default is 0.
-<a name="narrativeLocation">narrativeLocation</a> | Written directions to the site. A narrative typically starts at the closest known, named physical feature to the site as in the following:<br>from Tlell, travel north on highway 16 to the big golden spruce tree on your left, hike west for about one kilometre.
+<a name="narrativeLocation">narrativeLocation</a> | Written directions to the site. A narrative typically starts at the closest known, named physical feature to the site as in the following:<br>From Tlell, travel north on highway 16 till you see a big golden spruce tree on your left, hike west for about one kilometre.
 
 
 One of any, aA value of 'any' will return a point type other than accessPoint if one is defined; otherwise, it will return an accessPoint. An accessPoint is a point that lies on the curb or road edge of the site's assigned street and in the middle of a site’s driveway or access lane. If a site has no driveway or access lane, the accessPoint will be located in the middle of the entrance walkway. A parcelPoint is a point that is known to lie within the boundaries of a land parcel that contains the site being addressed. A routingPoint is a point that lies on a road centreline and directly in front of a site's accessPoint. A frontDoorPoint is a point represents the location of the front door or main entrance to a house or building. A rooftopPoint is a point representing the location of the roof of a house or building
@@ -68,49 +68,39 @@ Point (pointCoordinates)
 
 The coordinates of the centre point used to define a bounding box in the bgeo/sites/nearest and bgeo/intersections/nearest queries . Format is x,y where x and y are coordinates in the specified outputSRS projection. By default, x is longitude and y is latitude in the default outputSRS projection of 4326 (WGS84).
 Precision Points (precisionPoints)
-
 Defines the points assigned to each match precision level.
+
 Province Code (provinceCode)
-
 The ISO 3166-2 Sub-Country Code for British Columbia, which is BC.
-Province Code Missing (provinceCode.missing)
 
-A given input address (addressString) representing a civic address or intersection address included a Province (provinceCode) that did not match with 'BC'. A match with the correct provinceCode is returned.
-Province Code Not Matched (provinceCode.notMatched)
-
-A given input address (addressString) representing a civic address or intersection address included a Province (provinceCode) that did not match with 'BC'. A match with the correct provinceCode is returned.
 Rooftop Point (rooftopPoint)
-
 A point representing the roof of a house or building.
+
 Routing Point (routingPoint)
-
 A point lying on a road centreline and directly in front of a site's accessPoint. A routing point is intended for use by routing algorithms to finding routes between addresses.
+
 Score (score)
-
 A number between 0 and 100 representing the quality of an address match; 100 is a perfect match; 0 means no match. Score is computed by taking the precision points and subtracting penalty points for each fault found.
+
 Setback (setBack)
-
 The distance to set back the returned point location from the curb(in meters). A positive setback moves the location toward the interior of the parcel, a setback of zero returns the location of the curb, and a negative setback returns the location of the street centreline. Setback is only used for interpolated site results.
+
 Site (site)
-
 A constructed geographic feature in British Columbia with known coordinates (latitude/longitude) and a site address that is needed in the conduct of provincial business. Examples of constructed geographic features include houses, cabins, permanent campsites, mobile home and RV parks, units within houses and buildings, buildings within complexes, stores, malls, offices, industrial plants, bandshell, golf courses, hospitals, universities, recreation centres, places of worship, parks, municipal pumping stations, hydro sub-stations, wharves, airports, train stations, and landmarks.
+
 Site ID (siteID)
-
 A unique identifier assigned to every site in B.C. They are currently not immutable. Poor matches and interpolated results don’t return a siteID.
+
 Site Name (siteName)
-
 A string containing the name of the building, facility, or institution (e.g., Duck Building, Casa Del Mar, Crystal Garden, Bluebird House). A business name should only be used if it is permanently affixed to the site and the site has no other, more generic name. If a site is a unit within a complex, it may have a sitename in addition to a unitNumber and unitSuffix. siteName may be empty.
-Site Name Not Matched (siteName.notMatched)
 
-A matching address was found but it does not have a site name or match the one provided.
 Site Retire Date (siteRetireDate)
-
 The date the site was retired.
+
 Site Status (siteStatus)
-
 The status of the site (active, or retired). A site is usually retired when it is destroyed or combined with another site.
-SRS Code (spatialReferenceSystem)
 
+SRS Code (spatialReferenceSystem)
 The code of the spatial referencing system that Location is defined in. Supported codes are:
 
     4326 - lat/lon
@@ -118,56 +108,29 @@ The code of the spatial referencing system that Location is defined in. Supporte
     26907-26911 - NAD83 UTM zones 7 - 11
 
 Start Date (startDate)
-
 The starting date of a time period formatted as YYYY-MM-DD
-Start Index (startIndex)
 
-The index number of the first result that the geocoder or other query should return. The first result is assigned an index of 1 which is also the default.
+
 Street Centreline (streetCentreline)
-
 A line that is parallel to the street edges and located in the middle of the roadway. A street centreline exists even on streets that have no painted lines on them (e.g., a residential or unpaved street). A street centreline is oriented in the direction of increasing civic numbers. In the case of blocks that have continuous numbering that goes up on one side and down the other the street centreline is oriented in the direction of the lowest block range.
+
 Street Direction (streetDirection)
-
 The abbreviated compass direction as defined by Canada Post and B.C. civic addressing authorities . The complete list is C, E, N, NE, NW, SE, SW, and W. All street directions except C are defined by Canada Post.
-Street Direction Missing (streetDirection.missing)
 
-A given address didn’t contain a street direction for a given street name and street type in a given locality but one was found.
-Street Direction Not Matched (streetDirection.notMatched)
-
-A given street direction for a given street name and street type in a given locality was not found. A match without the street direction is returned.
 Street Name (streetName)
-
 The official name of the street recognized by a municipality (e.g., Douglas in 1175 Douglas Street). A streetName that starts with a directional is not abbreviated (e.g., North Park, not N Park)
-Street Name Not Matched (streetName.notMatched)
 
-A given street name within a given locality was not found. The locality is returned with a match precision of LOCALITY. Other addresses in different localities that contain the given civic number and street will also be returned but with a lesser score.
-Street Name Spelled Wrong (streetName.spelledWrong)
 
-A given street name was spelled wrong but was successfully corrected to match a known street name with the given locality.
 Street Type (streetType)
-
 The type of street as assigned by a municipality (e.g., the ST in 1175 DOUGLAS ST) and is abbreviated if such an abbreviation exists. The set of all street types is defined by the provincial Digital Road Atlas program.
-Street Type Missing (streetType.missing)
 
-A given address didn’t contain a street type for a given street name in a given locality but one was found.
-Street Type Not Matched (streetType.notMatched)
 
-A given street type for a given street name in a given locality was not found. A match containing the correct street type is returned.
 Unit Number (unitNumber)
-
 The number of the unit, suite, or apartment within a house or building.
-Unit Number Not Matched (unitNumber.notMatched)
 
-A matching address was found but it does not have a unit number or match the one provided.
 Unit Number Suffix (unitNumberSuffix)
-
 A letter or fraction that follows the unit number as in Unit 1A or Suite 1 1/2.
-Unit Number Suffix Not Matched (unitNumberSuffix.notMatched)
 
-A matching address was found but it does not have a unit number suffix or match the one provided.
 Unit Designator (unitDesignator)
-
 The type of unit(e.g., APT, SUITE, and UNIT) and is abbreviated if such an abbreviation is defined. The set of all unit designators MUST include those defined in the Addressing Guidelines by Canada Post and is the responsibility of DataBC.
-Unit Designator Not Matched (unitDesignator.notMatched)
 
-A matching address was found but it does not have a unitDesignator or match the one provided.
