@@ -14,7 +14,7 @@ Term | Definition
 <a name="changeDate">changeDate</a> | The date a site or intersection address was last changed.
 <a name="civicAddress">Civic Address</a> | The address of a site as assigned by an addressing authority such as a municipality. A civic address includes a civicNumber, civicNumberPrefix, and the localityName is that assigned by the address authority, not Canada Post. Here are some examples:<br>840 Esquimalt Rd, Esquimalt, BC<br>2317 MOODY AVE Kamloops, BC<br>Apt 1 -- 1207 Douglas St, Victoria, BC<br>525 Superior St, Victoria,BC<br>4251A Rockbank Pl, West Vancouver, BC<br>4450 Happy Valley Rd, Metchosin, BC<br>2050 SW Marine Dr,Vancouver,BC<br>420 Gorge Rd E, Victoria, BC<br>130A Hall ST,Nelson,BC<br>Unit 1 -- 7467 Aspen Blvd, Pemberton, BC<br>PadD 2, 2097 Wildflower Rd,Shawnigan Lake, BC<br>Port Alice Health Centre -- 1090 Marine Dr, Port Alice, BC<br>Royal Athletic Park, 1014 Caledonia Ave, Victoria,BC
 <a name="civicNumber">civicNumber</a> | The number assigned to a site on a street by an address authority (e.g., the 1175 in 1175 Douglas St, Victoria, BC).
-<a name="civicNumberSuffix">civicNumberSuffix</a> | A single letter that follows the civic number as in 103A, or a fraction as in as in 103 1/2
+<a name="civicNumberSuffix">civicNumberSuffix</a> | A letter or fraction that follows the civic number. There should be no space between a civic number and a letter (e.g., Unit 1A) and one space between a civic number and a fraction (e.g., Suite 3 1/2)
 <a name="echo">echo</a> | Include unmatched address details such as site name in results.
 <a name="endDate">endDate</a> | The ending date of a time period formatted as YYYY-MM-DD .
 <a name="faults">faults</a> | A list of faults the geocoder found with a given address match. Each fault contains the nature of the fault, the address element affected, and the fault penalty. For a complete list of faults, see .
@@ -61,34 +61,17 @@ Term | Definition
 <a name="spatialReferenceSystem">spatialReferenceSystem</a> | The EPSG code of the spatial reference system used to state the coordination location of a named feature. It is ignored if KML output is specified since KML only supports 4326 (WGS84). Allowed values are:<br>3005: BC Albers<br>4326: WGS 84 (default)<br>26907-26911: NAD83/UTM Zones 7N through 11N<br>32607-32611: WGS84/UTM Zones 7N through 11N<br>26707-26711: NAD27/UTM Zones 7N through 11N
 <a name="startDate">startDate</a> | The starting date of a time period formatted as YYYY-MM-DD
 <a name="streetCentreline">Street Centreline</a> | A line that is parallel to the street edges and located in the middle of the roadway. A street centreline exists even on streets that have no painted lines on them (e.g., a residential or unpaved street). A street centreline is oriented in the direction of increasing civic numbers. In the case of blocks that have continuous numbering that goes up on one side and down the other the street centreline is oriented in the direction of the lowest block range.
-<a name="siteID">siteID</a> | 
-<a name="siteID">siteID</a> | 
-<a name="siteID">siteID</a> | 
-<a name="siteID">siteID</a> | 
-
-One of any, aA value of 'any' will return a point type other than accessPoint if one is defined; otherwise, it will return an accessPoint. An accessPoint is a point that lies on the curb or road edge of the site's assigned street and in the middle of a site’s driveway or access lane. If a site has no driveway or access lane, the accessPoint will be located in the middle of the entrance walkway. A parcelPoint is a point that is known to lie within the boundaries of a land parcel that contains the site being addressed. A routingPoint is a point that lies on a road centreline and directly in front of a site's accessPoint. A frontDoorPoint is a point represents the location of the front door or main entrance to a house or building. A rooftopPoint is a point representing the location of the roof of a house or building
-
-
-Street Centreline (streetCentreline)
-A line that is parallel to the street edges and located in the middle of the roadway. A street centreline exists even on streets that have no painted lines on them (e.g., a residential or unpaved street). A street centreline is oriented in the direction of increasing civic numbers. In the case of blocks that have continuous numbering that goes up on one side and down the other the street centreline is oriented in the direction of the lowest block range.
-
-Street Direction (streetDirection)
-The abbreviated compass direction as defined by Canada Post and B.C. civic addressing authorities . The complete list is C, E, N, NE, NW, SE, SW, and W. All street directions except C are defined by Canada Post.
-
-Street Name (streetName)
-The official name of the street recognized by a municipality (e.g., Douglas in 1175 Douglas Street). A streetName that starts with a directional is not abbreviated (e.g., North Park, not N Park)
-
-
-Street Type (streetType)
-The type of street as assigned by a municipality (e.g., the ST in 1175 DOUGLAS ST) and is abbreviated if such an abbreviation exists. The set of all street types is defined by the provincial Digital Road Atlas program.
-
-
-Unit Number (unitNumber)
-The number of the unit, suite, or apartment within a house or building.
-
-Unit Number Suffix (unitNumberSuffix)
-A letter or fraction that follows the unit number as in Unit 1A or Suite 1 1/2.
-
-Unit Designator (unitDesignator)
-The type of unit(e.g., APT, SUITE, and UNIT) and is abbreviated if such an abbreviation is defined. The set of all unit designators MUST include those defined in the Addressing Guidelines by Canada Post and is the responsibility of DataBC.
-
+<a name="streetDirection">streetDirection</a> | The abbreviated compass direction as defined by Canada Post and B.C. civic addressing authorities . The complete list is C, E, N, NE, NW, SE, SW, and W. All street directions except C are defined by Canada Post.
+<a name="streetName">streetName</a> | The official name of the street recognized by a municipality (e.g., Douglas in 1175 Douglas Street). A streetName that starts with a directional is not abbreviated (e.g., North Park, not N Park)
+<a name="streetType">streetType</a> | The type of street as assigned by a municipality (e.g., the ST in 1175 DOUGLAS ST) and is abbreviated if such an abbreviation exists. The set of all street types is defined by the provincial Digital Road Atlas program.
+<a name="unitNumberSuffix)">unitNumberSuffix)</a> | A letter that follows the unit number as in Unit 1A.
+<a name="unitDesignator">unitDesignator</a> | The type of unit(e.g., APT, SUITE, and UNIT) and is abbreviated if such an abbreviation is defined. The set of all unit designators MUST include those defined in the Addressing Guidelines by Canada Post and is the responsibility of DataBC to maintain this set.
+<a name="unitNumber">unitNumber</a> | The number of the unit, suite, or apartment within a house or building.
+<a name="unitNumber">unitNumber</a> | The number of the unit, suite, or apartment within a house or building.
+<a name="unitNumber">unitNumber</a> | The number of the unit, suite, or apartment within a house or building.
+<a name="unitNumber">unitNumber</a> | The number of the unit, suite, or apartment within a house or building.
+<a name="unitNumber">unitNumber</a> | The number of the unit, suite, or apartment within a house or building.
+<a name="unitNumber">unitNumber</a> | The number of the unit, suite, or apartment within a house or building.
+<a name="unitNumber">unitNumber</a> | The number of the unit, suite, or apartment within a house or building.
+<a name="unitNumber">unitNumber</a> | The number of the unit, suite, or apartment within a house or building.
+<a name="unitNumber">unitNumber</a> | The number of the unit, suite, or apartment within a house or building.
