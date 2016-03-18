@@ -17,6 +17,7 @@ Term | Definition
 <a name="civicNumberSuffix">civicNumberSuffix</a> | A letter or fraction that follows the civic number. There should be no space between a civic number and a letter (e.g., Unit 1A) and one space between a civic number and a fraction (e.g., Suite 3 1/2)
 <a name="echo">echo</a> | Include unmatched address details such as site name in results.
 <a name="endDate">endDate</a> | The ending date of a time period formatted as YYYY-MM-DD .
+<a name="extrapolate">extrapolate</a> | If true, uses supplied parcelPoint to derive an appropriate accessPoint. If extrapolate=true and no parcelPoint is provided or if extrapolate= false and a parcelPoint is provided, no extrapolation is performed and locationDescriptor is used to determine type of point to return.
 <a name="faults">faults</a> | A list of faults the geocoder found with a given address match. Each fault contains the nature of the fault, the address element affected, and the fault penalty. For a complete list of faults, see .
 <a name="frontDoorPoint">frontDoorPoint</a> | A point representing the position of the front door or main entrance to a house or building.
 <a name="fullAddress">fullAddress</a> | The cleaned, standardized address of a site in a single string as in the following:<br>RM 104, Student Union Building -- University of Victoria -- 3800 Finnerty Rd, Saanich, BC
@@ -42,6 +43,8 @@ Term | Definition
 <a name="matchPrecisionNot">matchPrecisionNot</a> | A comma-separated list of matchPrecision levels to exclude from request results. For example, &matchPrecisionNot=unit,site will exclude matches at the unit and site levels.
 <a name="maxDistance">maxDistance</a> | The maximum distance (in metres) to search from the given point.  If not specified, the maximum distance is unlimited.
 <a name="maxResults">maxResults</a> | Maximum number of matched addresses to return for each input address. The default is 1.
+<a name="minDegree">minDegree</a> | Minimum degree an intersection can have to be included in results. A dead-end has a degree of 1
+<a name="minDegree">minDegree</a> | The maximum degree an interesection can have to be included in results. A four-way stop has a degree of 4.
 <a name="minScore">minScore</a> | The minimum score an address match must have before it is included in the results. Scores range between 0 and 100 inclusive. The default is 0.
 <a name="narrativeLocation">narrativeLocation</a> | Turn-by-turn directions to the site. A narrative typically starts at the closest known, named physical feature to the site as in the following:<br>From Tlell, travel north on highway 16 till you see a big golden spruce tree on your left, hike west for about one kilometre.
 <a name="outputFormat">outputFormat</a> | Format of request results. Allowed values are xhtml, kml, csv, shpz, geojson, geojsonp, gml
