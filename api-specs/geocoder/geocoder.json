@@ -36,7 +36,6 @@
     "host": "geocoder.api.gov.bc.ca",
     "basePath": "/",
     "schemes": [
-        "http",
         "https"
     ],
     "produces": [
