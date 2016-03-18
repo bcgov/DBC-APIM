@@ -15,8 +15,8 @@
         },
         "version": "3.0.0"
     },
-    "host": "api.gov.bc.ca",
-    "basePath": "/bcdc/3",
+    "host": "catalogue.data.gov.bc.ca",
+    "basePath": "/api/3",
     "tags": [
         {
             "name": "action",
@@ -28,7 +28,6 @@
         }
     ],
     "schemes": [
-        "http",
         "https"
     ],
     "consumes": [
