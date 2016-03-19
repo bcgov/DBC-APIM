@@ -43,8 +43,8 @@ Term | Definition
 <a name="matchPrecisionNot">matchPrecisionNot</a> | A comma-separated list of matchPrecision levels to exclude from request results. For example, &matchPrecisionNot=unit,site will exclude matches at the unit and site levels.
 <a name="maxDistance">maxDistance</a> | The maximum distance (in metres) to search from the given point.  If not specified, the maximum distance is unlimited.
 <a name="maxResults">maxResults</a> | Maximum number of matched addresses to return for each input address. The default is 1.
-<a name="minDegree">minDegree</a> | Minimum degree an intersection can have to be included in results. A dead-end has a degree of 1
-<a name="minDegree">minDegree</a> | The maximum degree an interesection can have to be included in results. A four-way stop has a degree of 4.
+<a name="minDegree">minDegree</a> | Minimum degree an intersection can have to be included in results. A dead-end has a degree of 1.
+<a name="minDegree">minDegree</a> | The maximum degree an intersection can have to be included in results. A four-way stop has a degree of 4.
 <a name="minScore">minScore</a> | The minimum score an address match must have before it is included in the results. Scores range between 0 and 100 inclusive. The default is 0.
 <a name="narrativeLocation">narrativeLocation</a> | Turn-by-turn directions to the site. A narrative typically starts at the closest known, named physical feature to the site as in the following:<br>From Tlell, travel north on highway 16 till you see a big golden spruce tree on your left, hike west for about one kilometre.
 <a name="outputFormat">outputFormat</a> | Format of request results. Allowed values are xhtml, kml, csv, shpz, geojson, geojsonp, gml
@@ -68,5 +68,6 @@ Term | Definition
 <a name="streetDirection">streetDirection</a> | The abbreviated compass direction as defined by Canada Post and B.C. civic addressing authorities . The complete list is C, E, N, NE, NO, NW, O, SE, SO, SW, and W. All street directions except C are defined by Canada Post. On input, the French streetDirections NO, O, and SO are mapped to NW, W, and SW respectively.
 <a name="streetName">streetName</a> | The official name of the street recognized by a municipality (e.g., Douglas in 1175 Douglas Street). A streetName that starts with a directional is not abbreviated (e.g., North Park, not N Park)
 <a name="streetType">streetType</a> | The type of street as assigned by a municipality (e.g., the ST in 1175 DOUGLAS ST) and is abbreviated if such an abbreviation exists. On input, French streetTypes are mapped to their English counterpart (e.g., Rue => St). The set of all street types is defined by the provincial Digital Road Atlas program.
+<a name="tags">tags</a> | Example: schools;courts;employment  A list of tags separated by semicolons.
 <a name="unitNumberSuffix)">unitNumberSuffix)</a> | A letter that follows the unit number as in Unit 1A.
 <a name="unitDesignator">unitDesignator</a> | The type of unit(e.g., APT, SUITE, and UNIT) and is abbreviated if such an abbreviation is defined. The set of all unit designators MUST include those defined in the Addressing Guidelines by Canada Post and is the responsibility of DataBC to maintain this set.
