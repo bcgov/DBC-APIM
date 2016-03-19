@@ -21,9 +21,6 @@
     },
     "tags": [
         {
-            "name": "addresses"
-        },
-        {
             "name": "sites"
         },
         {
@@ -33,9 +30,10 @@
             "name": "occupants"
         }
     ],
-    "host": "geocoder.api.gov.bc.ca",
-    "basePath": "/",
+    "host": "apps.gov.bc.ca/pub",
+    "basePath": "/geocoder",
     "schemes": [
+        "http",
         "https"
     ],
     "produces": [
@@ -46,13 +44,14 @@
             "get": {
                 "description": "Represents the set of geocoded and standardized sites and intersections whose address best matches a given query address.",
                 "tags": [
-                    "addresses"
+                    "sites",
+                    "intersections"
                 ],
                 "parameters": [
                     {
                         "name": "addressString",
                         "in": "query",
-                        "description": "Examples: 525 Superior Street, Victoria, BC     301-780 Blanshard St, Victoria, BC    Johnson St and Government St, Victoria, BC                          Civic address or intersection address in Single-line Address Format or a recognized alternative format. If left empty, individual address elements must be provided (e.g., civicNumber, streetName, streetType, locality)",
+                        "description": "Examples: 525 Superior Street, Victoria, BC<br>301-780 Blanshard St, Victoria, BC<br>Johnson St and Government St, Victoria, BC.<br> Civic or intersection address as a single string. See <a href=https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#addressString>addressString</a>",
                         "type": "string",
                         "required": false
                     },
@@ -76,7 +75,7 @@
                     {
                         "name": "locationDescriptor",
                         "in": "query",
-                        "description": "Describes the nature of the address location. A value of 'any' will return a point type other than accessPoint if one is defined; otherwise, it will return an accessPoint. An accessPoint is a point that lies on the curb or road edge of the site's assigned street and in the middle of a site’s driveway or access lane. If a site has no driveway or access lane, the accessPoint will be located in the middle of the entrance walkway. A parcelPoint is a point that is known to lie within the boundaries of a land parcel that contains the site being addressed. A routingPoint is a point that lies on a road centreline and directly in front of a site's accessPoint. A frontDoorPoint is a point represents the location of the front door or main entrance to a house or building. A rooftopPoint is a point representing the location of the roof of a house or building",
+                        "description": "Describes the nature of the address location. See <a href=https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#locationDescriptor>locationDescriptor</a>",
                         "type": "string",
                         "required": true,
                         "default": "any",
@@ -100,7 +99,7 @@
                     {
                         "name": "interpolation",
                         "in": "query",
-                        "description": "In the case of a block level match, the method of interpolation to determine how far down the block the accessPoint should be. Linear interpolation uses the ratio (civicNumber - blockFaceMinCivicNumber) /    (blockFaceMaxCivicNumber - blockFaceMinCivicNumber) and the locations of the beginning and end of the block.  Adaptive interpolation uses the ratio (civicNumber - precedingKnownCivicNumber) / (followingKnownCivicNumber - precedingKnownCivicNumber) and the locations of the preceding, known civic number and the following, known civic number.",
+                        "description": "accessPoint interpolation method. See <a href=https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#locationDescriptor>locationDescriptor</a>",
                         "type": "string",
                         "required": false,
                         "default": "adaptive",
@@ -128,7 +127,7 @@
                     {
                         "name": "outputSRS",
                         "in": "query",
-                        "description": "The spatial reference system (SRS) to use for output geometries. The default value is 4326 (WGS84, latitude/longitude).  Other common options are: 4269 (NAD83, latitude/longitude), 3005 (NAD83, BC Albers), 26907 (NAD83, UTM Zone 7N), 26908 (NAD83, UTM Zone 8N), 26909 (NAD83, UTM Zone 9N), 26910 (NAD83, UTM Zone 10N), 26911 (NAD83, UTM Zone 11N)",
+                        "description": "The EPSG code of the spatial reference system (SRS) to use for output geometries. See <a href=https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#outputSRS>outputSRS</a>",
                         "type": "integer",
                         "required": true,
                         "default": 4326,
@@ -146,7 +145,7 @@
                     {
                         "name": "minScore",
                         "in": "query",
-                        "description": "The minimum score required for a match to be returned. Scores are in the range of [0-100], where 100 represents the best possible match.",
+                        "description": "The minimum score required for a match to be returned. See <a href=https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#minScore>minScore</a>",
                         "type": "integer",
                         "required": false,
                         "default": 1
@@ -154,28 +153,28 @@
                     {
                         "name": "matchPrecision",
                         "in": "query",
-                        "description": "Example: street,locality.  A comma separated list of individual match precision levels. A site whose address matches at one of the allowed levels is included in the match results. In low to high precision order, match precision levels are: province, locality, intersection, street, block, civicNumber, site, unit",
+                        "description": "Example: street,locality.  A comma separated list of individual match precision levels to include in results. See <a href=https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#matchPrecision>matchPrecision</a>",
                         "type": "string",
                         "required": false
                     },
                     {
                         "name": "matchPrecisionNot",
                         "in": "query",
-                        "description": "Example: street,locality.  A comma separated list of individual match precision levels. A site whose address matches at one of the allowed levels is excluded from the match results. In low to high precision order, match precision levels are: province, locality, intersection, street, block, civicNumber, site, unit",
+                        "description": "Example: street,locality.  A comma separated list of individual match precision levels to exclude from results. See <a href=https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#matchPrecisionNot>matchPrecisionNot</a>",
                         "type": "string",
                         "required": false
                     },
                     {
                         "name": "siteName",
                         "in": "query",
-                        "description": "A string containing the name of the building, facility, or institution (e.g., Duck Building, Casa Del Mar, Crystal Garden, Bluebird House). A business name should only be used if it is permanently affixed to the site and the site has no other, more generic name. If a site is a unit within a complex, it may have a sitename in addition to a unitNumber and unitSuffix. siteName may be empty.",
+                        "description": "A string containing the name of the building, facility, or institution (e.g., Duck Building, Casa Del Mar, Crystal Garden, Bluebird House).See <a href=https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#siteName>siteName</a>",
                         "type": "string",
                         "required": false
                     },
                     {
                         "name": "unitDesignator",
                         "in": "query",
-                        "description": "The type of unit within a house or building. The geocoder will try to match variations of these values on input (e.g., UPR) and output the standardized value (e.g., UPPR)",
+                        "description": "The type of unit within a house or building. See <a href=https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#unitDesignator>unitDesignator</a>",
                         "type": "string",
                         "required": false,
                         "enum": [
@@ -214,35 +213,35 @@
                     {
                         "name": "civicNumber",
                         "in": "query",
-                        "description": "The official number assigned to a site by an address authority such as a municipality, regional district, First Nations government, or the Department of National Defence.",
+                        "description": "The official number assigned to a site by an address authority. See <a href=https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#civicNumber>civicNumber</a>",
                         "type": "string",
                         "required": false
                     },
                     {
                         "name": "civicNumberSuffix",
                         "in": "query",
-                        "description": "A letter or fraction that follows the civic number. There should be no space between a civic number and a letter (e.g., Unit 1A) and one space between a civic number and a fraction (e.g., Suite 3 1/2)",
+                        "description": "A letter or fraction that follows the civic number (e.g., the A in 1039A Bledsoe St). See <a href=https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#civicNumberSuffix>civicNumberSuffix</a>",
                         "type": "string",
                         "required": false
                     },
                     {
                         "name": "streetName",
                         "in": "query",
-                        "description": "The official name of the street as assigned by an address authority (e.g., the Douglas in 1175 Douglas Street). A streetName that starts with a directional is not abbreviated (e.g., North Park, not N Park).",
+                        "description": "The official name of the street as assigned by an address authority (e.g., the Douglas in 1175 Douglas Street). See <a href=https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#streetName>streetName</a>",
                         "type": "string",
                         "required": false
                     },
                     {
                         "name": "streetType",
                         "in": "query",
-                        "description": "The type of street as assigned by a municipality (e.g., the ST in 1175 DOUGLAS ST) and is abbreviated if such an abbreviation exists. The set of all street types is defined by the provincial Integrated Transportation Network program.",
+                        "description": "The type of street as assigned by a municipality (e.g., the ST in 1175 DOUGLAS St). See <a href=https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#streetType>streetType</a>",
                         "type": "string",
                         "required": false
                     },
                     {
                         "name": "streetDirection",
                         "in": "query",
-                        "description": "The abbreviated compass direction as defined by Canada Post and B.C. civic addressing authorities.",
+                        "description": "The abbreviated compass direction as defined by Canada Post and B.C. civic addressing authorities. See <a href=https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#streetDirection>streetDirection</a>",
                         "type": "string",
                         "required": false,
                         "enum": [
@@ -264,18 +263,12 @@
                         "in": "query",
                         "description": "The qualifier of a street name (e.g., the Bridge in Johnson St Bridge)",
                         "type": "string",
-                        "required": false,
-                        "enum": [
-                            "Onramp",
-                            "Offramp",
-                            "Bridge",
-                            "Frontage"
-                        ]
+                        "required": false
                     },
                     {
                         "name": "localityName",
                         "in": "query",
-                        "description": "The name of the municipality, community, Indian Reservation, subdivision, regional district, aboriginal land, or natural feature the site is located in. Since this is a physical address geocoder, not a mailing address geocoder, the locality of a civic address is that defined by the address authority, not Canada Post. For example, an address in the Municipality of Esquimalt has a localityName of Esquimalt not Victoria which is the name of the postal community A locality name that starts with a directional should not be abbreviated (e.g., North Vancouver, not N Vancouver). Spelling of localities that are place names or natural feature names MUST match that published by the BC Geographical Names Information System.",
+                        "description": "The name of the locality assigned to a given site by an address authority. See <a href=https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#streetDirection>streetDirection</a>",
                         "type": "string",
                         "required": false
                     },
@@ -304,21 +297,21 @@
                     {
                         "name": "bbox",
                         "in": "query",
-                        "description": "Example: -126.0792945083648,49.76287332290923,-126.0163386310997,49.79077056256354 .  A bounding box (xmin,ymin,xmax,ymax) that limits the search area.  The coordinates must be specified in the same SRS as given by the 'outputSRS' parameter.",
+                        "description": "Example: -126.0792945083648,49.76287332290923,-126.0163386310997,49.79077056256354 .  A bounding box (xmin,ymin,xmax,ymax) that limits the search area. See <a href=https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#bbox>bbox</a>",
                         "type": "string",
                         "required": false
                     },
                     {
                         "name": "centre",
                         "in": "query",
-                        "description": "Example: -124.0165926,49.2296251 .  The coordinates of a centre point (x,y) used to define a bounding circle that will limit the search area. The coordinates must be specified in the same SRS as given by the 'outputSRS' parameter. This parameter must be specified together with 'maxDistance'.",
+                        "description": "Example: -124.0165926,49.2296251 .  The coordinates of a centre point (x,y) used to define a bounding circle that will limit the search area. This parameter must be specified together with 'maxDistance'. See <a href=https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#centre>centre</a>",
                         "type": "string",
                         "required": false
                     },
                     {
                         "name": "maxDistance",
                         "in": "query",
-                        "description": "The maximum distance (metres) from the centre point that will define a bounding area to limit the search. The coordinates must be specified in the same SRS as given by the 'outputSRS' parameter. This parameter must be specified together with 'centre'.",
+                        "description": "The maximum distance (in metres) to search from the given point.  If not specified, the search distance is unlimited.",
                         "type": "number",
                         "required": false
                     },
@@ -878,7 +871,7 @@
                     {
                         "name": "minDegree",
                         "in": "query",
-                        "description": "The minimum degree. A dead-end has a degree of 1.",
+                        "description": "The minimum degree an intersection can have to be included in results. A dead-end has a degree of 1.",
                         "type": "integer",
                         "required": true,
                         "default": 2
@@ -886,7 +879,7 @@
                     {
                         "name": "maxDegree",
                         "in": "query",
-                        "description": "The maximum degree. A four-way stop has a degree of 4.",
+                        "description": "The maximum degree an interesection can have to be included in results. A four-way stop has a degree of 4.",
                         "type": "integer",
                         "required": true,
                         "default": 100
@@ -926,10 +919,9 @@
                     {
                         "name": "point",
                         "in": "query",
-                        "description": "The point (x,y) from which the nearby sites will be identified. The coordinates must be specified in the same SRS as given by the 'outputSRS' parameter.",
+                        "description": "Example: -122.377,50.121  The point (x,y) from which the nearby sites will be identified. The coordinates must be specified in the same SRS as given by the 'outputSRS' parameter.",
                         "type": "string",
-                        "required": true,
-                        "default": "-122.377,50.121"
+                        "required": true
                     },
                     {
                         "name": "maxDistance",
