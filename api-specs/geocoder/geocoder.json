@@ -1218,10 +1218,9 @@
                     {
                         "name": "bbox",
                         "in": "query",
-                        "description": "A bounding box (xmin,ymin,xmax,ymax) used to limit the search area.  The coordinates must be specified in the same SRS as given by the 'outputSRS' parameter.",
+                        "description": "Example: -119.51,49.48,-119.53,49.50. A bounding box (xmin,ymin,xmax,ymax) used to limit the search area. See <a href=https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#bbox>bbox</a>",
                         "type": "string",
-                        "required": true,
-                        "default": "-122.89,49.30,-122.91,49.36"
+                        "required": true
                     },
                     {
                         "name": "outputSRS",
@@ -1308,10 +1307,9 @@
                     {
                         "name": "bbox",
                         "in": "query",
-                        "description": "A bounding box (xmin,ymin,xmax,ymax) used to limit the search area.  The coordinates must be specified in the same SRS as given by the 'outputSRS' parameter.",
+                        "description": "Example: -119.51,49.48,-119.53,49.50. A bounding box (xmin,ymin,xmax,ymax) used to limit the search area. See <a href=https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#bbox>bbox</a>",
                         "type": "string",
-                        "required": true,
-                        "default": "-122.89,49.30,-122.91,49.36"
+                        "required": true
                     },
                     {
                         "name": "tags",
