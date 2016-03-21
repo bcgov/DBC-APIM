@@ -768,6 +768,13 @@
                         "required": false
                     },
                     {
+                        "name": "tags",
+                        "in": "query",
+                        "description": "Example: schools;courts;employment<br>A list of tags separated by semicolons.",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
                         "name": "outputSRS",
                         "in": "query",
                         "description": "The EPSG code of the spatial reference system (SRS) to use for output geometries. See <a href=https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#outputSRS>outputSRS</a>",
@@ -1021,6 +1028,13 @@
                         "name": "point",
                         "in": "query",
                         "description": "Example: -122.377,50.121  The point (x,y) from which the nearest site will be identified. The coordinates must be specified in the same SRS as given by the 'outputSRS' parameter.",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "tags",
+                        "in": "query",
+                        "description": "Example: schools;courts;employment<br>A list of tags separated by semicolons.",
                         "type": "string",
                         "required": true
                     },
@@ -1300,11 +1314,18 @@
                         "default": "-122.89,49.30,-122.91,49.36"
                     },
                     {
+                        "name": "tags",
+                        "in": "query",
+                        "description": "Example: schools;courts;employment<br>A list of tags separated by semicolons.",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
                         "name": "outputSRS",
                         "in": "query",
                         "description": "The EPSG code of the spatial reference system (SRS) to use for output geometries. See <a href=https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#outputSRS>outputSRS</a>",
                         "type": "integer",
-                        "required": true,
+                        "required": false,
                         "default": 4326,
                         "enum": [
                             4326,
@@ -1330,7 +1351,7 @@
                         "in": "query",
                         "description": "Describes the nature of the address location. See <a href=https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#locationDescriptor>locationDescriptor</a>",
                         "type": "string",
-                        "required": true,
+                        "required": false,
                         "default": "any",
                         "enum": [
                             "any",
