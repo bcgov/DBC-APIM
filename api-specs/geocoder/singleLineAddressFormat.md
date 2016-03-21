@@ -20,7 +20,8 @@ In each format, a term in square brackets is optional, a term in square brackets
 
 
 ##Examples
-Here is an example of a civic address:
+
+###Example 1 - Civic Address
 
 420A GORGE RD E, VICTORIA, BC
 
@@ -37,47 +38,41 @@ localityName |	VICTORIA
 provinceCode |	BC
 
 
-Here is an example of a civic address with a unit:
+###Example 2 - Civic address with unit
 
 UNIT 1A -- 433 CEDAR RAPIDS BLVD, PEMBERTON, BC 
 
 which contains the following address elements:
 
-Address Element	Value
-unitDesignator	UNIT
-unitNumber	1
-unitNumberSuffix	A
-civicNumber	433
-streetName	CEDAR RAPIDS
-streetType	BLVD
-localityName	PEMBERTON
-provinceCode	BC
+Address Element |	Value
+----: | -----------
+unitDesignator |	UNIT
+unitNumber |	1
+unitNumberSuffix |	A
+civicNumber |	433
+streetName |	CEDAR RAPIDS
+streetType |	BLVD
+localityName |	PEMBERTON
+provinceCode |	BC
 
-
-Here is an example of a non-civic address with a street qualifier:
+Example #3 - Non-civic address with a street qualifier:
 
 JOHNSON ST BRIDGE, VICTORIA, BC 
 
 which contains the following address elements:
 
-Address Element	Value
-streetName	JOHNSON
-streetType	ST
-streetQualifier	BRIDGE
-localityName	VICTORIA
-provinceCode	BC
+Address Element |	Value
+----: | -----------
+streetName |	JOHNSON
+streetType |	ST
+streetQualifier |	BRIDGE
+localityName |	VICTORIA
+provinceCode |	BC
 
-
-Here are some more examples: 
-
-1.	Civic addresses without a unit: 
+Example #4 - Civic addresses without a unit
 
 1025 HAPPY VALLEY RD, METCHOSIN, BC 
 130A HILL ST, NELSON, BC 
-
-2.	A civic address with a unit: 
-
-PAD 2 -- 1200 NORTH PARK RD, SHAWNIGAN LAKE, BC 
 
 3.	Civic addresses with occupants: 
 
