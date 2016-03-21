@@ -3,10 +3,10 @@ Name | Definition
 -------: | ---------------
 <a name="CIVIC_NUMBER_missing">Civic Number Missing</a> | A given address didn't contain a civic number but one was found.
 <a name="CIVIC_NUMBER_notInAnyBlock">Civic Number Not In Any Block</a> | A given civic number is not in any known address range for a given street in a given locality. The street within the given locality is returned with a match precision of STREET. 
-<a name="CIVIC_NUMBER_SUFFIX_notMatched">Civic Number Suffix Not Matched | A given civic number suffix for a given civic number and street was not found in a given locality.
-Locality Is Alias	| A given civic number and street were found in an alias of the given locality but not the locality itself.
-Locality Missing | A given address didn’t contain a locality name but one was found that contains the given civic number and street.
-Locality Not Matched | A given locality does not contain a given civic number and street but another locality was found that does.
+<a name="CIVIC_NUMBER_SUFFIX_notMatched">Civic Number Suffix Not Matched</a> | A given civic number suffix for a given civic number and street was not found in a given locality.
+<a name="LOCALITY_isAlias">Locality Is Alias</a>	| A given civic number and street were found in an alias of the given locality but not the locality itself.
+<a name="LOCALITY_missing">Locality Missing</a> | A given address didn’t contain a locality name but one was found that contains the given civic number and street.
+<a name="LOCALITY_notMatched">Locality Not Matched</a> | A given locality does not contain a given civic number and street but another locality was found that does.
 Locality Spelled Wrong | A given locality was spelled wrong but was successfully corrected to match a known locality. 
 Postal Address Element Not Allowed | An element of a mailing address was detected (e.g., PO, BOX nn, SS, RR nn, a postal code. All such elements are ignored.
 Province Missing | A given address didn't contain a province code (e.g., BC)
