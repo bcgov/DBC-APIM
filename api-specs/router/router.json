@@ -5,8 +5,8 @@
         "description": "Finds shortest/fastest route between two points on British Columbia's public road network. Here are some geocoded addresses to play with: \n 18 Douglas St,Victoria -123.369628,48.408923 \n  1002 Johnson St, Victoria -123.355745,48.426206 \n 543 Johnson St, Victoria, BC -123.369077,48.42770 \n 14 Centennial Sq, Victoria, BC -123.365645,48.428632 \n 1105 Royal Ave,New Westminster  -122.920091,49.200637 \n 808 Jackson Cres, New Westminster -122.907620,49.225588 \n 10810 McDonald Rd, Chilliwack -121.938087,49.198594 \n 3950 June Springs Rd, Kelowna -119.407515,49.839604 \n 1201 Riondel Rd, Kootenay Bay -116.854024,49.744483 \n 1201 Riondel Rd, Kootenay Bay -116.832759,49.730500 (parcelPoint) \n 2499 Walbran Pl, Courtenay -124.972951,49.715181 \n 2013 Smoke Bluff Rd, Squamish   -123.139464,49.704015 \n 235 Kelvin Grove Way, Lions Bay -123.235246,49.450354",
         "version": "1.1.0",
         "license": {
-            "name": "Open Government License - British Columbia",
-            "url": "http://www.data.gov.bc.ca/local/dbc/docs/license/OGL-vbc2.0.pdf"
+            "name": "Copyright 2016 Province of British Columbia - Access only",
+            "url": "http://www2.gov.bc.ca/gov/content/home/copyright"
         },
         "termsOfService": "http://www.data.gov.bc.ca/local/dbc/docs/license/API_Terms_of_Use.pdf",
         "contact": {
@@ -42,8 +42,8 @@
             "name": "fastest route"
         }
     ],
-    "host": "api-router.api.gov.bc.ca",
-    "basePath": "",
+    "host": "router.api.gov.bc.ca",
+    "basePath": "/",
     "schemes": [
         "https"
     ],
@@ -67,7 +67,7 @@
     "paths": {
         "/distance.{outputFormat}": {
             "get": {
-                "description": "Computes the length of the shortest path between given start and end points.",
+                "description": "Represents the distance and time of the shortest or fastest path between given start and end points.",
                 "tags": [
                     "distance"
                 ],
@@ -145,14 +145,14 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "Distance of shortest or fastest route"
+                        "description": "Distance and time of the shortest or fastest route"
                     }
                 }
             }
         },
         "/route.{outputFormat}": {
             "get": {
-                "description": "Computes the shortest path between given start and end points and returns route geometry and total length",
+                "description": "Represents the geometry, distance, and time of the shortest or fastest path between given start and end points.",
                 "tags": [
                     "route"
                 ],
@@ -230,14 +230,14 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "Geometry and distance of shortest route in metres"
+                        "description": "Geometry, distance, and time of the shortest or fastest route"
                     }
                 }
             }
         },
         "/directions.{outputFormat}": {
             "get": {
-                "description": "Computes the shortest path between given start and end points and returns turns by turn directions, route geometry, and total length",
+                "description": "Represents the turn-by-turn directions, geometry, distance, and time of the shortest path or fastest path between given start and end points",
                 "tags": [
                     "directions"
                 ],
@@ -315,7 +315,7 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "Geometry, turn by turn directions, and distance of shortest or fastest route"
+                        "description": "turn-by-turn directions, geometry, distance, and time of the shortest or fastest route"
                     }
                 }
             }
