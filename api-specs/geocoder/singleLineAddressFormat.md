@@ -27,14 +27,15 @@ Here is an example of a civic address:
 
 which contains the following address elements:
 
-Address Element	Value
-civicNumber	420
-civicNumberSuffix	A
-streetName	GORGE
-streetType	RD
-streetDirection	E
-localityName	VICTORIA
-provinceCode	BC
+Address Element |	Value
+----: | -----------
+civicNumber |	420
+civicNumberSuffix |	A
+streetName |	GORGE
+streetType |	RD
+streetDirection |	E
+localityName |	VICTORIA
+provinceCode |	BC
 
 
 Here is an example of a civic address with a unit:
