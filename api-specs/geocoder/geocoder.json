@@ -31,7 +31,7 @@
         }
     ],
     "host": "apps.gov.bc.ca",
-    "basePath": "/geocoder",
+    "basePath": "pub//geocoder",
     "schemes": [
         "http",
         "https"
