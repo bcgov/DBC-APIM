@@ -4,23 +4,24 @@ An address may be represented by a single line (string) in one of the formats li
 
 In each format, a term in square brackets is optional, a term in square brackets followed by an asterisk means the term may appear zero or more times, and a term in square brackets followed by a plus sign means the term may appear one or more times.  A term in brace brackets (e.g., {streetDirection}) may appear in none or one of the multiple places indicated (e.g., Central St, N Central St, or Central St N, but not N Central St NE)
 
-Format 1 – Civic address
+##Format 1 – Civic address
 
 {occupantName[,]}[[unitDesignator unitNumber[unitNumberSuffix]] [siteName],]* frontGate civicNumber[civicNumberSuffix] {streetDirection} {streetType} streetName {streetType} {streetDirection} [streetQualifier], localityName, provinceCode
 
 
-Format 2 – Non-civic address
+##Format 2 – Non-civic address
 
 {occupantName[,]}[[unitDesignator unitNumber[unitNumberSuffix]] [siteName],]* frontGate [{streetDirection} {streetType} streetName {streetType} {streetDirection} [streetQualifier],] localityName, provinceCode
 
 
-Format 3 – Intersection address
+##Format 3 – Intersection address
 
 {streetDirection} {streetType} streetName {streetType} {streetDirection} [streetQualifier] [ and {streetDirection} {streetType} streetName {streetType} {streetDirection} [streetQualifier] ]+ , localityName, provinceCode
 
 
 frontGate is the double dash delimiter (e.g., “--“) 
 
+##Examples
 Here is an example of a civic address:
 
 420A GORGE RD E, VICTORIA, BC
