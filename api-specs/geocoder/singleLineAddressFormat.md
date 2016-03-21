@@ -55,7 +55,7 @@ streetType |	BLVD
 localityName |	PEMBERTON
 provinceCode |	BC
 
-Example #3 - Non-civic address with a street qualifier:
+###Example 3 - Non-civic address with a street qualifier:
 
 JOHNSON ST BRIDGE, VICTORIA, BC 
 
@@ -69,47 +69,41 @@ streetQualifier |	BRIDGE
 localityName |	VICTORIA
 provinceCode |	BC
 
-Example #4 - Civic addresses without a unit
+###Example 4 - Civic address with an occupant
 
-1025 HAPPY VALLEY RD, METCHOSIN, BC 
-130A HILL ST, NELSON, BC 
+UVIC Main Campus -- 3800 Finnerty Rd, Saanich, BC
 
-3.	Civic addresses with occupants: 
-
-PORT ALICE HEALTH CENTRE -- 1090 MARINE DRIVE, PORT ALICE, BC 
-ROYAL ATHLETIC PARK -- 1014 CALEDONIA AVE, VICTORIA, BC 
-
-4.	Civic addresses with a unit within a named complex: 
+###Example 5.	Civic addresses with a unit within a named complex 
 
 PAD 2, HAPPY MOBILE HOME PARK -- 1200 NORTH PARK RD, SHAWNIGAN LAKE, BC 
 ROOM 103A, CLEARIHUE BUILDING, UNIVERSITY OF VICTORIA -- 3800 FINNERTY RD, VICTORIA, BC 
 ROOM 230, WEST BLOCK, ROYAL JUBILEE HOSPITAL -- 1952 BAY ST, VICTORIA, BC 
 
-5.	Non-civic addresses with a unit within a named complex: 
+###Example 6.	Non-civic addresses with a unit within a named complex 
 
 PAD 2, HAPPY MOBILE HOME PARK -- NIMPO LAKE, BC 
 PAD 2, HAPPY MOBILE HOME PARK -- REMOTE RD, NIMPO LAKE, BC 
 
 
-6.	Non-civic address containing a street, locality, and  province: 
+### Example 7.	Non-civic addresses containing a street, locality, and  province 
 
 WILLOW DRIVE, 70 MILE HOUSE, BC 
 HORSE LAKE ROAD, 100 MILE HOUSE, BC
 JOHNSON ST BRIDGE, VICTORIA, BC 
 
-7.	Non-civic addresses containing only  locality and province: 
+###Example 8.	Non-civic addresses containing only locality and province 
 
 PEACE RIVER REGIONAL DISTRICT, BC 
 100 MILE HOUSE, BC 
 PYPER LAKE, BC 
 
-8.	Intersection addresses: 
+###Example 9.	Intersection addresses 
 
 Douglas St and Johnson St, Victoria, BC
 Douglas St and Gorge Rd E and Hillside Ave, Victoria, BC
 
  
-Alternative Address Formats
+#Alternative Address Formats
 On input, the GET geocoder/addresses request can also handle the following alternatives to single-line address format:
 
 1.	Unit without a frontGate:
@@ -120,4 +114,3 @@ PAD 2, 1200 NORTH PARK RD, SHAWNIGAN LAKE, BC
 
 3.	Unit following street (as per Canada Post):
 1200 NORTH PARK RD PAD 2, SHAWNIGAN LAKE, BC 
-
