@@ -2,7 +2,7 @@
 
 An address may be represented by a single line (string) in one of the formats listed below. 
 
-In each format, a term in square brackets is optional, a term in square brackets followed by an asterisk means the term may appear zero or more times, and a term in square brackets followed by a plus sign means the term may appear one or more times.  A term in brace brackets (e.g., {streetDirection}) may appear in none or one of the multiple places indicated (e.g., Central St, N Central St, or Central St N, but not N Central St NE)
+In each format, a term in square brackets is optional, a term in square brackets followed by an asterisk means the term may appear zero or more times, and a term in square brackets followed by a plus sign means the term may appear one or more times.  A term in brace brackets (e.g., {streetDirection}) may appear in none or one of the multiple places indicated (e.g., Central St, N Central St, or Central St N, but not N Central St NE). frontGate is the double dash delimiter (e.g., “--“) 
 
 ##Format 1 – Civic address
 
@@ -18,8 +18,6 @@ In each format, a term in square brackets is optional, a term in square brackets
 
 {streetDirection} {streetType} streetName {streetType} {streetDirection} [streetQualifier] [ and {streetDirection} {streetType} streetName {streetType} {streetDirection} [streetQualifier] ]+ , localityName, provinceCode
 
-
-frontGate is the double dash delimiter (e.g., “--“) 
 
 ##Examples
 Here is an example of a civic address:
