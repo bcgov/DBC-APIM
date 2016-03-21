@@ -77,7 +77,7 @@
                         "in": "query",
                         "description": "Describes the nature of the address location. See <a href=https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#locationDescriptor>locationDescriptor</a>",
                         "type": "string",
-                        "required": true,
+                        "required": false,
                         "default": "any",
                         "enum": [
                             "any",
@@ -114,6 +114,7 @@
                         "in": "query",
                         "description": "If true, include unmatched address details such as site name in results.",
                         "type": "boolean",
+                        "required": false,
                         "default": true
                     },
                     {
@@ -129,7 +130,7 @@
                         "in": "query",
                         "description": "The EPSG code of the spatial reference system (SRS) to use for output geometries. See <a href=https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#outputSRS>outputSRS</a>",
                         "type": "integer",
-                        "required": true,
+                        "required": false,
                         "default": 4326,
                         "enum": [
                             4326,
@@ -366,7 +367,7 @@
                         "in": "query",
                         "description": "Examples: Redfish Elementary --<br>Redfish Elementary -- Balfour<br>Redfish Elementary School -- 265 Bryan Rd, Balfour, BC<br>Occupant name followed by a frontGate delimiter ('--') followed by an optional address",
                         "type": "string",
-                        "required": true
+                        "required": false
                     },
                     {
                         "name": "tags",
@@ -380,7 +381,7 @@
                         "in": "query",
                         "description": "Describes the nature of the address location. See <a href=https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#locationDescriptor>locationDescriptor</a>",
                         "type": "string",
-                        "required": true,
+                        "required": false,
                         "default": "any",
                         "enum": [
                             "any",
@@ -417,7 +418,7 @@
                         "in": "query",
                         "description": "If true, include unmatched address details such as site name in results.",
                         "type": "boolean",
-                        "default": true
+                        "default": false
                     },
                     {
                         "name": "setBack",
@@ -432,7 +433,7 @@
                         "in": "query",
                         "description": "The EPSG code of the spatial reference system (SRS) to use for output geometries. See <a href=https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#outputSRS>outputSRS</a>",
                         "type": "integer",
-                        "required": true,
+                        "required": false,
                         "default": 4326,
                         "enum": [
                             4326,
@@ -683,7 +684,7 @@
                         "in": "query",
                         "description": "The EPSG code of the spatial reference system (SRS) to use for output geometries. See <a href=https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#outputSRS>outputSRS</a>",
                         "type": "integer",
-                        "required": true,
+                        "required": false,
                         "default": 4326,
                         "enum": [
                             4326,
@@ -701,7 +702,7 @@
                         "in": "query",
                         "description": "Describes the nature of the address location. See <a href=https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#locationDescriptor>locationDescriptor</a>",
                         "type": "string",
-                        "required": true,
+                        "required": false,
                         "default": "any",
                         "enum": [
                             "any",
@@ -771,7 +772,7 @@
                         "in": "query",
                         "description": "The EPSG code of the spatial reference system (SRS) to use for output geometries. See <a href=https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#outputSRS>outputSRS</a>",
                         "type": "integer",
-                        "required": true,
+                        "required": false,
                         "default": 4326,
                         "enum": [
                             4326,
@@ -789,7 +790,7 @@
                         "in": "query",
                         "description": "Describes the nature of the address location. See <a href=https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#locationDescriptor>locationDescriptor</a>",
                         "type": "string",
-                        "required": true,
+                        "required": false,
                         "default": "any",
                         "enum": [
                             "any",
@@ -859,7 +860,7 @@
                         "in": "query",
                         "description": "The EPSG code of the spatial reference system (SRS) to use for output geometries. See <a href=https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#outputSRS>outputSRS</a>",
                         "type": "integer",
-                        "required": true,
+                        "required": false,
                         "default": 4326,
                         "enum": [
                             4326,
@@ -877,7 +878,7 @@
                         "in": "query",
                         "description": "The minimum degree an intersection can have to be included in results. A dead-end has a degree of 1.",
                         "type": "integer",
-                        "required": true,
+                        "required": false,
                         "default": 2
                     },
                     {
@@ -885,7 +886,7 @@
                         "in": "query",
                         "description": "The maximum degree an interesection can have to be included in results. A four-way stop has a degree of 4.",
                         "type": "integer",
-                        "required": true,
+                        "required": false,
                         "default": 100
                     }
                 ],
@@ -939,7 +940,7 @@
                         "in": "query",
                         "description": "The EPSG code of the spatial reference system (SRS) to use for output geometries. See <a href=https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#outputSRS>outputSRS</a>",
                         "type": "integer",
-                        "required": true,
+                        "required": false,
                         "default": 4326,
                         "enum": [
                             4326,
@@ -965,7 +966,7 @@
                         "in": "query",
                         "description": "Describes the nature of the address location. See <a href=https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#locationDescriptor>locationDescriptor</a>",
                         "type": "string",
-                        "required": true,
+                        "required": false,
                         "default": "any",
                         "enum": [
                             "any",
@@ -1035,7 +1036,7 @@
                         "in": "query",
                         "description": "The EPSG code of the spatial reference system (SRS) to use for output geometries. See <a href=https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#outputSRS>outputSRS</a>",
                         "type": "integer",
-                        "required": true,
+                        "required": false,
                         "default": 4326,
                         "enum": [
                             4326,
@@ -1061,7 +1062,7 @@
                         "in": "query",
                         "description": "Describes the nature of the address location. See <a href=https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#locationDescriptor>locationDescriptor</a>",
                         "type": "string",
-                        "required": true,
+                        "required": false,
                         "default": "any",
                         "enum": [
                             "any",
@@ -1157,7 +1158,7 @@
                         "in": "query",
                         "description": "The minimum degree an intersection can have to be included in results. A dead-end has a degree of 1.",
                         "type": "integer",
-                        "required": true,
+                        "required": false,
                         "default": 2
                     },
                     {
@@ -1165,13 +1166,13 @@
                         "in": "query",
                         "description": "The maximum degree an interesection can have to be included in results. A four-way stop has a degree of 4.",
                         "type": "integer",
-                        "required": true,
+                        "required": false,
                         "default": 100
                     }
                 ],
                 "responses": {
                     "200": {
-                        "description": "A list of selected intersections near a the given point"
+                        "description": "A list of selected intersections near a given point"
                     }
                 }
             }
@@ -1213,7 +1214,7 @@
                         "in": "query",
                         "description": "The EPSG code of the spatial reference system (SRS) to use for output geometries. See <a href=https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#outputSRS>outputSRS</a>",
                         "type": "integer",
-                        "required": true,
+                        "required": false,
                         "default": 4326,
                         "enum": [
                             4326,
@@ -1239,7 +1240,7 @@
                         "in": "query",
                         "description": "Describes the nature of the address location. See <a href=https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#locationDescriptor>locationDescriptor</a>",
                         "type": "string",
-                        "required": true,
+                        "required": false,
                         "default": "any",
                         "enum": [
                             "any",
@@ -1261,7 +1262,7 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "A list of selected sites within the given area"
+                        "description": "A list of selected sites within a given area"
                     }
                 }
             }
@@ -1383,17 +1384,16 @@
                     {
                         "name": "bbox",
                         "in": "query",
-                        "description": "A bounding box (xmin,ymin,xmax,ymax) used to limit the search area.  The coordinates must be specified in the same SRS as given by the 'outputSRS' parameter.",
+                        "description": "Example: -119.51,49.48,-119.53,49.50. A bounding box (xmin,ymin,xmax,ymax) used to limit the search area. See <a href=https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#bbox>bbox</a>",
                         "type": "string",
-                        "required": true,
-                        "default": "-119.51,49.48,-119.53,49.50"
+                        "required": true
                     },
                     {
                         "name": "outputSRS",
                         "in": "query",
                         "description": "The EPSG code of the spatial reference system (SRS) to use for output geometries. See <a href=https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#outputSRS>outputSRS</a>",
                         "type": "integer",
-                        "required": true,
+                        "required": false,
                         "default": 4326,
                         "enum": [
                             4326,
@@ -1419,7 +1419,7 @@
                         "in": "query",
                         "description": "The minimum degree an intersection can have to be included in results. A dead-end has a degree of 1.",
                         "type": "integer",
-                        "required": true,
+                        "required": false,
                         "default": 2
                     },
                     {
@@ -1427,7 +1427,7 @@
                         "in": "query",
                         "description": "The maximum degree an interesection can have to be included in results. A four-way stop has a degree of 4.",
                         "type": "integer",
-                        "required": true,
+                        "required": false,
                         "default": 100
                     }
                 ],
@@ -1474,7 +1474,7 @@
                         "in": "query",
                         "description": "The EPSG code of the spatial reference system (SRS) to use for output geometries. See <a href=https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#outputSRS>outputSRS</a>",
                         "type": "integer",
-                        "required": true,
+                        "required": false,
                         "default": 4326,
                         "enum": [
                             4326,
@@ -1492,7 +1492,7 @@
                         "in": "query",
                         "description": "Describes the nature of the address location. See <a href=https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#locationDescriptor>locationDescriptor</a>",
                         "type": "string",
-                        "required": true,
+                        "required": false,
                         "default": "any",
                         "enum": [
                             "any",
@@ -1555,7 +1555,7 @@
                         "in": "query",
                         "description": "The EPSG code of the spatial reference system (SRS) to use for output geometries. See <a href=https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#outputSRS>outputSRS</a>",
                         "type": "integer",
-                        "required": true,
+                        "required": false,
                         "default": 4326,
                         "enum": [
                             4326,
@@ -1573,7 +1573,7 @@
                         "in": "query",
                         "description": "Describes the nature of the address location. See <a href=https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#locationDescriptor>locationDescriptor</a>",
                         "type": "string",
-                        "required": true,
+                        "required": false,
                         "default": "any",
                         "enum": [
                             "any",
@@ -1636,7 +1636,7 @@
                         "in": "query",
                         "description": "The EPSG code of the spatial reference system (SRS) to use for output geometries. See <a href=https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#outputSRS>outputSRS</a>",
                         "type": "integer",
-                        "required": true,
+                        "required": false,
                         "default": 4326,
                         "enum": [
                             4326,
