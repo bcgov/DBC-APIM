@@ -1124,8 +1124,7 @@
                         "in": "query",
                         "description": "The maximum distance (in metres) to search from the given point.  If not specified, the search distance is unlimited.",
                         "type": "integer",
-                        "required": false,
-                        "default": 10
+                        "required": false
                     },
                     {
                         "name": "outputSRS",
