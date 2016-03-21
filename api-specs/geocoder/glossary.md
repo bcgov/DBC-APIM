@@ -1,5 +1,4 @@
 #Glossary of Terms
-
 Term | Definition
 ----: | -----------
 <a name="accessNotes">accessNotes</a> | Contains additional information that is helpful in determining the access location and any restrictions on mode of access (e.g., boat only, floatplane only).
