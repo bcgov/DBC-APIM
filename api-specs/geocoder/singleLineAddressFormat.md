@@ -104,7 +104,7 @@ Douglas St and Gorge Rd E and Hillside Ave, Victoria, BC
 
  
 #Alternative Address Formats
-On input, the GET geocoder/addresses request can also handle the following alternatives to single-line address format:
+On input, the addresses and occupant/addresses resources can also handle the following alternatives to single-line address format:
 
 1.	Unit without a frontGate:
 PAD 2, 1200 NORTH PARK RD, SHAWNIGAN LAKE, BC 
