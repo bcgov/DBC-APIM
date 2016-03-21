@@ -1,7 +1,7 @@
 #Geocoder Faults
 Name | Definition
 -------: | ---------------
-Civic Number Missing | A given address didn't contain a civic number but one was found.
+<a name="civicNumberMissing">civicNumberMissing</a> | A given address didn't contain a civic number but one was found.
 Civic Number Not In Any Block | A given civic number is not in any known address range for a given street in a given locality. The street within the given locality is returned with a match precision of STREET. 
 Civic Number Suffix Not Matched | A given civic number suffix for a given civic number and street was not found in a given locality.
 Locality Is Alias	| A given civic number and street were found in an alias of the given locality but not the locality itself.
