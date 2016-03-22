@@ -21,15 +21,15 @@ Name | Definition
 <a name="STREET_DIRECTION.spelledWrong">Street Direction Spelled Wrong</a> | A given street direction was spelled wrong. A match with a correctly spelled street direction is returned.
 <a name="STREET_NAME.isAlias">Street Name Is Alias</a> | A given street name is an alias for the official street name. A match with the official street name is returned.
 <a name="STREET_NAME.missing">Street Name Missing</a> | A given address didn't contain a street name but one was found.
-Street Name Not Matched | A given streetName within a given locality was not found. The locality is returned with a match precision of LOCALITY. Other addresses in different localities that contain the given civic number and street will also be returned but with a lesser score.
-Street Name Spelled Wrong | A given street name was spelled wrong but was successfully corrected to match a known street name with the given locality.
-Street Qualifier Missing | A given address didn't contain a street qualifier but one was found.
-Street Qualifier Not Matched | A given street qualifier was not found. A match without a street qualifier is returned.
-Street Qualifier Spelled Wrong | A given street qualifier was spelled wrong but was successfully corrected to match a known street qualifier.
-Street Type Missing | A given address didn’t contain a street type for a given street name in a given locality but one was found.
-Street Type Not Matched | A given street type for a given street name in a given locality was not found. A match containing the correct street type is returned.
-Street Type Spelled Wrong |	A given street type was spelled wrong but was successfully corrected to match a known street type.
-Unrecognized element notAllowed	| A potential street name or locality name isn’t known anywhere in the province (e.g., Gazoony St).  Since geocoder v1.4, the parser gives up, keeping execution time short. In v1.3, the parser would not give up until it returned a more meaningful fault like streetName notMatched but this took too long.
+<a name="STREET_NAME.notMatched">Street Name Not Matched</a> | A given streetName within a given locality was not found. The locality is returned with a match precision of LOCALITY. Other addresses in different localities that contain the given civic number and street will also be returned but with a lesser score.
+<a name="STREET_NAME.spelledWrong">Street Name Spelled Wrong</a> | A given street name was spelled wrong but was successfully corrected to match a known street name with the given locality.
+<a name="STREET_QUALIFIER.missing">Street Qualifier Missing</a> | A given address didn't contain a street qualifier but one was found.
+<a name="STREET_QUALIFIER.notMatched">Street Qualifier Not Matched</a> | A given street qualifier was not found. A match without a street qualifier is returned.
+<a name="STREET_QUALIFIER.spelledWrong">Street Qualifier Spelled Wrong</a> | A given street qualifier was spelled wrong but was successfully corrected to match a known street qualifier.
+<a name="STREET_TYPE.missing">Street Type Missing</a> | A given address didn’t contain a street type for a given street name in a given locality but one was found.
+<a name="STREET_TYPE.notMatched">Street Type Not Matched</a> | A given street type for a given street name in a given locality was not found. A match containing the correct street type is returned.
+<a name="STREET_TYPE.spelledWrong">Street Type Spelled Wrong</A>given street type was spelled wrong but was successfully corrected to match a known street type.
+<a name="UNRECOGNIZED_ELEMENT.notAllowed">Unrecognized element notAllowed</a>	| A potential street name or locality name isn’t known anywhere in the province (e.g., Gazoony St).  Since geocoder v1.4, the parser gives up, keeping execution time short. In v1.3, the parser would not give up until it returned a more meaningful fault like streetName notMatched but this took too long.
 Unit Designator Is Alias | A given unit designator is an alias of the official unit designator. A match containing the official unit designator is returned.
 Unit Designator Missing | A given address didn't contain a unit designator but one was found.
 Unit Designator Not Matched | A given unit designator was not found. A match containing the correct unit designator is returned.
