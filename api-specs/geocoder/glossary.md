@@ -18,7 +18,7 @@ Term | Definition
 <a name="echo">echo</a> | Include unmatched address details such as site name in results.
 <a name="endDate">endDate</a> | The ending date of a time period formatted as YYYY-MM-DD .
 <a name="extrapolate">extrapolate</a> | If true, uses supplied parcelPoint to derive an appropriate accessPoint. If extrapolate=true and no parcelPoint is provided or if extrapolate= false and a parcelPoint is provided, no extrapolation is performed and locationDescriptor is used to determine type of point to return.
-<a name="faults">faults</a> | A list of faults the geocoder found with a given address match. Each fault contains the nature of the fault, the address element affected, and the fault penalty. For a complete list of faults, see .
+<a name="faults">faults</a> | A list of faults the geocoder found with a given address match. Each fault contains the nature of the fault, the address element affected, and the fault penalty. Here is the [complete list of faults](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/faults.md)  .
 <a name="frontDoorPoint">frontDoorPoint</a> | A point representing the position of the front door or main entrance to a house or building.
 <a name="fullAddress">fullAddress</a> | The cleaned, standardized address of a site in a single string as in the following:<br>RM 104, Student Union Building -- University of Victoria -- 3800 Finnerty Rd, Saanich, BC
 <a name="fullSiteDescriptor">fullSiteDescriptor</a> | The portion of fullAddress that precedes the civic number (in the case of a civic address) or the locality (in the case of a non-civic address). Here is an example:<br>RM 104, Student Union Building -- University of Victoria
