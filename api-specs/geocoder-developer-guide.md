@@ -10,19 +10,19 @@ http://apps.gov.bc.ca/pub/geocoder/js/geocode.js
 ###API Changes in v2.0
 1.	A site can now have one or more public or related business occupants. Here is an example:
 VICTORIA LAW COURTS -- 850 Burdett Ave, Victoria, BC
-Resources have been added to support validating, geocoding, and finding occupants nearby but only courts of law and some hospitals have been loaded. Expect a lot more occupants in the near future. Here are some example requests:
-http://apps.gov.bc.ca/pub/geocoder/occupants/addresses.geojson?tags=courts&addressString=victoria%20law%20courts%20--%20
-http://apps.gov.bc.ca/pub/geocoder/occupants/nearest.geojson?point=-123.7064038,48.8498537&tags=courts 
-http://apps.gov.bc.ca/pub/geocoder/occupants/near.geojson?point=-123.7064038,48.8498537&tags=courts&maxResults=3
+Resources have been added to support validating, geocoding, and finding occupants nearby but only courts of law and some hospitals have been loaded. Expect a lot more occupants in the near future. Here are some example requests:<br><br>
+http://apps.gov.bc.ca/pub/geocoder/occupants/addresses.geojson?tags=courts&addressString=victoria%20law%20courts%20--%20<br><br>
+http://apps.gov.bc.ca/pub/geocoder/occupants/nearest.geojson?point=-123.7064038,48.8498537&tags=courts<br><br> 
+http://apps.gov.bc.ca/pub/geocoder/occupants/near.geojson?point=-123.7064038,48.8498537&tags=courts&maxResults=3<br><br>
 2.	The documentation has been updated.
 
 ###Resource Overview
-The Online Geocoder offers resources for validating and geocoding an address (including public and related business occupants); finding a given site, intersection, and occupant; and finding sites, intersections, and occupants near a point or within an area.
-Geocoder Base URL
-The current baseUrl for the online geocoder is:
-http://apps.gov.bc.ca/pub/geocoder
-The baseUrl for the online geocoder under the HTTP Secure protocol is: 
-https://apps.gov.bc.ca/pub/geocoder
+The Online Geocoder offers resources for validating and geocoding an address (including public and related business occupants); finding a given site, intersection, and occupant; and finding sites, intersections, and occupants near a point or within an area. 
+The current baseUrl for the online geocoder is:<br>
+http://apps.gov.bc.ca/pub/geocoder<br><br>
+The baseUrl for the online geocoder under the HTTP Secure protocol is:<br> 
+https://apps.gov.bc.ca/pub/geocoder<br><br>
+
 ###Addresses Resource
 The addresses resource represents all addresses in the geocoder. A request on this resource to find a query address will return one or more matching addresses that are standardized and geocoded (i.e., given a point location on the earth). 
 A query address can be specified in two different ways:
