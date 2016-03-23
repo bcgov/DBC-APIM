@@ -76,12 +76,7 @@ minScore | integer | The minimum acceptable score of returned matches. Any match
 maxResults | integer | The maximum number of results returned by the geocoder or other query.
 echo | Boolean | If true, unmatched address elements are put into siteName attribute of site address; otherwise, they do not appear in output at all.
 interpolation |	String | Interpolation method used to determine location; adaptive, linear, none
-outputSRS | integer | EPSG code of the projection used to state the coordination location of a named feature. It is ignored (WGS 84) if KML output is specified. Possible values:
-3005: BC Albers
-4326: WGS 84 (default)
-26907 26911: NAD83/UTM Zones 7N through 11N
-32607 32611: WGS84/UTM Zones 7N through 11N
-26707 26711: NAD27/UTM Zones 7N through 11N
+outputSRS | integer | EPSG code of the projection used to state the coordination location of a named feature. It is ignored (WGS 84) if KML output is specified. Possible values:<br>3005: BC Albers<br>4326: WGS 84 (default)<br>26907 26911: NAD83/UTM Zones 7N through 11N<br>32607-32611: WGS84/UTM Zones 7N through 11N<br>26707-26711: NAD27/UTM Zones 7N through 11N
 setBack | Real | The distance to move the accessPoint away from the curb (in meters) and towards the interior of the parcel.
 locationDescriptor	String	Type of point requested. Allowed values are accessPoint, any, frontDoorPoint, parcelPoint, rooftopPoint, and routingPoint. 
  
