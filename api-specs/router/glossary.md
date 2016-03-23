@@ -1,4 +1,4 @@
-#Glossary of Terms
+#BC Route Planner Glossary of Terms
 Term | Definition
 ----: | -----------
 <a name="routeDescription">routeDescription</a> | blah blah
