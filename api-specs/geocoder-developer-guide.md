@@ -21,7 +21,7 @@ The Online Geocoder offers resources for validating and geocoding an address (in
 The current baseUrl for the online geocoder is:<br>
 http://apps.gov.bc.ca/pub/geocoder<br><br>
 The baseUrl for the online geocoder under the HTTP Secure protocol is:<br> 
-https://apps.gov.bc.ca/pub/geocoder<br><br>
+https://apps.gov.bc.ca/pub/geocoder
 
 ###Addresses Resource
 The addresses resource represents all addresses in the geocoder. A request on this resource to find a query address will return one or more matching addresses that are standardized and geocoded (i.e., given a point location on the earth). 
