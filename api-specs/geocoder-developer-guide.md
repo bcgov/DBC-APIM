@@ -64,7 +64,7 @@ http://apps.gov.bc.ca/pub/geocoder/occupants/nearest.geojson?point=-123.7064038,
 ###HTTP Responses
 This resource will return a document in the requested format and spatial reference system.  Documents in formats that support a header record (e.g., XHTML, KML, GEOJSON, GEOJSONP, GML) will contain a single About Query record describing the query and its execution, and one or more site address or intersection address records. Documents in formats that don’t support a header record (e.g., CSV, SHPZ), will contain one or more site/intersection address records.
 
-Here we define the attributes of the different record types that are written to response document. For the precise structure of a given document format, geocode an address using the online geocoder in the desired format and examine the result.
+Here we define the attributes of the different record types that are returned in a response document. For the precise structure of a given document format, geocode an address using the online geocoder in the desired format and examine the result.
  
 ####About Query Record
 Attribute Name |	Type |	Description
