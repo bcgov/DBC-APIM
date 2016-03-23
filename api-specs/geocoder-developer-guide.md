@@ -33,6 +33,7 @@ http://apps.gov.bc.ca/pub/geocoder/addresses.geojson?civicNumber=525&streetName=
 This request will execute faster and may return a better match for the same address since the geocoder doesn’t have to determine what each part of an address string means.
 
 Here are some more example geocoder requests:
+
 1.	Geocode 456 Gorge Rd E, Victoria, BC 
 http://apps.gov.bc.ca/pub/geocoder/addresses.xhtml?addressString=456%20Gorge%20Rd%20e%20victoria%20bc
 2.	Geocode 7-955 13th Ave, Valemount, BC
