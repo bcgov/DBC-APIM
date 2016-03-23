@@ -25,6 +25,7 @@ https://apps.gov.bc.ca/pub/geocoder
 
 ###Addresses Resource
 The addresses resource represents all addresses in the geocoder. A request on this resource to find a query address will return one or more matching addresses that are standardized and geocoded (i.e., given a point location on the earth). 
+
 A query address can be specified in two different ways:
 
 1.	A single address string containing all elements of an address as in:<br><br>
