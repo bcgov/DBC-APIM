@@ -75,7 +75,7 @@ version	| String | Software version of the REST Web Service
 minScore | integer | The minimum acceptable score of returned matches. Any match below the minimum is not returned. Score ranges from 0-100.
 maxResults | integer | The maximum number of results returned by the geocoder or other query.
 echo | Boolean | If true, unmatched address elements are put into siteName attribute of site address; otherwise, they do not appear in output at all.
-interpolation	String	Interpolation method used to determine location; adaptive, linear, none
+interpolation |	String | Interpolation method used to determine location; adaptive, linear, none
 outputSRS	integer	EPSG code of the projection used to state the coordination location of a named feature. It is ignored (WGS 84) if KML output is specified. Possible values:
 3005: BC Albers
 4326: WGS 84 (default)
