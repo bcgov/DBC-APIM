@@ -80,20 +80,21 @@ outputSRS | integer | EPSG code of the projection used to state the coordination
 setBack | Real | The distance to move the accessPoint away from the curb (in meters) and towards the interior of the parcel.
 locationDescriptor	String	Type of point requested. Allowed values are accessPoint, any, frontDoorPoint, parcelPoint, rooftopPoint, and routingPoint. 
  
-Site Address Record
-Site Address Attribute	Type	Description
-fullAddress	String	Civic or non-civic address in Single-Line Address Format (see last section of this document)
-score	integer	Match score (between 0 and 100)
-matchPrecision	String	The level of precision of an address match. Here are all civic address  levels from the most precise to least precise:
+####Site Address Record
+Attribute Name |	Type |	Description
+---------------------: | --- | ------------
+fullAddress |	String |	Civic or non-civic address in Single-Line Address Format (see last section of this document)
+score |	integer |	Match score (between 0 and 100)
+matchPrecision |	String |	The level of precision of an address match. Here are all civic address  levels from the most precise to least precise:
 •	civicNumber – the civic number matched
 •	block – the civic number falls within a known block range
 •	street – the street name, street direction, and street type matched
 •	locality – the locality matched
 •	province – no match
-Here are all intersection address levels:
+<br><br>Here are all intersection address levels:
 •	intersection
 •	locality
-•	province
+•	province<br><br>
 precisionPoints	integer	Points given for matchPrecision
 faults	String	The list of faults found with a given address match. Each fault contains the nature of the fault, the address property affected, and the fault penalty. See Faults table below for a list of all faults.
 siteName	String	A string containing the name of the building, facility, or institution (e.g., Duck Building, Casa Del Mar, Crystal Garden, Bluebird House). A business name should only be used if it is permanently affixed to the site and the site has no other, more generic name. If a site is a unit within a complex, it may have a sitename in addition to a unitNumber and unitSuffix. siteName is optional for civic addresses but required for non-civic addresses.
