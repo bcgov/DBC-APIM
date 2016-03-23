@@ -88,14 +88,14 @@
                     {
                         "name": "points",
                         "in": "query",
-                        "description": "Example: -123.707942,48.778691,-123.537850,48.382005. A list of any number of route points in start to end order. Points are specified as X1,Y1,...Xn,Yn where X and Y are values in the projection specified by the 'outputSRS' parameter. If no outputSRS is given, X is treated as longitude and Y is treated as latitude.",
+                        "description": "Example: -123.707942,48.778691,-123.537850,48.382005. A list of any number of route points in start to end order. See <a href=https://github.com/bcgov/DBC-APIM/blob/master/api-specs/router/glossary.md#points target='_blank'>points</a>",
                         "type": "string",
                         "required": true
                     },
                     {
                         "name": "outputSRS",
                         "in": "query",
-                        "description": "The EPSG code of the spatial reference system (SRS) to use for output geometries. See <a href=https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#outputSRS target=\"_blank\">outputSRS</a>",
+                        "description": "The EPSG code of the spatial reference system (SRS) to use for output geometries. See <a href=https://github.com/bcgov/DBC-APIM/blob/master/api-specs/router/glossary.md#outputSRS target=\"_blank\">outputSRS</a>",
                         "type": "integer",
                         "required": false,
                         "default": 4326,
@@ -173,14 +173,14 @@
                     {
                         "name": "points",
                         "in": "query",
-                        "description": "Example: -123.707942,48.778691,-123.537850,48.382005. A list of any number of route points in start to end order. Points are specified as X1,Y1,...Xn,Yn where X and Y are values in the projection specified by the 'outputSRS' parameter. If no outputSRS is given, X is treated as longitude and Y is treated as latitude.",
+                        "description": "Example: -123.707942,48.778691,-123.537850,48.382005. A list of any number of route points in start to end order. See <a href=https://github.com/bcgov/DBC-APIM/blob/master/api-specs/router/glossary.md#points target='_blank'>points</a>",
                         "type": "string",
                         "required": true
                     },
                     {
                         "name": "outputSRS",
                         "in": "query",
-                        "description": "The EPSG code of the spatial reference system (SRS) to use for output geometries. See <a href=https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#outputSRS target=\"_blank\">outputSRS</a>",
+                        "description": "The EPSG code of the spatial reference system (SRS) to use for output geometries. See <a href=https://github.com/bcgov/DBC-APIM/blob/master/api-specs/router/glossary.md#outputSRS target=\"_blank\">outputSRS</a>",
                         "type": "integer",
                         "required": false,
                         "default": 4326,
@@ -198,7 +198,7 @@
                     {
                         "name": "criteria",
                         "in": "query",
-                        "description": "Routing criteria to optimize (e.g. shortest, fastest). Default is shortest.",
+                        "description": "Routing criteria to optimize (e.g., shortest, fastest). Default is shortest.",
                         "type": "string",
                         "required": false,
                         "default": "shortest",
@@ -210,7 +210,7 @@
                     {
                         "name": "distanceUnit",
                         "in": "query",
-                        "description": "Distance units of measure (e.g., km, mi). Default is km.",
+                        "description": "distance unit of measure (e.g., km, mi). Default is km.",
                         "type": "string",
                         "required": false,
                         "default": "km",
@@ -258,14 +258,14 @@
                     {
                         "name": "points",
                         "in": "query",
-                        "description": "Example: -123.707942,48.778691,-123.537850,48.382005. A list of any number of route points in start to end order. Points are specified as X1,Y1,...Xn,Yn where X and Y are values in the projection specified by the 'outputSRS' parameter. If no outputSRS is given, X is treated as longitude and Y is treated as latitude.",
+                        "description": "Example: -123.707942,48.778691,-123.537850,48.382005. A list of any number of route points in start to end order. See <a href=https://github.com/bcgov/DBC-APIM/blob/master/api-specs/router/glossary.md#points target='_blank'>points</a>",
                         "type": "string",
                         "required": true
                     },
                     {
                         "name": "outputSRS",
                         "in": "query",
-                        "description": "The EPSG code of the spatial reference system (SRS) to use for output geometries. See <a href=https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#outputSRS target=\"_blank\">outputSRS</a>",
+                        "description": "The EPSG code of the spatial reference system (SRS) to use for output geometries. See <a href=https://github.com/bcgov/DBC-APIM/blob/master/api-specs/router/glossary.md#outputSRS target=\"_blank\">outputSRS</a>",
                         "type": "integer",
                         "required": false,
                         "default": 4326,
@@ -295,7 +295,7 @@
                     {
                         "name": "distanceUnit",
                         "in": "query",
-                        "description": "distance units of measure (e.g., km, mi). Default is km.",
+                        "description": "distance unit of measure (e.g., km, mi). Default is km.",
                         "type": "string",
                         "required": false,
                         "default": "km",
