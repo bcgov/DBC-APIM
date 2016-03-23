@@ -30,10 +30,8 @@ A query address can be specified in two different ways:
 
 1.	A single address string containing all elements of an address as in:<br>
 http://apps.gov.bc.ca/pub/geocoder/addresses.geojson?addressString=525%20superior%20st,%20victoria,%20bc<br><br> 
-2.	A set of address elements as in:<br>
+2.	Individual address elements as in:<br>
 http://apps.gov.bc.ca/pub/geocoder/addresses.geojson?civicNumber=525&streetName=superior&streetType=st&localityName=victoria&provinceCode=BC
-
-The second request will execute faster and may return a better match for the same address since the geocoder doesn’t have to determine what each part of an address string means.
 
 Here are some more example geocoder requests:
 
