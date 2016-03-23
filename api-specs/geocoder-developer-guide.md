@@ -31,7 +31,7 @@ http://apps.gov.bc.ca/pub/geocoder/addresses.geojson?addressString=525%20superio
 2.	A set of address elements as in:
 http://apps.gov.bc.ca/pub/geocoder/addresses.geojson?civicNumber=525&streetName=superior&streetType=st&localityName=victoria&provinceCode=BC 
 This request will execute faster and may return a better match for the same address since the geocoder doesn’t have to determine what each part of an address string means.
-<br>
+
 Here are some more example geocoder requests:
 1.	Geocode 456 Gorge Rd E, Victoria, BC 
 http://apps.gov.bc.ca/pub/geocoder/addresses.xhtml?addressString=456%20Gorge%20Rd%20e%20victoria%20bc
