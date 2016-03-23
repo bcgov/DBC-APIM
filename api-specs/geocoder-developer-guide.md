@@ -35,9 +35,9 @@ This request will execute faster and may return a better match for the same addr
 Here are some more example geocoder requests:
 
 1.	Geocode 456 Gorge Rd E, Victoria, BC<br> 
-http://apps.gov.bc.ca/pub/geocoder/addresses.xhtml?addressString=456%20Gorge%20Rd%20e%20victoria%20bc
+http://apps.gov.bc.ca/pub/geocoder/addresses.xhtml?addressString=456%20Gorge%20Rd%20e%20victoria%20bc<br>
 2.	Geocode 7-955 13th Ave, Valemount, BC<br>
-http://apps.gov.bc.ca/pub/geocoder/addresses.xhtml?addressString=7-955%2013th%20ave,%20Valemount,bc 
+http://apps.gov.bc.ca/pub/geocoder/addresses.xhtml?addressString=7-955%2013th%20ave,%20Valemount,bc<br> 
 3.	Geocode the intersection at Johnson and Government<br>
 http://apps.gov.bc.ca/pub/geocoder/addresses.xhtml?addressString=johnson%20and%20government 
 4.	Geocode 5671 Malibu Terrace, Nanaimo, BC and return results in GEOJSON and BC Albers projection<br>
