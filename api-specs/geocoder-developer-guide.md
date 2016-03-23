@@ -35,12 +35,12 @@ This request will execute faster and may return a better match for the same addr
 Here are some more example geocoder requests:
 
 1.	Geocode 456 Gorge Rd E, Victoria, BC<br> 
-http://apps.gov.bc.ca/pub/geocoder/addresses.xhtml?addressString=456%20Gorge%20Rd%20e%20victoria%20bc<br>
+http://apps.gov.bc.ca/pub/geocoder/addresses.xhtml?addressString=456%20Gorge%20Rd%20e%20victoria%20bc<br><br>
 2.	Geocode 7-955 13th Ave, Valemount, BC<br>
-http://apps.gov.bc.ca/pub/geocoder/addresses.xhtml?addressString=7-955%2013th%20ave,%20Valemount,bc<br> 
+http://apps.gov.bc.ca/pub/geocoder/addresses.xhtml?addressString=7-955%2013th%20ave,%20Valemount,bc<br><br> 
 3.	Geocode the intersection at Johnson and Government<br>
 http://apps.gov.bc.ca/pub/geocoder/addresses.xhtml?addressString=johnson%20and%20government 
-4.	Geocode 5671 Malibu Terrace, Nanaimo, BC and return results in GEOJSON and BC Albers projection<br>
+4.	Geocode 5671 Malibu Terrace, Nanaimo, BC and return results in GEOJSON and BC Albers projection<br><br>
 http://apps.gov.bc.ca/pub/geocoder/addresses.geojson?outputSRS=3005&addressString=5671%20malibu%20terrace%20nanaimo%20bc
 5.	Geocode 5670 Malibu Terrace, Nanaimo and return the location along the road centreline for using in routing<br>
 http://apps.gov.bc.ca/pub/geocoder/addresses.kml?locationDescriptor=routingPoint&addressString=5670%20malibu%20terrace%20nanaimo%20bc 
