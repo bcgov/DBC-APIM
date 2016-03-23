@@ -15,6 +15,7 @@ http://apps.gov.bc.ca/pub/geocoder/occupants/addresses.geojson?tags=courts&addre
 http://apps.gov.bc.ca/pub/geocoder/occupants/nearest.geojson?point=-123.7064038,48.8498537&tags=courts 
 http://apps.gov.bc.ca/pub/geocoder/occupants/near.geojson?point=-123.7064038,48.8498537&tags=courts&maxResults=3
 2.	The documentation has been updated.
+
 ###Resource Overview
 The Online Geocoder offers resources for validating and geocoding an address (including public and related business occupants); finding a given site, intersection, and occupant; and finding sites, intersections, and occupants near a point or within an area.
 Geocoder Base URL
