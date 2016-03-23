@@ -75,7 +75,7 @@
                     {
                         "name": "outputFormat",
                         "in": "path",
-                        "description": "Output format (e.g., json, kml, html). Default is json.",
+                        "description": "Format of representation",
                         "type": "string",
                         "required": true,
                         "default": "json",
@@ -95,7 +95,7 @@
                     {
                         "name": "outputSRS",
                         "in": "query",
-                        "description": "The spatial reference system (SRS) to use for output geometries. The default value is 4326 (WGS84, latitude/longitude).  Other common options are: 4269 (NAD83, latitude/longitude), 3005 (NAD83, BC Albers), 26907 (NAD83, UTM Zone 7N), 26908 (NAD83, UTM Zone 8N), 26909 (NAD83, UTM Zone 9N), 26910 (NAD83, UTM Zone 10N), 26911 (NAD83, UTM Zone 11N)",
+                        "description": "The EPSG code of the spatial reference system (SRS) to use for output geometries. See <a href=https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#outputSRS target=\"_blank\">outputSRS</a>",
                         "type": "integer",
                         "required": false,
                         "default": 4326,
@@ -160,7 +160,7 @@
                     {
                         "name": "outputFormat",
                         "in": "path",
-                        "description": "Output format (e.g., json, kml, html). Default is json.",
+                        "description": "Format of representation",
                         "type": "string",
                         "required": true,
                         "default": "json",
@@ -180,7 +180,7 @@
                     {
                         "name": "outputSRS",
                         "in": "query",
-                        "description": "The spatial reference system (SRS) to use for output geometries. The default value is 4326 (WGS84, latitude/longitude).  Other common options are: 4269 (NAD83, latitude/longitude), 3005 (NAD83, BC Albers), 26907 (NAD83, UTM Zone 7N), 26908 (NAD83, UTM Zone 8N), 26909 (NAD83, UTM Zone 9N), 26910 (NAD83, UTM Zone 10N), 26911 (NAD83, UTM Zone 11N)",
+                        "description": "The EPSG code of the spatial reference system (SRS) to use for output geometries. See <a href=https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#outputSRS target=\"_blank\">outputSRS</a>",
                         "type": "integer",
                         "required": false,
                         "default": 4326,
@@ -245,7 +245,7 @@
                     {
                         "name": "outputFormat",
                         "in": "path",
-                        "description": "Output format (e.g., json, kml, html). Default is json.",
+                        "description": "Format of representation",
                         "type": "string",
                         "required": true,
                         "default": "json",
@@ -265,7 +265,7 @@
                     {
                         "name": "outputSRS",
                         "in": "query",
-                        "description": "The spatial reference system (SRS) to use for output geometries. The default value is 4326 (WGS84, latitude/longitude).  Other common options are: 4269 (NAD83, latitude/longitude), 3005 (NAD83, BC Albers), 26907 (NAD83, UTM Zone 7N), 26908 (NAD83, UTM Zone 8N), 26909 (NAD83, UTM Zone 9N), 26910 (NAD83, UTM Zone 10N), 26911 (NAD83, UTM Zone 11N)",
+                        "description": "The EPSG code of the spatial reference system (SRS) to use for output geometries. See <a href=https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#outputSRS target=\"_blank\">outputSRS</a>",
                         "type": "integer",
                         "required": false,
                         "default": 4326,
