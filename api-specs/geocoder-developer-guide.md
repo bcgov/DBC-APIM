@@ -26,11 +26,13 @@ https://apps.gov.bc.ca/pub/geocoder
 ###Addresses Resource
 The addresses resource represents all addresses in the geocoder. A request on this resource to find a query address will return one or more matching addresses that are standardized and geocoded (i.e., given a point location on the earth). 
 A query address can be specified in two different ways:
-1.	A single address string containing all elements of an address as in:
-http://apps.gov.bc.ca/pub/geocoder/addresses.geojson?addressString=525%20superior%20st,%20victoria,%20bc 
+
+1.	A single address string containing all elements of an address as in:<br><br>
+http://apps.gov.bc.ca/pub/geocoder/addresses.geojson?addressString=525%20superior%20st,%20victoria,%20bc<br><br> 
 2.	A set of address elements as in:
-http://apps.gov.bc.ca/pub/geocoder/addresses.geojson?civicNumber=525&streetName=superior&streetType=st&localityName=victoria&provinceCode=BC 
-This request will execute faster and may return a better match for the same address since the geocoder doesn’t have to determine what each part of an address string means.
+http://apps.gov.bc.ca/pub/geocoder/addresses.geojson?civicNumber=525&streetName=superior&streetType=st&localityName=victoria&provinceCode=BC
+
+The second request will execute faster and may return a better match for the same address since the geocoder doesn’t have to determine what each part of an address string means.
 
 Here are some more example geocoder requests:
 
