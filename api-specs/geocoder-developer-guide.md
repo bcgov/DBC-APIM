@@ -67,7 +67,7 @@ This resource will return a document in the requested format and spatial referen
 Here we define the attributes of the different record types that are written to response document. For the precise structure of a given document format, geocode an address using the online geocoder in the desired format and examine the result.
  
 ####About Query Record
-About Query Attribute |	Type |	Description
+Attribute Name |	Type |	Description
 ---------------------: | --- | ------------
 searchTimestamp	| DateTime | Date/time search was completed (in format yyyy-mm-dd hh:mm:ss.sss)
 executionTime	| Real | Query execution time  in milliseconds
