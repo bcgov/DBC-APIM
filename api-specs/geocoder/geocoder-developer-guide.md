@@ -69,7 +69,7 @@ Here we define the attributes of the different record types that are returned in
 ####About Query Record
 Attribute Name |	Type
 ---------------------: | --- |
-[searchTimestamp](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#searchTimestamp target="_BLANK") | Datetime
+<a link=https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#searchTimestamp" target="_BLANK">searchTimestamp</a>) | Datetime
 [executionTime](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#executionTime) | Real
 [version](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#version) | String 
 [minScore](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#minScore)  | Integer 
