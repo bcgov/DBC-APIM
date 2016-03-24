@@ -88,25 +88,25 @@ Attribute Name |	Type
 [precisionPoints](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#matchPrecision) | integer
 [faults](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#faults) | String
 [siteName](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#siteName) | String
-[unitDesignator] | String
-unitNumber | String
-unitNumberSuffix | String
-civicNumber | String
-civicNumberSuffix | String
-streetName | String
-streetType | String
-isStreetTypePrefix | Boolean
-streetDirection | String
-isStreetDirectionPrefix | Boolean
-streetQualifier | String
-localityName | String
-provinceCode |	String
-locationPositionalAccuracy |	String
-locationDescriptor	String
-siteID	string
-siteURL	string	The unique URL that a given site is associated with. Returns a site address.
-blockID	String	ID of ITN road segment that site appears on
-fullSiteDescriptor	String	That portion of addressString that precedes the civic number (in the case of a civic address) or the locality (in the case of a non-civic address).
+[unitDesignator](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#unitDesignator) | String
+[unitNumber](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#unitNumber) | String
+[unitNumberSuffix](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#unitNumberSuffix) | String
+[civicNumber](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#civicNumber) | String
+[civicNumberSuffix](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#civicNumberSuffix) | String
+[streetName](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#streetName) | String
+[streetType](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#streetType) | String
+[isStreetTypePrefix](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#isStreetTypePrefix) | Boolean
+[streetDirection](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#streetDirection) | String
+[isStreetDirectionPrefix](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#isStreetDirectionPrefix) | Boolean
+[streetQualifier](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#streetQualifier) | String
+[locationName](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#locationName) | String
+[provinceCode](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#provinceCode) |	String
+[locationPositionalAccuracy](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#locationPositionalAccuracy) |	String
+[locationDescriptor](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#locationDescriptor) |	String
+[siteID](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#siteID) |	string
+[siteURL](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#siteURL) |	string	The unique URL that a given site is associated with. Returns a site address.
+[blockID](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#blockID) |	String	ID of ITN road segment that site appears on
+[fullSiteDescriptor](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#fullSiteDescriptor) |	String	That portion of addressString that precedes the civic number (in the case of a civic address) or the locality (in the case of a non-civic address).
 narrativeLocation	String	Written directions to access the site. The narrative should start at the closest known, named physical feature to the site (e.g. from Tlell, travel north on highway 16 to the big golden spruce tree on your left, hike west for about one kilometre).
 accessNotes	String	Additional information that is helpful in determining the access location and any restrictions on mode of access (e.g., boat only, floatplane only).
 siteStatus	String	The status of the site (active, or retired). A site is usually retired when it is destroyed or combined with another site.
