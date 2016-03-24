@@ -67,17 +67,17 @@ This resource will return a document in the requested format and spatial referen
 Here we define the attributes of the different record types that are returned in a response document. For the precise structure of a given document format, geocode an address using the online geocoder in the desired format and examine the result.
  
 ####About Query Record
-Attribute Name |	Type |	Description
----------------------: | --- | ------------
-searchTimestamp	| DateTime | [searchTimestamp](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#searchTimestamp)
+Attribute Name |	Type
+---------------------: | --- |
+[searchTimestamp](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#searchTimestamp) | date
 executionTime	| Real | [executionTime](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#executionTime)
-version	| String | [version](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#version)
-minScore | integer | [minScore](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#minScore)
-maxResults | integer |  [maxResults](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#maxResults)
-echo | Boolean | [echo](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#echo)
-interpolation |	String | [interpolation](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#interpolation)
-outputSRS | integer | [outputSRS](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#outputSRS)
-setBack | Real | [setBack](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#setBack) 
+[version](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#version) | String 
+[minScore](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#minScore)  | Integer 
+[maxResults](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#maxResults) | Integer 
+[echo](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#echo)  | Boolean
+[interpolation](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#interpolation)  |	String 
+[outputSRS](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#outputSRS) | Integer
+[setBack](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#setBack) |Real 
  
 ####Site Address Record
 Attribute Name |	Type |	Description
