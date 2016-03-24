@@ -83,7 +83,7 @@ locationDescriptor	String	Type of point requested. Allowed values are accessPoin
 ####Site Address Record
 Attribute Name |	Type |	Description
 ---------------------: | --- | ------------
-fullAddress |	String |	Civic or non-civic address in Single-Line Address Format (see last section of this document)
+fullAddress |	String |	Civic or non-civic address in Single-Line Address Format. See [Single-line Address Format](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/singleLineAddressFormat.md).
 score |	integer |	Match score (between 0 and 100)
 matchPrecision |	String |	The level of precision of an address match. Here are all civic address  levels from the most precise to least precise:<br>•	civicNumber – the civic number matched<br>•	block – the civic number falls within a known block range<br>•	street – the street name, street direction, and street type matched<br>•	locality – the locality matched<br>•	province – no match<br><br>Here are all intersection address levels:<br>•	intersection<br>•	locality<br>•	province<br><br>
 precisionPoints | integer | Points given for matchPrecision
