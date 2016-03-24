@@ -17,6 +17,7 @@ Term | Definition
 <a name="civicNumberSuffix">civicNumberSuffix</a> | A letter or fraction that follows the civic number. There should be no space between a civic number and a letter (e.g., Unit 1A) and one space between a civic number and a fraction (e.g., Suite 3 1/2)
 <a name="echo">echo</a> | Include unmatched address details such as site name in results.
 <a name="endDate">endDate</a> | The ending date of a time period formatted as YYYY-MM-DD .
+<a name="executionTime">executionTime</a> | Query execution time in milliseconds
 <a name="extrapolate">extrapolate</a> | If true, uses supplied parcelPoint to derive an appropriate accessPoint. If extrapolate=true and no parcelPoint is provided or if extrapolate= false and a parcelPoint is provided, no extrapolation is performed and locationDescriptor is used to determine type of point to return.
 <a name="faults">faults</a> | A list of faults the geocoder found with a given address match. Each fault contains the nature of the fault, the address element affected, and the fault penalty. Here is the [complete list of faults](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/faults.md)  .
 <a name="frontDoorPoint">frontDoorPoint</a> | A point representing the position of the front door or main entrance to a house or building.
