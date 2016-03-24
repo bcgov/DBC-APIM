@@ -69,7 +69,7 @@ Here we define the attributes of the different record types that are returned in
 ####About Query Record
 Attribute Name |	Type |	Description
 ---------------------: | --- | ------------
-searchTimestamp	| DateTime | Date/time search was completed (in format yyyy-mm-dd hh:mm:ss.sss)
+searchTimestamp	| DateTime | [searchTimestamp](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#searchTimestamp) Date/time search was completed (in format yyyy-mm-dd hh:mm:ss.sss)
 executionTime	| Real | Query execution time  in milliseconds
 version	| String | Software version of the REST Web Service
 minScore | integer | The minimum acceptable score of returned matches. Any match below the minimum is not returned. Score ranges from 0-100.
