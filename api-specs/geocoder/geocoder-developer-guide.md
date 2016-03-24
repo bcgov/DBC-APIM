@@ -70,15 +70,14 @@ Here we define the attributes of the different record types that are returned in
 Attribute Name |	Type |	Description
 ---------------------: | --- | ------------
 searchTimestamp	| DateTime | [searchTimestamp](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#searchTimestamp) Date/time search was completed (in format yyyy-mm-dd hh:mm:ss.sss)
-executionTime	| Real | Query execution time  in milliseconds
-version	| String | Software version of the REST Web Service
-minScore | integer | The minimum acceptable score of returned matches. Any match below the minimum is not returned. Score ranges from 0-100.
-maxResults | integer | The maximum number of results returned by the geocoder or other query.
-echo | Boolean | If true, unmatched address elements are put into siteName attribute of site address; otherwise, they do not appear in output at all.
-interpolation |	String | Interpolation method used to determine location; adaptive, linear, none
-outputSRS | integer | EPSG code of the projection used to state the coordination location of a named feature. It is ignored (WGS 84) if KML output is specified. Possible values:<br>3005: BC Albers<br>4326: WGS 84 (default)<br>26907 26911: NAD83/UTM Zones 7N through 11N<br>32607-32611: WGS84/UTM Zones 7N through 11N<br>26707-26711: NAD27/UTM Zones 7N through 11N
-setBack | Real | The distance to move the accessPoint away from the curb (in meters) and towards the interior of the parcel.
-locationDescriptor	String	Type of point requested. Allowed values are accessPoint, any, frontDoorPoint, parcelPoint, rooftopPoint, and routingPoint. 
+executionTime	| Real | [executionTime](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#executionTime)
+version	| String | [version](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#version)
+minScore | integer | [minScore](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#minScore)
+maxResults | integer |  [maxResults](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#maxResults)
+echo | Boolean | [echo](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#echo)
+interpolation |	String | [interpolation](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#interpolation)
+outputSRS | integer | [outputSRS](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#outputSRS)
+setBack | Real | [setBack](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#setBack) 
  
 ####Site Address Record
 Attribute Name |	Type |	Description
