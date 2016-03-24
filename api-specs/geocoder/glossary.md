@@ -73,3 +73,4 @@ Term | Definition
 <a name="tags">tags</a> | Example: schools;courts;employment  A list of tags separated by semicolons.
 <a name="unitNumberSuffix)">unitNumberSuffix)</a> | A letter that follows the unit number as in Unit 1A.
 <a name="unitDesignator">unitDesignator</a> | The type of unit(e.g., APT, SUITE, and UNIT) and is abbreviated if such an abbreviation is defined. The set of all unit designators MUST include those defined in the Addressing Guidelines by Canada Post and is the responsibility of DataBC to maintain this set.
+<a name="version">version</a> | Software version of the REST Web Service
