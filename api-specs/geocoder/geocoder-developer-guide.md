@@ -128,7 +128,7 @@ Attribute Name |	Type
 [precisionPoints](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#precisionPoints) |	Integer
 [faults](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#faults) |	String
 [intersectionID](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#intersectionID) |	String
-[degree](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#) |	String
+[degree](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#degree) |	String
 
 SiteAndIntersection Address Record
 Site/Intersection Address Attribute	Type	Description
