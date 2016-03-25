@@ -106,43 +106,40 @@ Attribute Name |	Type
 [siteID](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#siteID) |	string
 [blockID](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#blockID) |	String	ID of ITN road segment that site appears on
 [fullSiteDescriptor](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#fullSiteDescriptor) |	String	That portion of addressString that precedes the civic number (in the case of a civic address) or the locality (in the case of a non-civic address).
-[narrativeLocation](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#narrativeLocation) |	string
-[accessNotes](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#accessNotes) |	string
-[siteStatus](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#siteStatus) |	string
-[](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#) |	string
-[](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#) |	string
-[](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#) |	string
+[narrativeLocation](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#narrativeLocation) |	String
+[accessNotes](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#accessNotes) |	String
+[siteStatus](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#siteStatus) |	String
+[siteRetireDate](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#siteRetireDate) |	Date
+[changeDate](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#changeDate) |	string
+[isPrimary](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#isPrimary) |	string
 [](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#) |	string
 [](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#) |	string
 [](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#) |	string
 [](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#) |	string
 
-siteStatus	String	The status of the site (active, or retired). A site is usually retired when it is destroyed or combined with another site.
-siteRetireDate	Date	The date the site was retired (in yyyy-mm-dd format)
-changeDate	Date	The date a site was last changed ( in yyyy-mm-dd format)
+
 isPrimary	Boolean	true if the location is the primary (or official) access point of the associated site; false otherwise.
 
  
-Intersection Address Record
-Intersection Address Attribute	Type	Description
-fullAddress	String	Intersection Address in Single-Line Address Format (see last section of this document)
-intersectionName	String	The street name, type, and direction of all streets that meet at a given intersection. Here are some examples:
-•	Douglas St and Gorge Rd E and Hillside Ave
-•	48th Ave W and Marine Dr SW
-localityName	String	The name of the municipality, community, Indian reservation, subdivision, regional district, aboriginal lands, or natural feature the site is located in. Since this standard is about geocoding, not mail delivery, the locality of a civic address is that defined by the civic address authority, not Canada Post. A locality name that starts with a directional is not abbreviated (e.g., North Vancouver, not N Vancouver). Spelling of localities that are place names or natural feature names MUST match that published by the BC Geographical Names Information System.
-localityType	String	Can be a municipality, community, Indian reservation, subdivision, regional district, aboriginal lands, forward sortation area, or natural feature.
-provinceCode	String	The ISO 3166-2 Sub-Country Code for British Columbia, which is BC.
-score	integer	Match score (between 0 and 100)
-matchPrecision	String	The level of precision of an address match. Here are all the  levels from the most precise to least precise:
-•	Intersection – the intersection name matched
-•	locality – the locality matched
-•	province – no match
-precisionPoints	integer	Points given for matchPrecision
-faults	String	The list of faults found with a given address match. Each fault contains the nature of the fault, the address property affected, and the fault penalty.
-intersectionID	String	A unique and immutable identifier assigned to the intersection.
-degree	String	Degree of intersection (e.g., 3 for 3-way, 4 for 4-way etc.) 
+###Intersection Address Record
+Attribute Name |	Type
+---------------------: | ---
+[fullAddress](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#fullAddress) |	String
+[intersectionName](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#intersectionName) |	String
+[localityName](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#localityName) |	String
+[provinceCode](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#provinceCode]) |	String
+[score](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#score) |	Integer
+[matchPrecision](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#matchPrecision) |	String
+[precisionPoints](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#precisionPoints) |	Integer
+[provinceCode](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#provinceCode) |	String
+[matchPrecision](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#matchPrecision) |	String
+[precisionPoints](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#precisionPoints) |	Integer
+[faults](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#faults) |	String
+[intersectionID](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#intersectionID) |	String
+[degree](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#) |	String
+[](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#) |	String
 
- 
+
 SiteAndIntersection Address Record
 Site/Intersection Address Attribute	Type	Description
 fullAddress	String	Civic, non-civic address, or intersection address in Single-Line Address Format (see last section of this document)
