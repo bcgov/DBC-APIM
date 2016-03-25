@@ -66,7 +66,7 @@ This resource will return a document in the requested format and spatial referen
 
 Here we define the attributes of the different record types that are returned in a response document. For the precise structure of a given document format, geocode an address using the online geocoder in the desired format and examine the result.
  
-####About Query Record
+####About Query Representation
 Attribute Name |	Type
 ---------------------: | --- |
 [searchTimestamp](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#searchTimestamp) | Datetime
@@ -79,7 +79,7 @@ Attribute Name |	Type
 [outputSRS](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#outputSRS) | Integer
 [setBack](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#setBack) |Real 
  
-####Site Address Record
+####Site Address Representation
 Attribute Name |	Type
 ---------------------: | ---
 [fullAddress](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#fullAddress) |	String
@@ -113,7 +113,7 @@ Attribute Name |	Type
 [changeDate](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#changeDate) |	string
 [isPrimary](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#isPrimary) |	string
 
-###Intersection Address Record
+###Intersection Address Representation
 Attribute Name |	Type
 ---------------------: | ---
 [fullAddress](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#fullAddress) |	String
