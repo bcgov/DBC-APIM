@@ -104,11 +104,19 @@ Attribute Name |	Type
 [locationPositionalAccuracy](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#locationPositionalAccuracy) |	String
 [locationDescriptor](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#locationDescriptor) |	String
 [siteID](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#siteID) |	string
-[siteURL](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#siteURL) |	string	The unique URL that a given site is associated with. Returns a site address.
 [blockID](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#blockID) |	String	ID of ITN road segment that site appears on
 [fullSiteDescriptor](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#fullSiteDescriptor) |	String	That portion of addressString that precedes the civic number (in the case of a civic address) or the locality (in the case of a non-civic address).
-narrativeLocation	String	Written directions to access the site. The narrative should start at the closest known, named physical feature to the site (e.g. from Tlell, travel north on highway 16 to the big golden spruce tree on your left, hike west for about one kilometre).
-accessNotes	String	Additional information that is helpful in determining the access location and any restrictions on mode of access (e.g., boat only, floatplane only).
+[narrativeLocation](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#narrativeLocation) |	string
+[accessNotes](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#accessNotes) |	string
+[siteStatus](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#siteStatus) |	string
+[](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#) |	string
+[](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#) |	string
+[](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#) |	string
+[](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#) |	string
+[](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#) |	string
+[](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#) |	string
+[](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#) |	string
+
 siteStatus	String	The status of the site (active, or retired). A site is usually retired when it is destroyed or combined with another site.
 siteRetireDate	Date	The date the site was retired (in yyyy-mm-dd format)
 changeDate	Date	The date a site was last changed ( in yyyy-mm-dd format)
