@@ -104,23 +104,15 @@ Attribute Name |	Type
 [locationPositionalAccuracy](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#locationPositionalAccuracy) |	String
 [locationDescriptor](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#locationDescriptor) |	String
 [siteID](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#siteID) |	string
-[blockID](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#blockID) |	String	ID of ITN road segment that site appears on
-[fullSiteDescriptor](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#fullSiteDescriptor) |	String	That portion of addressString that precedes the civic number (in the case of a civic address) or the locality (in the case of a non-civic address).
+[blockID](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#blockID) |	String
+[fullSiteDescriptor](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#fullSiteDescriptor) |	String
 [narrativeLocation](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#narrativeLocation) |	String
 [accessNotes](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#accessNotes) |	String
 [siteStatus](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#siteStatus) |	String
 [siteRetireDate](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#siteRetireDate) |	Date
 [changeDate](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#changeDate) |	string
 [isPrimary](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#isPrimary) |	string
-[](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#) |	string
-[](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#) |	string
-[](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#) |	string
-[](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#) |	string
 
-
-isPrimary	Boolean	true if the location is the primary (or official) access point of the associated site; false otherwise.
-
- 
 ###Intersection Address Record
 Attribute Name |	Type
 ---------------------: | ---
@@ -137,11 +129,17 @@ Attribute Name |	Type
 [faults](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#faults) |	String
 [intersectionID](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#intersectionID) |	String
 [degree](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#) |	String
-[](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#) |	String
-
 
 SiteAndIntersection Address Record
 Site/Intersection Address Attribute	Type	Description
+
+[](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#) |	string
+[](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#) |	string
+[](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#) |	string
+[](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#) |	string
+
+
+
 fullAddress	String	Civic, non-civic address, or intersection address in Single-Line Address Format (see last section of this document)
 intersectionName	String	The street name, type, and direction of all streets that meet at a given intersection. Here are some examples:
 •	Douglas St and Gorge Rd E and Hillside Ave
