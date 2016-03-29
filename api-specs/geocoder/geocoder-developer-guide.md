@@ -111,7 +111,7 @@ Attribute Name |	Type
 [changeDate](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#changeDate) |	string
 [isPrimary](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#isPrimary) |	string
 
-###Intersection Address Representation
+####Intersection Address Representation
 Attribute Name |	Type
 ---------------------: | ---
 [fullAddress](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#fullAddress) |	String
@@ -129,7 +129,9 @@ Attribute Name |	Type
 [degree](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#degree) |	String
 
 
-The occupants/addresses is similar to the addresses resource. Its response will include an About Query representation plus one site representation and occupant representation for each address matched.
+
+##Occupant/addresses Resource
+The occupants/addresses resource is similar to the addresses resource. Its response will include an About Query representation plus one site representation and occupant representation for each address matched.
 
 ####Occupant Representation
 Attribute Name |	Type
