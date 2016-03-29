@@ -724,7 +724,7 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "The nearest site"
+                        "description": "The nearest site in <a href=\"https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/geocoder-developer-guide.md#site-address-representation\" target=\"_blank\">Site Address Representation</a>"
                     }
                 }
             }
@@ -819,7 +819,7 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "The nearest occupant"
+                        "description": "The nearest occupant in <a href=\"https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/geocoder-developer-guide.md#site-address-representation\" target=\"_blank\">Site Address Representation</a> plus <a href=\"https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/geocoder-developer-guide.md#occupant-representation\" target=\"_blank\">Occupant Representation</a>"
                     }
                 }
             }
@@ -899,7 +899,7 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "The nearest intersection"
+                        "description": "The nearest intersection in <a href=\"https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/geocoder-developer-guide.md#intersection-address-representation\" target=\"_blank\">Intersection Address Representation</a>"
                     }
                 }
             }
@@ -995,7 +995,7 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "A list of selected sites that are near a given point in order of closest to farther"
+                        "description": "A list of selected sites that are near a given point in order of closest to farther. Each site in the response document is structured as a <a href=\"https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/geocoder-developer-guide.md#site-address-representation\" target=\"_blank\">Site Address Representation</a>"
                     }
                 }
             }
@@ -1098,7 +1098,7 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "A list of selected sites that are near a given point in order of closest to farther"
+                        "description": "A list of selected occupants that are near a given point in order of closest to farther. Each occupant is returned as a <a href=\"https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/geocoder-developer-guide.md#site-address-representation\" target=\"_blank\">Site Address Representation</a> plus a <a href=\"https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/geocoder-developer-guide.md#occupant-representation\" target=\"_blank\">Occupant Representation</a>"
                     }
                 }
             }
@@ -1186,7 +1186,7 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "A list of selected intersections near a given point"
+                        "description": "A list of selected intersections near a given point. Each intersection is in <a href=\"https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/geocoder-developer-guide.md#intersection-address-representation\" target=\"_blank\">Intersection Address Representation</a>"
                     }
                 }
             }
@@ -1275,7 +1275,7 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "A list of selected sites within a given area"
+                        "description": "A list of selected sites within a given area. Each site in the response document is structured as a <a href=\"https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/geocoder-developer-guide.md#site-address-representation\" target=\"_blank\">Site Address Representation</a>"
                     }
                 }
             }
@@ -1371,7 +1371,7 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "A list of selected occupants within the given area"
+                        "description": "A list of selected occupants within the given area. Each occupant is returned in a <a href=\"https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/geocoder-developer-guide.md#site-address-representation\" target=\"_blank\">Site Address Representation</a> plus <a href=\"https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/geocoder-developer-guide.md#occupant-representation\" target=\"_blank\">Occupant Representation</a>"
                     }
                 }
             }
@@ -1452,7 +1452,7 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "A list of selected intersections within the given area"
+                        "description": "A list of selected intersections within the given area. Each intersection is in Each intersection is in <a href=\"https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/geocoder-developer-guide.md#intersection-address-representation\" target=\"_blank\">Intersection Address Representation</a>"
                     }
                 }
             }
@@ -1533,7 +1533,7 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "The site with the requested siteID"
+                        "description": "The site with the requested siteID in <a href=\"https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/geocoder-developer-guide.md#site-address-representation\" target=\"_blank\">Site Address Representation</a>"
                     }
                 }
             }
@@ -1614,7 +1614,7 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "The occupant with the requested occupantID"
+                        "description": "The occupant with the requested occupantID in <a href=\"https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/geocoder-developer-guide.md#site-address-representation\" target=\"_blank\">Site Address Representation</a> plus <a href=\"https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/geocoder-developer-guide.md#occupant-representation\" target=\"_blank\">Occupant Representation</a>"
                     }
                 }
             }
@@ -1671,7 +1671,7 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "The Intersection with the requested intersectionID"
+                        "description": "The Intersection with the requested intersectionID in <a href=\"https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/geocoder-developer-guide.md#intersection-address-representation\" target=\"_blank\">Intersection Address Representation</a>"
                     }
                 }
             }
