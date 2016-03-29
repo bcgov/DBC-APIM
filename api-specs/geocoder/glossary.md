@@ -71,7 +71,32 @@ Term | Definition
 <a name="streetDirection">streetDirection</a> | The abbreviated compass direction as defined by Canada Post and B.C. civic addressing authorities . The complete list is C, E, N, NE, NO, NW, O, SE, SO, SW, and W. All street directions except C are defined by Canada Post. On input, the French streetDirections NO, O, and SO are mapped to NW, W, and SW respectively.
 <a name="streetName">streetName</a> | The official name of the street recognized by a municipality (e.g., Douglas in 1175 Douglas Street). A streetName that starts with a directional is not abbreviated (e.g., North Park, not N Park)
 <a name="streetType">streetType</a> | The type of street as assigned by a municipality (e.g., the ST in 1175 DOUGLAS ST) and is abbreviated if such an abbreviation exists. On input, French streetTypes are mapped to their English counterpart (e.g., Rue => St). The set of all street types is defined by the provincial Digital Road Atlas program.
-<a name="tags">tags</a> | Example: schools;courts;employment  A list of tags separated by semicolons.
+<a name="tags">tags</a> | A list of tags separated by semicolons (e.g., schools;courts;employment).
 <a name="unitNumberSuffix)">unitNumberSuffix)</a> | A letter that follows the unit number as in Unit 1A.
 <a name="unitDesignator">unitDesignator</a> | The type of unit(e.g., APT, SUITE, and UNIT) and is abbreviated if such an abbreviation is defined. The set of all unit designators MUST include those defined in the Addressing Guidelines by Canada Post and is the responsibility of DataBC to maintain this set.
 <a name="version">version</a> | Software version of the REST Web Service
+
+<a name=""></a> | 
+<a name=""></a> | 
+<a name=""></a> | 
+<a name=""></a> | 
+<a name=""></a> | 
+<a name=""></a> | 
+<Data name="occupantName"><value>Sir James Douglas Elementary</value></Data>
+<Data name="occupantID"><value>93504e52-ec01-4e7c-92ad-484d96987d0c</value></Data>
+<Data name="occupantAliasAddress"><value>401 MOSS ST, VICTORIA, BC</value></Data>
+<Data name="occupantDescription"><value></value></Data>
+<Data name="contactEmail"><value></value></Data>
+<Data name="contactPhone"><value></value></Data>
+<Data name="contactFax"><value></value></Data>
+<Data name="websiteUrl"><value></value></Data>
+<Data name="imageUrl"><value></value></Data>
+<Data name="keywords"><value>elementary and secondary schools;elementary;secondary;schools</value></Data>
+<Data name="businessCategoryClass"><value>elementaryAndSecondarySchools</value></Data>
+<Data name="businessCategoryDescription"><value>Elementary and secondary schools</value></Data>
+<Data name="naicsCode"><value>611110</value></Data>
+<Data name="dateOccupantUpdated"><value>2016-02-16</value></Data>
+<Data name="dateOccupantAdded"><value>2016-02-16</value></Data>
+<Data name="custodianId"><value>4</value></Data>
+<Data name="sourceDataId"><value>3310</value></Data>
+
