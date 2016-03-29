@@ -145,7 +145,7 @@ Attribute Name |	Type
 [keywords](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#keywords) |	string
 [businessCategoryClass](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#businessCategoryClass) |	string
 [businessCategoryDescription](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#businessCategoryDescription) |	string
-[naicsCode"](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#naicsCode") |	string
+[naicsCode](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#naicsCode) |	string
 [dateOccupantUpdated](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#dateOccupantUpdated) |	string
 [dateOccupantAdded](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#dateOccupantAdded) |	string
 [custodianId](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#custodianId) |	string
