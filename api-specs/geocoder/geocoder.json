@@ -333,7 +333,7 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "A list of matching sites or intersections and their physical locations"
+                        "description": "A list of matching sites or intersections and their physical locations. See <a href='https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/geocoder-developer-guide.md#resource-representations-in-http-responses' target=\"_blank\">addresses response</a>"
                     }
                 }
             }
@@ -636,7 +636,7 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "A list of matching occupants and their physical locations"
+                        "description": "A list of matching occupants, sites, and their physical locations. Response document will contain one <a href=\"https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/geocoder-developer-guide.md#about-query-representation\" target=\"_blank\">About Query Representation</a> and one <a href=\"https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/geocoder-developer-guide.md#site-address-representation\" target=\"_blank\">Site Address Representation</a> plus <a href=\"https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/geocoder-developer-guide.md#occupant-representation\" target=\"_blank\">Occupant Representation</a> for each matching occupant."
                     }
                 }
             }
