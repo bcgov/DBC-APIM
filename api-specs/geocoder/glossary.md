@@ -10,6 +10,8 @@ Term | Definition
 <a name="addressMatch">Address match</a> | Conveys site address match quality through score, precision, and faults properties. faults is a data type that defines a list of faults. Each fault contains the nature of the fault, the address property affected, and the fault penalty. precisionPoints defines the points assigned to each match precision level. MatchPrecision is an enumeration of all precision levels. MatchFaultPenalty defines the penalty value of each possible fault. Penalties are subtracted from the appropriate precision level points to arrive at a match score.
 <a name="blockID">blockID</a> | The unique, immutable identifier of a road segment in the Integrated Transportation Network that a matched address is located on.
 <a name="bbox">bbox</a> | A rectangular geographic area used to filter results of a query. Coordinates are specified as xmin,ymin,xmax,ymax . By default, coordinates are longitude minimum, latitude minimum, longitude maximum, latitude maximum in the default output SRS, 4326 (WGS84).
+<a name="businessCategoryClass">businessCategoryClass</a> | NAICS name of category class associated with occupant.
+<a name="businessCategoryDescription">businessCategoryDescription</a> | Description of NAICS Category associated with occupant. 
 <a name="centre">centre</a> | The coordinates of a centre point (x,y) used to define a bounding circle that will limit the search area. centre and maxDistance together define a search area.
 <a name="changeDate">changeDate</a> | The date a site or intersection address was last changed.
 <a name="civicAddress">Civic Address</a> | The address of a site as assigned by an addressing authority such as a municipality. A civic address includes a civicNumber, civicNumberPrefix, and the localityName is that assigned by the address authority, not Canada Post. Here are some examples:<br>840 Esquimalt Rd, Esquimalt, BC<br>2317 MOODY AVE Kamloops, BC<br>Apt 1 -- 1207 Douglas St, Victoria, BC<br>525 Superior St, Victoria,BC<br>4251A Rockbank Pl, West Vancouver, BC<br>4450 Happy Valley Rd, Metchosin, BC<br>2050 SW Marine Dr,Vancouver,BC<br>420 Gorge Rd E, Victoria, BC<br>130A Hall St,Nelson,BC<br>Unit 1 -- 7467 Aspen Blvd, Pemberton, BC<br>Pad 2, 2097 Wildflower Rd,Shawnigan Lake, BC<br>Port Alice Health Centre -- 1090 Marine Dr, Port Alice, BC<br>Royal Athletic Park -- 1014 Caledonia Ave, Victoria,BC
@@ -53,6 +55,7 @@ Term | Definition
 <a name="minDegree">minDegree</a> | Minimum degree an intersection can have to be included in results. A dead-end has a degree of 1.
 <a name="minDegree">minDegree</a> | The maximum degree an intersection can have to be included in results. A four-way stop has a degree of 4.
 <a name="minScore">minScore</a> | The minimum score an address match must have before it is included in the results. Scores range between 0 and 100 inclusive. The default is 0.
+<a name="naicsCode">naicsCode</a> | NAICS code assigned to occupant. For more information, see [NAICS Canada](http://www.statcan.gc.ca/pub/12-501-x/12-501-x2012001-eng.pdf)
 <a name="narrativeLocation">narrativeLocation</a> | Turn-by-turn directions to the site. A narrative typically starts at the closest known, named physical feature to the site as in the following:<br>From Tlell, travel north on highway 16 till you see a big golden spruce tree on your left, hike west for about one kilometre.
 <a name="occupantAliasAddress">occupantAliasAddress</a> | Address for display purposes. Useful when you want an occupant to display a recognizable localityName instead of the municipally-correct one (e.g., Brentwood Bay instead Central Saanich).
 <a name="occupantDescription">occupantDescription</a> | Occupant description
@@ -90,8 +93,8 @@ Term | Definition
 
 
 
-<a name="businessCategoryClass">businessCategoryClass</a> | 
-<a name="businessCategoryDescription">businessCategoryDescription</a> | 
+
+
 <a name="naicsCode">naicsCode</a> | 
 <a name="dateOccupantUpdated">dateOccupantUpdated</a> | 
 <a name="dateOccupantAdded">dateOccupantAdded</a> | 
