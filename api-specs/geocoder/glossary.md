@@ -20,6 +20,9 @@ Term | Definition
 <a name="contactEmail">contactEmail</a> | Contact email address of occupant
 <a name="contactFax">contactFax</a> | Contact fax number of occupant
 <a name="contactPhone">contactPhone</a> | Contact phone number of occupant
+<a name="custodianId">custodianId</a> | Unique id assigned to custodian of occupant data.
+<a name="dateOccupantUpdated">dateOccupantUpdated</a> | The date the occupant was last updated in the Geographic Site Registry.
+<a name="dateOccupantAdded">dateOccupantAdded</a> | The date the occupant was added to the Geographic Site Registry.
 <a name="degree">degree</a> | The number of road segments that intersection at an intersection. The degree of a dead-end is 1. The degree of a 4-way intersection is 4.
 <a name="echo">echo</a> | Include unmatched address details such as site name in results.
 <a name="endDate">endDate</a> | The ending date of a time period formatted as YYYY-MM-DD .
@@ -77,6 +80,7 @@ Term | Definition
 <a name="siteName">siteName</a> | A string containing the name of the building, facility, or institution (e.g., Duck Building, Casa Del Mar, Crystal Garden, Bluebird House). A business name should only be used if it is permanently affixed to the site and the site has no other, more generic name. If a site is a unit within a complex, it may have a sitename in addition to a unitNumber and unitSuffix.
 <a name="siteRetireDate">siteRetireDate</a> | The date the site was retired.
 <a name="siteStatus">siteStatus</a> | A site is usually retired when it is destroyed or combined with another site. Allowed values are active or retired.
+<a name="sourceDataId">sourceDataId</a> | Id assigned to occupant by its data custodian. custodianId plus sourcDataId is unique within geocoder.
 <a name="spatialReferenceSystem">spatialReferenceSystem</a> | The EPSG code of the spatial reference system used to state the coordination location of a named feature. It is ignored if KML output is specified since KML only supports 4326 (WGS84). Allowed values are:<br>3005: BC Albers<br>4326: WGS 84 (default)<br>26907-26911: NAD83/UTM Zones 7N through 11N<br>32607-32611: WGS84/UTM Zones 7N through 11N<br>26707-26711: NAD27/UTM Zones 7N through 11N
 <a name="startDate">startDate</a> | The starting date of a time period formatted as YYYY-MM-DD
 <a name="streetCentreline">Street Centreline</a> | A line that is parallel to the street edges and located in the middle of the roadway. A street centreline exists even on streets that have no painted lines on them (e.g., a residential or unpaved street). A street centreline is oriented in the direction of increasing civic numbers. In the case of blocks that have continuous numbering that goes up on one side and down the other the street centreline is oriented in the direction of the lowest block range.
@@ -89,15 +93,5 @@ Term | Definition
 <a name="version">version</a> | Software version of the REST Web Service
 <a name="websiteUrl">websiteUrl</a> | Web site URL of occupant
 
-
-
-
-
-
-
-<a name="naicsCode">naicsCode</a> | 
-<a name="dateOccupantUpdated">dateOccupantUpdated</a> | 
-<a name="dateOccupantAdded">dateOccupantAdded</a> | 
-<a name="custodianId">custodianId</a> | 
 <a name="sourceDataId">sourceDataId</a> | 
 
