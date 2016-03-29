@@ -15,7 +15,9 @@ Term | Definition
 <a name="civicAddress">Civic Address</a> | The address of a site as assigned by an addressing authority such as a municipality. A civic address includes a civicNumber, civicNumberPrefix, and the localityName is that assigned by the address authority, not Canada Post. Here are some examples:<br>840 Esquimalt Rd, Esquimalt, BC<br>2317 MOODY AVE Kamloops, BC<br>Apt 1 -- 1207 Douglas St, Victoria, BC<br>525 Superior St, Victoria,BC<br>4251A Rockbank Pl, West Vancouver, BC<br>4450 Happy Valley Rd, Metchosin, BC<br>2050 SW Marine Dr,Vancouver,BC<br>420 Gorge Rd E, Victoria, BC<br>130A Hall St,Nelson,BC<br>Unit 1 -- 7467 Aspen Blvd, Pemberton, BC<br>Pad 2, 2097 Wildflower Rd,Shawnigan Lake, BC<br>Port Alice Health Centre -- 1090 Marine Dr, Port Alice, BC<br>Royal Athletic Park -- 1014 Caledonia Ave, Victoria,BC
 <a name="civicNumber">civicNumber</a> | The number assigned to a site on a street by an address authority (e.g., the 1175 in 1175 Douglas St, Victoria, BC).
 <a name="civicNumberSuffix">civicNumberSuffix</a> | A letter or fraction that follows the civic number. There should be no space between a civic number and a letter (e.g., Unit 1A) and one space between a civic number and a fraction (e.g., Suite 3 1/2)
-<a name="contactEmail">contactEmail</a> | Contact email address of occupant 
+<a name="contactEmail">contactEmail</a> | Contact email address of occupant
+<a name="contactFax">contactFax</a> | Contact fax number of occupant
+<a name="contactPhone">contactPhone</a> | Contact phone number of occupant
 <a name="degree">degree</a> | The number of road segments that intersection at an intersection. The degree of a dead-end is 1. The degree of a 4-way intersection is 4.
 <a name="echo">echo</a> | Include unmatched address details such as site name in results.
 <a name="endDate">endDate</a> | The ending date of a time period formatted as YYYY-MM-DD .
@@ -27,6 +29,7 @@ Term | Definition
 <a name="fullSiteDescriptor">fullSiteDescriptor</a> | That portion of fullAddress that precedes the civic number (in the case of a civic address) or the locality (in the case of a non-civic address). Here is an example:<br>RM 104, Student Union Building -- University of Victoria
 <a name="geomark">geomark</a> | A point, line, or polygon of interest that can be shared in a variety of formats and map projections. Geomarks are created by the <a href="https://apps.gov.bc.ca/pub/geomark/">Geomark Service</a>.
 <a name="geomarkURL">geomarkURL</a> | The URL of a polygon geomark that should be used by the geocoder as a bounding box in the /bgeo/sites/within query. Point and line geomarks will not work. When specifying this URL programmatically, it should be url-encoded without format and projection parameters.
+<a name="imageUrl">imageUrl</a> | URL of an occupant's photo or picture
 <a name="interpolatedSite">Interpolated Site</a> | A site whose civic number is assumed to be valid because it lies within a known address range and whose location was interpolated using the address range (e.g., linear address interpolation) or the address range plus the locations of known sites (e.g., adaptive address interpolation).
 <a name="interpolation">interpolation</a> | In the case of a block level match, the method of interpolation to determine how far down the block the accessPoint should be. Linear interpolation uses the ratio (civicNumber - blockFaceMinCivicNumber) /    (blockFaceMaxCivicNumber - blockFaceMinCivicNumber) and the locations of the beginning and end of the block.  Adaptive interpolation uses the ratio (civicNumber - precedingKnownCivicNumber) / (followingKnownCivicNumber - precedingKnownCivicNumber) and the locations of the preceding, known civic number and the following, known civic number.
 <a name="intersection">Intersection</a> | A dead-end or the intersection of two or more roads. 
@@ -34,6 +37,7 @@ Term | Definition
 <a name="intersectionAddress">Intersection Address</a> | The intersection of two or more named streets as a single string. Here are some examples: <br>Douglas St and Gorge Rd E and Hillside Ave, Victoria, BC<br>48th Ave W and Marine Dr SW, Vancouver, BC 
 <a name="intersectionName">intersectionName</a> | The street name, type, direction, and qualifier of all streets that meet at a given intersection. Here are some examples:<br>Douglas St and Gorge Rd E and Hillside Ave<br>48th Ave W and Marine Dr SW
 <a name="isPrimary">isPrimary</a> | True if primary accessPoint of the associated site.
+<a name="keywords">keywords</a> | semi-colon delimited list of keywords associated with occupant 
 <a name="linearAddressInterpolation">linearAddressInterpolation</a> | The process of inferring the location of a site with a given civic number using a road centreline and address range for a given block face.
 <a name="localityName">localityName</a> | The name of the locality assigned to a given site by an address authority such as a municipality, Regional District, Indian Reservation, First Nations government, or the Department of National Defense. It may also be an official name of a natural feature from the BC Geographical Names Information System (BCGNIS). A locality name that starts with a directional is not abbreviated (e.g., North Vancouver, not N Vancouver). Spelling of localities that are place names or natural feature names MUST match that published by BCGNIS.
 <a name="localityType">localityType</a> | The type of address authority that assigned the localityName to the address. 
@@ -51,8 +55,9 @@ Term | Definition
 <a name="minScore">minScore</a> | The minimum score an address match must have before it is included in the results. Scores range between 0 and 100 inclusive. The default is 0.
 <a name="narrativeLocation">narrativeLocation</a> | Turn-by-turn directions to the site. A narrative typically starts at the closest known, named physical feature to the site as in the following:<br>From Tlell, travel north on highway 16 till you see a big golden spruce tree on your left, hike west for about one kilometre.
 <a name="occupantAliasAddress">occupantAliasAddress</a> | Address for display purposes. Useful when you want an occupant to display a recognizable localityName instead of the municipally-correct one (e.g., Brentwood Bay instead Central Saanich).
+<a name="occupantDescription">occupantDescription</a> | Occupant description
 <a name="occupantID">occupantID</a> | Unique id assigned to occupant
-<a name="occupantName">occupantName</a> | 
+<a name="occupantName">occupantName</a> | Name of occupant
 <a name="outputFormat">outputFormat</a> | Format of request results. Allowed values are xhtml, kml, csv, shpz, geojson, geojsonp, gml
 <a name="outputSRS">outputSRS</a> | The EPSG code of the spatial reference system used to state the coordination location of a named feature. It is ignored if KML output is specified since KML only supports 4326 (WGS84). Allowed values are:<br>3005: BC Albers<br>4326: WGS 84 (default)<br>26907-26911: NAD83/UTM Zones 7N through 11N<br>32607-32611: WGS84/UTM Zones 7N through 11N<br>26707-26711: NAD27/UTM Zones 7N through 11N
 <a name="parcelPoint">parcelPoint</a> | A point representing a position known to be within the boundaries of a land parcel, usually the parcel centroid.
@@ -79,16 +84,12 @@ Term | Definition
 <a name="unitNumberSuffix)">unitNumberSuffix)</a> | A letter that follows the unit number as in Unit 1A.
 <a name="unitDesignator">unitDesignator</a> | The type of unit(e.g., APT, SUITE, and UNIT) and is abbreviated if such an abbreviation is defined. The set of all unit designators MUST include those defined in the Addressing Guidelines by Canada Post and is the responsibility of DataBC to maintain this set.
 <a name="version">version</a> | Software version of the REST Web Service
+<a name="websiteUrl">websiteUrl</a> | Web site URL of occupant
 
 
 
-<a name="occupantDescription">occupantDescription</a> | 
-<a name="contactEmail">contactEmail</a> | 
-<a name="contactPhone">contactPhone</a> | 
-<a name="contactFax">contactFax</a> | 
-<a name="websiteUrl">websiteUrl</a> | 
-<a name="imageUrl">imageUrl</a> | 
-<a name="keywords">keywords</a> | 
+
+
 <a name="businessCategoryClass">businessCategoryClass</a> | 
 <a name="businessCategoryDescription">businessCategoryDescription</a> | 
 <a name="naicsCode">naicsCode</a> | 
