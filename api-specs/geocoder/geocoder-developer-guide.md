@@ -7,14 +7,8 @@ The BC Physical Address Online Geocoder REST API lets you integrate real-time st
 To simplify integration of the online geocoder into your client web application, you can use the Javascript API located at:
 http://apps.gov.bc.ca/pub/geocoder/js/geocode.js 
 <br>
-##API Changes in v2.0
-1.	A site can now have one or more public or related business occupants. Here is an example:
-VICTORIA LAW COURTS -- 850 Burdett Ave, Victoria, BC
-Resources have been added to support validating, geocoding, and finding occupants nearby but only courts of law and some hospitals have been loaded. Expect a lot more occupants in the near future. Here are some example requests:<br><br>
-http://apps.gov.bc.ca/pub/geocoder/occupants/addresses.geojson?tags=courts&addressString=victoria%20law%20courts%20--%20<br><br>
-http://apps.gov.bc.ca/pub/geocoder/occupants/nearest.geojson?point=-123.7064038,48.8498537&tags=courts<br><br> 
-http://apps.gov.bc.ca/pub/geocoder/occupants/near.geojson?point=-123.7064038,48.8498537&tags=courts&maxResults=3<br><br>
-2.	The documentation has been updated.
+##API Changes in v2.0.1
+There are no API changes in v2.0.1
 
 ##Resource Overview
 The Online Geocoder offers resources for validating and geocoding an address (including public and related business occupants); finding a given site, intersection, and occupant; and finding sites, intersections, and occupants near a point or within an area. 
