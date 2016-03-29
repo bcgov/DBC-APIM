@@ -137,31 +137,17 @@ Attribute Name |	Type
 [occupantName](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#occupantName) |	string
 [occupantID](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#occupantID) |	string
 [occupantAliasAddress](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#occupantAliasAddress) |	string
-[](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#) |	string
-[](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#) |	string
-[](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#) |	string
-[](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#) |	string
-[](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#) |	string
-[](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#) |	string
-[](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#) |	string
-[](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#) |	string
-<Data name="occupantName"><value>Sir James Douglas Elementary</value></Data>
-<Data name="occupantID"><value>93504e52-ec01-4e7c-92ad-484d96987d0c</value></Data>
-<Data name="occupantAliasAddress"><value>401 MOSS ST, VICTORIA, BC</value></Data>
-<Data name="occupantDescription"><value></value></Data>
-<Data name="contactEmail"><value></value></Data>
-<Data name="contactPhone"><value></value></Data>
-<Data name="contactFax"><value></value></Data>
-<Data name="websiteUrl"><value></value></Data>
-<Data name="imageUrl"><value></value></Data>
-<Data name="keywords"><value>elementary and secondary schools;elementary;secondary;schools</value></Data>
-<Data name="businessCategoryClass"><value>elementaryAndSecondarySchools</value></Data>
-<Data name="businessCategoryDescription"><value>Elementary and secondary schools</value></Data>
-<Data name="naicsCode"><value>611110</value></Data>
-<Data name="dateOccupantUpdated"><value>2016-02-16</value></Data>
-<Data name="dateOccupantAdded"><value>2016-02-16</value></Data>
-<Data name="custodianId"><value>4</value></Data>
-<Data name="sourceDataId"><value>3310</value></Data>
-
-
-
+[occupantDescription](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#occupantDescription) |	string
+[contactEmail](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#contactEmail) |	string
+[contactPhone](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#contactPhone) |	string
+[contactFax](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#contactFax) |	string
+[websiteUrl](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#websiteUrl) |	string
+[imageUrl](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#imageUrl) |	string
+[keywords](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#keywords) |	string
+[businessCategoryClass](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#businessCategoryClass) |	string
+[businessCategoryDescription](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#businessCategoryDescription) |	string
+[naicsCode"](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#naicsCode") |	string
+[dateOccupantUpdated](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#dateOccupantUpdated) |	string
+[dateOccupantAdded](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#dateOccupantAdded) |	string
+[custodianId](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#custodianId) |	string
+[sourceDataId](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#sourceDataId) |	string
