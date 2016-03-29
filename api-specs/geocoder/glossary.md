@@ -93,5 +93,3 @@ Term | Definition
 <a name="version">version</a> | Software version of the REST Web Service
 <a name="websiteUrl">websiteUrl</a> | Web site URL of occupant
 
-<a name="sourceDataId">sourceDataId</a> | 
-
