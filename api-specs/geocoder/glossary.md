@@ -15,6 +15,7 @@ Term | Definition
 <a name="civicAddress">Civic Address</a> | The address of a site as assigned by an addressing authority such as a municipality. A civic address includes a civicNumber, civicNumberPrefix, and the localityName is that assigned by the address authority, not Canada Post. Here are some examples:<br>840 Esquimalt Rd, Esquimalt, BC<br>2317 MOODY AVE Kamloops, BC<br>Apt 1 -- 1207 Douglas St, Victoria, BC<br>525 Superior St, Victoria,BC<br>4251A Rockbank Pl, West Vancouver, BC<br>4450 Happy Valley Rd, Metchosin, BC<br>2050 SW Marine Dr,Vancouver,BC<br>420 Gorge Rd E, Victoria, BC<br>130A Hall St,Nelson,BC<br>Unit 1 -- 7467 Aspen Blvd, Pemberton, BC<br>Pad 2, 2097 Wildflower Rd,Shawnigan Lake, BC<br>Port Alice Health Centre -- 1090 Marine Dr, Port Alice, BC<br>Royal Athletic Park -- 1014 Caledonia Ave, Victoria,BC
 <a name="civicNumber">civicNumber</a> | The number assigned to a site on a street by an address authority (e.g., the 1175 in 1175 Douglas St, Victoria, BC).
 <a name="civicNumberSuffix">civicNumberSuffix</a> | A letter or fraction that follows the civic number. There should be no space between a civic number and a letter (e.g., Unit 1A) and one space between a civic number and a fraction (e.g., Suite 3 1/2)
+<a name="contactEmail">contactEmail</a> | Contact email address of occupant 
 <a name="degree">degree</a> | The number of road segments that intersection at an intersection. The degree of a dead-end is 1. The degree of a 4-way intersection is 4.
 <a name="echo">echo</a> | Include unmatched address details such as site name in results.
 <a name="endDate">endDate</a> | The ending date of a time period formatted as YYYY-MM-DD .
@@ -49,6 +50,9 @@ Term | Definition
 <a name="minDegree">minDegree</a> | The maximum degree an intersection can have to be included in results. A four-way stop has a degree of 4.
 <a name="minScore">minScore</a> | The minimum score an address match must have before it is included in the results. Scores range between 0 and 100 inclusive. The default is 0.
 <a name="narrativeLocation">narrativeLocation</a> | Turn-by-turn directions to the site. A narrative typically starts at the closest known, named physical feature to the site as in the following:<br>From Tlell, travel north on highway 16 till you see a big golden spruce tree on your left, hike west for about one kilometre.
+<a name="occupantAliasAddress">occupantAliasAddress</a> | Address for display purposes. Useful when you want an occupant to display a recognizable localityName instead of the municipally-correct one (e.g., Brentwood Bay instead Central Saanich).
+<a name="occupantID">occupantID</a> | Unique id assigned to occupant
+<a name="occupantName">occupantName</a> | 
 <a name="outputFormat">outputFormat</a> | Format of request results. Allowed values are xhtml, kml, csv, shpz, geojson, geojsonp, gml
 <a name="outputSRS">outputSRS</a> | The EPSG code of the spatial reference system used to state the coordination location of a named feature. It is ignored if KML output is specified since KML only supports 4326 (WGS84). Allowed values are:<br>3005: BC Albers<br>4326: WGS 84 (default)<br>26907-26911: NAD83/UTM Zones 7N through 11N<br>32607-32611: WGS84/UTM Zones 7N through 11N<br>26707-26711: NAD27/UTM Zones 7N through 11N
 <a name="parcelPoint">parcelPoint</a> | A point representing a position known to be within the boundaries of a land parcel, usually the parcel centroid.
@@ -75,9 +79,9 @@ Term | Definition
 <a name="unitNumberSuffix)">unitNumberSuffix)</a> | A letter that follows the unit number as in Unit 1A.
 <a name="unitDesignator">unitDesignator</a> | The type of unit(e.g., APT, SUITE, and UNIT) and is abbreviated if such an abbreviation is defined. The set of all unit designators MUST include those defined in the Addressing Guidelines by Canada Post and is the responsibility of DataBC to maintain this set.
 <a name="version">version</a> | Software version of the REST Web Service
-<a name="occupantName">occupantName</a> | 
-<a name="occupantID">occupantID</a> | 
-<a name="occupantAliasAddress">occupantAliasAddress</a> | 
+
+
+
 <a name="occupantDescription">occupantDescription</a> | 
 <a name="contactEmail">contactEmail</a> | 
 <a name="contactPhone">contactPhone</a> | 
