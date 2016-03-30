@@ -52,7 +52,7 @@ the distance resource will return this representation:
         ],
 
             [
-                ​-123.1515025,
+               ​-123.1515025,
                 ​55.3913904
             ]
         ],
