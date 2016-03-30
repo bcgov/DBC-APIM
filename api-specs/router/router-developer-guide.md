@@ -29,6 +29,16 @@ https://router.api.gov.bc.ca/distance.json?routeDescription=shortest%20distance%
 
 the distance resource will return this representation:
 
+####Response Properties
+Attribute Name |	Type
+---------------------: | --- |
+[routeDescription](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/router/glossary.md#routeDescription) | String
+[searchTimestamp](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/router/glossary.md#searchTimestamp) | Datetime
+[executionTime](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/router/glossary.md#executionTime) | Real
+[version](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/router/glossary.md#version) | String 
+[disclaimer](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/router/glossary.md#disclaimer) | String
+
+
     {
 
         "routeDescription": "shortest distance in km and json",
