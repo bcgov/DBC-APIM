@@ -9,13 +9,17 @@ The BC Route Planner REST API lets you integrate basic routing between BC locati
 Your application can store router results or display them on any web map because all result data is copyright Province of British Columbia.  
 
 ##API Key
-Use of the BC Route Planner REST API is currently restricted to government applications. For an API key, please contact
-DataBC.
+Use of the BC Route Planner REST API is currently restricted to government applications. If you are working on a government application that needs routing, please please contact DataBC for an API key.
 
 
 ##Distance Resource
-The distance resource returns the distance of the shortest or faster route between given points. Here are some examples:
+The distance resource represents the length and duration of the shortest or fastest route between given points. Here are some examples:
 
+##Route Resource
+The route resource represents the shortest or fastest route between given points and the length and duration of that route. Here are some examples:
+
+##Directions Resource
+The directions resource represents the turn-by-turn directions, shortest or fastest route between given points and the length and duration of that route. Here are some examples:
 
 
 
