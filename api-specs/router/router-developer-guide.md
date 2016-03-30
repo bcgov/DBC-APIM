@@ -15,6 +15,19 @@ Use of the BC Route Planner REST API is currently restricted to government. If y
 ##Distance Resource
 The distance resource represents the length and duration of the shortest or fastest route between given points. Here are some examples:
 
+1. Shortest distance in km and json between Duncan and Metchosin<br><br>https://router.api.gov.bc.ca/distance.json?routeDescription=shortest%20distance%20in%20km%20and%20json&points=-123.707942%2C48.778691%2C-123.537850%2C48.382005&outputSRS=4326&criteria=shortest&distanceUnits=km&apikey=myapikey<br>
+   
+2. Metchosin",57.017,00:49:33,49,Y,"https://router.api.gov.bc.ca/distance.json?routeDescription=shortest%20distance%20in%20km%20and%20json&points=-123.707942%2C48.778691%2C-123.537850%2C48.382005&outputSRS=4326&criteria=shortest&distanceUnits=km&apikey=myapikey"
+distance,shortest,km,kml,4326,"shortest distance in km and kml",2,"Duncan to Metchosin",57.017,00:49:33.0,48,Y,"https://router.api.gov.bc.ca/distance.kml?routeDescription=shortest%20distance%20in%20km%20and%20kml&points=-123.707942%2C48.778691%2C-123.537850%2C48.382005&outputSRS=4326&criteria=shortest&distanceUnits=km&apikey=myapikey"
+distance,shortest,km,html,4326,"shortest distance in km and html",2,"Duncan to Metchosin",57.017,00:49:33,49,Y,"https://router.api.gov.bc.ca/distance.html?routeDescription=shortest%20distance%20in%20km%20and%20html&points=-123.707942%2C48.778691%2C-123.537850%2C48.382005&outputSRS=4326&criteria=shortest&distanceUnit=km&apikey=myapikey"
+route,shortest,mi,json,4326,"shortest route in mi and json",2,"Duncan to Metchosin",35.429,00:49:33,46,Y,"https://router.api.gov.bc.ca/route.json?routeDescription=shortest%20route%20in%20mi%20and%20json&points=-123.707942%2C48.778691%2C-123.537850%2C48.382005&outputSRS=4326&criteria=shortest&distanceUnit=mi&apikey=myapikey"
+route,shortest,mi,kml,4326,"shortest route in mi and kml",2,"Duncan to Metchosin",35.429,00:49:33,46,Y,"https://router.api.gov.bc.ca/route.kml?routeDescription=shortest%20route%20in%20mi%20and%20kml&points=-123.707942%2C48.778691%2C-123.537850%2C48.382005&outputSRS=4326&criteria=shortest&distanceUnit=mi&apikey=myapikey"
+route,shortest,mi,html,4326,"shortest route in mi and html",2,"Duncan to Metchosin",35.429,00:49:33,51,Y,"https://router.api.gov.bc.ca/route.html?routeDescription=shortest%20route%20in%20mi%20and%20html&points=-123.707942%2C48.778691%2C-123.537850%2C48.382005&outputSRS=4326&criteria=shortest&distanceUnit=mi&apikey=myapikey"
+distance,fastest,km,json,4326,"fastest distance in km and json",2,"Duncan to Metchosin",57.108,00:49:25,34,Y,"https://router.api.gov.bc.ca/distance.json?routeDescription=fastest%20distance%20in%20km%20and%20json&points=-123.707942%2C48.778691%2C-123.537850%2C48.382005&outputSRS=4326&criteria=fastest&distanceUnit=km&apikey=myapikey"
+distance,fastest,km,kml,4326,"fastest distance in km and kml",2,"Duncan to Metchosin",57.108,00:49:25,33,Y,"https://router.api.gov.bc.ca/distance.kml?routeDescription=fastest%20distance%20in%20km%20and%20kml&points=-123.707942%2C48.778691%2C-123.537850%2C48.382005&outputSRS=4326&criteria=fastest&distanceUnit=km&apikey=myapikey"
+distance,fastest,km,html,4326,"fastest distance in km and html",2,"Duncan to Metchosin",57.108,00:49:25,33,Y,"https://router.api.gov.bc.ca/distance.html?routeDescription=fastest%20distance%20in%20km%20and%20html&points=-123.707942%2C48.778691%2C-123.537850%2C48.382005&outputSRS=4326&criteria=fastest&distanceUnit=km&apikey=myapikey"
+
+
 ##Route Resource
 The route resource represents the shortest or fastest route between given points and the length and duration of that route. Here are some examples:
 
