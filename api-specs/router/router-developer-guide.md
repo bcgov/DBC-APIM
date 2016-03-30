@@ -29,7 +29,7 @@ https://router.api.gov.bc.ca/distance.json?routeDescription=shortest%20distance%
 
 the distance resource will return this representation:
 
-####Response Properties
+####distance representation
 Attribute Name |	Type
 ---------------------: | --- |
 [routeDescription](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/router/glossary.md#routeDescription) | String
@@ -37,47 +37,14 @@ Attribute Name |	Type
 [executionTime](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/router/glossary.md#executionTime) | Real
 [version](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/router/glossary.md#version) | String 
 [disclaimer](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/router/glossary.md#disclaimer) | String
-
-
-    {
-
-        "routeDescription": "shortest distance in km and json",
-        "[searchTimestamp](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/geocoder/glossary.md#searchTimestamp)": "2016-03-30 11:18:07.752",
-        "executionTime": ​1,
-        "version": "1.1.1",
-        "disclaimer": "http://www2.gov.bc.ca/gov/content/home/disclaimer",
-        "privacyStatement": "http://www2.gov.bc.ca/gov/content/home/privacy",
-        "copyrightNotice": "Copyright 2016 Province of British Columbia - Access only",
-        "copyrightLicense": "http://www2.gov.bc.ca/gov/content/home/copyright",
-        "srsCode": ​4326,
-        "criteria": "shortest",
-        "points": 
-
-        [
-    
-            [
-
-               ​-123.1485847,
-                ​55.3933927
-
-            ],
-
-            [
-               ​-123.1515025,
-                ​55.3913904
-            ]
-        ],
-        "distance": ​1.17,
-        "distanceUnit": "km",
-        "time": ​95,
-        "timeText": "1 minutes 35 seconds"
-
-    }
-
-
-
-
-
+[privacyStatement](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/router/glossary.md#privacyStatement) | String
+[srsCode](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/router/glossary.md#srsCode) | String
+[criteria](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/router/glossary.md#criteria) | String
+[points](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/router/glossary.md#points) | String
+[distance](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/router/glossary.md#distance) | String
+[distanceUnit](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/router/glossary.md#distanceUnit) | String
+[time](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/router/glossary.md#time) | String
+[timeText](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/router/glossary.md#) | String
 
 ##Route Resource
 The route resource represents the shortest or fastest route between given points and the length and duration of that route. Here are some examples:
