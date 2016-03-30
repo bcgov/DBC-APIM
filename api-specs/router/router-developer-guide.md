@@ -41,6 +41,44 @@ Attribute Name |	Type
 [time](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/router/glossary.md#time) | Integer
 [timeText](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/router/glossary.md#timeText) | String
 
+Here is a sample json response:
+
+    {
+    
+        "routeDescription": "shortest distance in km and json",
+        "searchTimestamp": "2016-03-30 11:18:07.752",
+        "executionTime": ​1,
+        "version": "1.1.1",
+        "disclaimer": "http://www2.gov.bc.ca/gov/content/home/disclaimer",
+        "privacyStatement": "http://www2.gov.bc.ca/gov/content/home/privacy",
+        "copyrightNotice": "Copyright 2016 Province of British Columbia - Access only",
+        "copyrightLicense": "http://www2.gov.bc.ca/gov/content/home/copyright",
+        "srsCode": ​4326,
+        "criteria": "shortest",
+        "points": 
+    
+    [
+    
+    [
+    
+        ​-123.1485847,
+        ​55.3933927
+    
+    ],
+    
+            [
+                ​-123.1515025,
+                ​55.3913904
+            ]
+        ],
+        "distance": ​1.17,
+        "distanceUnit": "km",
+        "time": ​95,
+        "timeText": "1 minutes 35 seconds"
+    
+    }
+
+
 ##Route Resource
 The route resource represents the shortest or fastest route between given points and the length and duration of that route. Here are some examples:
 
