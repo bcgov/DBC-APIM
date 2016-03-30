@@ -6,7 +6,7 @@ This guide is aimed at developers and web masters that would like to incorporate
 The BC Route Planner REST API lets you integrate basic routing between BC locations into your own applications. This document defines aspects of the REST API that are not covered in the [Swagger definition](https://raw.githubusercontent.com/bcgov/DBC-APIM/master/api-specs/router/router.json). You can explore the API in the [API Console](http://apps.gov.bc.ca/pub/api-explorer/?url=https://raw.githubusercontent.com/bcgov/DBC-APIM/master/api-specs/router/router.json) . 
 <br>
 
-Your application can store router results or display them on any web map because all result data is copyright Province of British Columbia.  
+Your application can store router results or display them on any web map.
 
 ##API Key
 Use of the BC Route Planner REST API is currently restricted to government applications. If you are working on a government application that needs routing, please please contact DataBC for an API key.
