@@ -9,7 +9,7 @@ The BC Route Planner REST API lets you integrate basic routing between BC locati
 Your application can store router results or display them on any web map.
 
 ##API Key
-Use of the BC Route Planner REST API is currently restricted to government. If you are working on a government application that needs routing, please please contact DataBC for an API key.
+Use of the BC Route Planner REST API is currently restricted to government. If you are working on a government application that needs routing, please please email [DataBC](mailto:datacat@gov.bc.ca) for an API key.
 
 
 ##Distance Resource
