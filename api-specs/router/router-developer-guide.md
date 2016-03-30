@@ -28,40 +28,40 @@ https://router.api.gov.bc.ca/distance.json?routeDescription=shortest%20distance%
 
 the distance resource will return this representation:
 
-{
+    {
 
-    "routeDescription": "shortest distance in km and json",
-    "searchTimestamp": "2016-03-30 11:18:07.752",
-    "executionTime": ​1,
-    "version": "1.1.1",
-    "disclaimer": "http://www2.gov.bc.ca/gov/content/home/disclaimer",
-    "privacyStatement": "http://www2.gov.bc.ca/gov/content/home/privacy",
-    "copyrightNotice": "Copyright 2016 Province of British Columbia - Access only",
-    "copyrightLicense": "http://www2.gov.bc.ca/gov/content/home/copyright",
-    "srsCode": ​4326,
-    "criteria": "shortest",
-    "points": 
-
-[
-
-[
-
-    ​-123.1485847,
-    ​55.3933927
-
-],
+        "routeDescription": "shortest distance in km and json",
+        "searchTimestamp": "2016-03-30 11:18:07.752",
+        "executionTime": ​1,
+        "version": "1.1.1",
+        "disclaimer": "http://www2.gov.bc.ca/gov/content/home/disclaimer",
+        "privacyStatement": "http://www2.gov.bc.ca/gov/content/home/privacy",
+        "copyrightNotice": "Copyright 2016 Province of British Columbia - Access only",
+        "copyrightLicense": "http://www2.gov.bc.ca/gov/content/home/copyright",
+        "srsCode": ​4326,
+        "criteria": "shortest",
+        "points": 
 
         [
-            ​-123.1515025,
-            ​55.3913904
-        ]
-    ],
-    "distance": ​1.17,
-    "distanceUnit": "km",
-    "time": ​95,
-    "timeText": "1 minutes 35 seconds"
+    
+        [
 
-}
+            ​-123.1485847,
+            ​55.3933927
+
+        ],
+
+            [
+                ​-123.1515025,
+                ​55.3913904
+            ]
+        ],
+        "distance": ​1.17,
+        "distanceUnit": "km",
+        "time": ​95,
+        "timeText": "1 minutes 35 seconds"
+
+    }
 
 
 
