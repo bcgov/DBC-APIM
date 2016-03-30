@@ -23,7 +23,7 @@ The distance resource represents the length and duration of the shortest or fast
 
 ### HTTP Response
 
-The distance resource will return the folling representation:
+The distance resource will return the following representation:
 
 Attribute Name |	Type
 ---------------------: | --- |
@@ -69,11 +69,6 @@ Attribute Name |	Type
 [time](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/router/glossary.md#time) | Integer
 [timeText](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/router/glossary.md#timeText) | String
 [route](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/router/glossary.md#route) | Polyline
-
-
-
-
-
 
 ##Directions Resource
 The directions resource represents the turn-by-turn directions, shortest or fastest route between given points and the length and duration of that route. Here are some examples:
