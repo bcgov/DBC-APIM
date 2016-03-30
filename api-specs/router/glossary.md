@@ -16,4 +16,4 @@ Term | Definition
 <a name="routeDescription">routeDescription</a> | A short description of the nature of the requested route. This will be echoed in the returned route representation for use in your application. For example:<br>Fastest route from 1002 Johnson St, Victoria to 1105 Royal Ave, New Westminster
 <a name="time">time</a> | Route duration (in seconds)
 <a name="timeText">timeText</a> | Route duration in structured English (e.g., 1 hour and 15 minutes)
-<a name="version">version</a> | Software version of the REST Web Service
+<a name="version">version</a> | Software version of the Router Web Service
