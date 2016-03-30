@@ -239,3 +239,113 @@ Attribute Name |	Type
 [timeText](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/router/glossary.md#timeText) | String
 [route](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/router/glossary.md#route) | Polyline
 [directions](https://github.com/bcgov/DBC-APIM/blob/master/api-specs/router/glossary.md#route) | list of String
+
+Here is a sample json response:
+
+    {
+    
+        "routeDescription": "shortest distance in km and json",
+        "searchTimestamp": "2016-03-30 11:19:40.879",
+        "executionTime": ​1,
+        "version": "1.1.1",
+        "disclaimer": "http://www2.gov.bc.ca/gov/content/home/disclaimer",
+        "privacyStatement": "http://www2.gov.bc.ca/gov/content/home/privacy",
+        "copyrightNotice": "Copyright 2016 Province of British Columbia - Access only",
+        "copyrightLicense": "http://www2.gov.bc.ca/gov/content/home/copyright",
+        "srsCode": ​4326,
+        "criteria": "shortest",
+        "points": 
+    
+    [
+    
+    [
+    
+        ​-123.1485847,
+        ​55.3933927
+    
+    ],
+    
+        [
+            ​-123.1515025,
+            ​55.3913904
+        ]
+    
+    ],
+    "distance": ​1.17,
+    "distanceUnit": "km",
+    "time": ​95,
+    "timeText": "1 minutes 35 seconds",
+    "route": 
+    [
+    
+    [
+    
+        ​-123.14858470195041,
+        ​55.39339267997931
+    
+    ],
+    [
+    
+        ​-123.14840793196278,
+        ​55.39338712528468
+    
+    ],
+    [
+    
+        ​-123.14761109235013,
+        ​55.39341636881418
+    
+    ],
+    [
+    
+        ​-123.14668144613537,
+        ​55.393617534494794
+    
+    ],
+    [
+    
+        ​-123.14503449525762,
+        ​55.39417521046494
+    
+    ],
+    [
+    
+        ​-123.14390833997521,
+        ​55.39236304295874
+    
+    ],
+    [
+    
+        ​-123.14305692485847,
+        ​55.39099288115634
+    
+    ],
+    [
+    
+        ​-123.1446450161482,
+        ​55.39068293699658
+    
+    ],
+    [
+    
+        ​-123.14784075650216,
+        ​55.390523867097286
+    
+    ],
+    
+        [
+            ​-123.15160701279896,
+            ​55.3907106829186
+        ]
+    
+    ],
+    "directions": 
+    
+        [
+            "Continue onto Columbia Dr for 250 m",
+            "Turn right onto Hwy 39 for 400 m",
+            "Turn right onto Alberta Dr for 550 m",
+            "Finish!"
+        ]
+    
+    }
