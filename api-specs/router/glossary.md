@@ -5,6 +5,7 @@ Term | Definition
 <a name="criteria">criteria</a> | Routing criteria to optimize. One of shortest or fastest. Default is shortest.
 <a name="directions">directions</a> | Turn-by-turn directions
 <a name="disclaimer">disclaimer</a> | Legal disclaimer of the Router Web Service
+<a name="distance">distance</a> | Length of shortest or fastest route
 <a name="distanceUnit">distanceUnit</a> | Unit of measure to report distance value in. Allowed values are km (kilometres) and mi (miles). Default is km.
 <a name="executionTime">executionTime</a> | Query execution time in milliseconds
 <a name="outputFormat">outputFormat</a> | Format of representation. Allowed values are json, html, and kml. Default is json.
