@@ -24,6 +24,7 @@ The distance resource represents the length and duration of the shortest or fast
 ### HTTP Response
 
 Given the following GET Request<br>
+
 https://router.api.gov.bc.ca/distance.json?routeDescription=shortest%20distance%20in%20km%20and%20json&points=-123.1485847%2C55.3933927%2C-123.1515025%2C55.3913904&outputSRS=4326&criteria=shortest&distanceUnits=km&apikey=a82472ff8f754968b4e70943adc63888
 
 the distance resource will return this representation:
