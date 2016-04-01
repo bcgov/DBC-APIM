@@ -1,4 +1,4 @@
-#Single-Line Address Format
+#Single-Line Address Format Specification
 
 An address may be represented by a single line (string) in one of the formats listed below. 
 
