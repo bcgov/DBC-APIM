@@ -7,5 +7,4 @@ Apache Spring HateOS | REST API | Apache License, Version 2.0
 Apache Commons | database connection pooling, general use library functions |	Apache License Version 2.0
 GeoTools	| Coordinate re-projection |	LGPL v2.1
 JTS | Geometry objects and manipulation functions |	LGPL v2
-Oracle JDBC	| Database access |OTN License
 SLF4j |	logging framework |	MIT License
