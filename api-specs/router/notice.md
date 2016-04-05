@@ -1,4 +1,4 @@
-BC Route Planner is Copyright Province of British Columbia and makes use of the following software packages:
+The BC Route Planner is Copyright Province of British Columbia and makes use of the following software packages:
 
 Name | Description | License
 --- | --- | ---
