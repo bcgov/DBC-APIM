@@ -7,4 +7,4 @@ Apache Commons | Database connection pooling, general use library functions |	Ap
 GeoTools	| Coordinate re-projection |	LGPL v2.1
 JTS | Geometry objects and manipulation functions |	LGPL v2
 SLF4j |	Logging framework |	MIT License
-Oracle JDBC |	Database access | OTN License
+Oracle JDBC |	Database access | Oracle Technology Network Development and Distribution License
