@@ -17,7 +17,7 @@
     },
     "externalDocs": {
         "description": "Physical Address Geocoder Web Site",
-        "url": "http://apps.gov.bc.ca/pub/geocoder"
+        "url": "https://catalogue.data.gov.bc.ca/dataset/physical-address-geocoding-web-service"
     },
     "tags": [
         {
@@ -30,10 +30,9 @@
             "name": "occupants"
         }
     ],
-    "host": "apps.gov.bc.ca",
-    "basePath": "/pub/geocoder",
+    "host": "geocoder.api.gov.bc.ca",
+    "basePath": "/",
     "schemes": [
-        "http",
         "https"
     ],
     "produces": [
