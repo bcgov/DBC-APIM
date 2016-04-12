@@ -17,7 +17,7 @@
     },
     "externalDocs": {
         "description": "Physical Address Geocoder Web Site",
-        "url": "http://apps.gov.bc.ca/pub/geocoder"
+        "url": "https://catalogue.data.gov.bc.ca/dataset/physical-address-geocoding-web-service"
     },
     "tags": [
         {
@@ -37,8 +37,10 @@
     ],
     "produces": [
         "application/json",
+        "application/vnd.geo+json",
         "application/vnd.google-earth.kml+xml",
-        "text/html"
+        "application/gml+xml",
+        "application/text+csv"
     ],
     "security": [
         {
@@ -1690,3 +1692,4 @@
             }
         }
     }
+}
