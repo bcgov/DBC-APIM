@@ -1,8 +1,8 @@
 {
     "swagger": "2.0",
     "info": {
-        "title": "Geocoder REST API",
-        "description": "This API computes the physical locations (i.e., latitude and longitude) and correct, standardized forms of civic and non-civic addresses in British Columbia.",
+        "title": "Gated Geocoder REST API",
+        "description": "This gated API computes the physical locations (i.e., latitude and longitude) and correct, standardized forms of civic and non-civic addresses in British Columbia.",
         "version": "2.0.0",
         "license": {
             "name": "Open Government License - British Columbia",
@@ -17,7 +17,7 @@
     },
     "externalDocs": {
         "description": "Physical Address Geocoder Web Site",
-        "url": "https://catalogue.data.gov.bc.ca/dataset/physical-address-geocoding-web-service"
+        "url": "http://apps.gov.bc.ca/pub/geocoder"
     },
     "tags": [
         {
@@ -36,8 +36,22 @@
         "https"
     ],
     "produces": [
-        "application/json"
+        "application/json",
+        "application/vnd.google-earth.kml+xml",
+        "text/html"
     ],
+    "security": [
+        {
+            "apikey": []
+        }
+    ],
+    "securityDefinitions": {
+        "apikey": {
+            "type": "apiKey",
+            "in": "header",
+            "name": "apikey"
+        }
+    },
     "paths": {
         "/addresses.{outputFormat}": {
             "get": {
@@ -1676,4 +1690,3 @@
             }
         }
     }
-}
