@@ -111,7 +111,7 @@
                     {
                         "name": "outputStyle",
                         "in": "query",
-                        "description": "Defines output format",
+                        "description": "Defines output style",
                         "type": "string",
                         "required": false,
                         "default": "detail",
@@ -174,7 +174,7 @@
                     {
                         "name": "bbox",
                         "in": "query",
-                        "description": "Bounding box in degrees. Format: bbox=minLon,minLat,maxLon,maxLat. Example: -127.132,50.474,-126.872,50.626",
+                        "description": "Returns all names, all official names, or notOfficial names inside or intersected by a given bounding box. Format: bbox=minLon,minLat,maxLon,maxLat. Example: -127.132,50.474,-126.872,50.626",
                         "type": "string",
                         "required": false
                     },
@@ -225,7 +225,7 @@
                     {
                         "name": "outputStyle",
                         "in": "query",
-                        "description": "Defines output format",
+                        "description": "Defines output style",
                         "type": "string",
                         "required": false,
                         "default": "detail",
@@ -272,7 +272,7 @@
         },
         "/names/near": {
             "get": {
-                "description": "Returns all names, all official names, or notOfficial names near a given point.",
+                "description": "Returns all names, all official names, or notOfficial names within a given distance (in km) of a given point.",
                 "tags": [
                     "Near"
                 ],
@@ -280,14 +280,14 @@
                     {
                         "name": "featurePoint",
                         "in": "query",
-                        "description": "A point. Format: featurePoint=Lon,Lat. Example: -123.307,48.473",
+                        "description": "______________________ Format: featurePoint=Lon,Lat. Example: -123.307,48.473",
                         "type": "string",
                         "required": false
                     },
                     {
                         "name": "distance",
                         "in": "query",
-                        "description": "Search range from featurePoint",
+                        "description": "in km",
                         "type": "integer",
                         "required": true,
                         "default": 5
@@ -295,7 +295,7 @@
                     {
                         "name": "official",
                         "in": "query",
-                        "description": "official, _________",
+                        "description": "Limit to official or unofficial names",
                         "type": "integer",
                         "required": false,
                         "default": 1
@@ -355,7 +355,7 @@
                     {
                         "name": "outputStyle",
                         "in": "query",
-                        "description": "Defines output format",
+                        "description": "Defines output style",
                         "type": "string",
                         "required": false,
                         "default": "detail",
@@ -395,14 +395,14 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "Inside search result"
+                        "description": "Near search result"
                     }
                 }
             }
         },
         "/names/decisions/recent": {
             "get": {
-                "description": "____________",
+                "description": "Returns all naming decisions made within the last x days.",
                 "tags": [
                     "Recent decisions"
                 ],
@@ -410,7 +410,7 @@
                     {
                         "name": "days",
                         "in": "query",
-                        "description": "_________________",
+                        "description": "Maximum age of decision in days (default 30)",
                         "type": "integer",
                         "required": true,
                         "default": 30
@@ -418,7 +418,7 @@
                     {
                         "name": "official",
                         "in": "query",
-                        "description": "official, _________",
+                        "description": "Limit to official or unofficial names",
                         "type": "integer",
                         "required": false,
                         "default": 1
@@ -478,7 +478,7 @@
                     {
                         "name": "outputStyle",
                         "in": "query",
-                        "description": "Defines output format",
+                        "description": "Defines output style",
                         "type": "string",
                         "required": false,
                         "default": "detail",
@@ -518,14 +518,14 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "Inside search result"
+                        "description": "Recent decisions search result"
                     }
                 }
             }
         },
         "/names/changes": {
             "get": {
-                "description": "add description",
+                "description": "Returns all names that have changed within the specified date range",
                 "tags": [
                     "Changes"
                 ],
@@ -533,7 +533,7 @@
                     {
                         "name": "fromDate",
                         "in": "query",
-                        "description": "add description",
+                        "description": "The oldest change date for which to fetch names",
                         "type": "string",
                         "required": true,
                         "default": "2016-03-21"
@@ -541,7 +541,7 @@
                     {
                         "name": "toDate",
                         "in": "query",
-                        "description": "add description",
+                        "description": "The most recent change date for which to fetch names ",
                         "type": "string",
                         "required": true,
                         "default": "2016-04-21"
@@ -549,7 +549,7 @@
                     {
                         "name": "official",
                         "in": "query",
-                        "description": "official, _________",
+                        "description": "Limit to official or unofficial names",
                         "type": "integer",
                         "required": false,
                         "default": 1
@@ -610,7 +610,7 @@
                     {
                         "name": "outputStyle",
                         "in": "query",
-                        "description": "Defines output format",
+                        "description": "Defines output style",
                         "type": "string",
                         "required": false,
                         "default": "detail",
@@ -650,7 +650,7 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "Inside search result"
+                        "description": "Changes search result"
                     }
                 }
             }
