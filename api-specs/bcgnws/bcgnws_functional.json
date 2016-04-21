@@ -3,8 +3,37 @@
     "info": {
         "title": "BC Geographical Names Web Service",
         "description": "Geographical names are more than labels on maps and road signs. They can reveal patterns of settlement, exploration and migration, and mirror outside influences to our history - aspects of the heritage and promise of an area that might otherwise be overlooked or forgotten by visitors and later generations.",
-        "version": "1.0.0"
+        "version": "3.1.0",
+        "license": {
+            "name": "Copyright 2016 Province of British Columbia - Access only",
+            "url": "http://www2.gov.bc.ca/gov/content/home/copyright"
+        },
+        "contact": {
+            "name": "BC Geographical Names Office",
+            "email": "geographical.names@gov.bc.ca"
+        }
     },
+    "externalDocs": {
+        "description": "BC Geographical Names Office Webpage",
+        "url": "http://www2.gov.bc.ca/gov/content/governments/celebrating-british-columbia/historic-places/geographical-names"
+    },
+    "tags": [
+        {
+            "name": "Search"
+        },
+        {
+            "name": "Inside"
+        },
+        {
+            "name": "Near"
+        },
+        {
+            "name": "Recent decisions"
+        },
+        {
+            "name": "Changes"
+        }
+    ],
     "host": "apps.gov.bc.ca",
     "basePath": "/pub/bcgnws",
     "schemes": [
@@ -18,6 +47,9 @@
         "/names/official/search": {
             "get": {
                 "description": "Searches all names or all official names by name; wildcard characters “*” are allowed.",
+                "tags": [
+                    "Search"
+                ],
                 "parameters": [
                     {
                         "name": "name",
@@ -135,6 +167,9 @@
         "/names/official/inside": {
             "get": {
                 "description": "Returns all names, all official names, or notOfficial names inside or intersected by a given bounding box.",
+                "tags": [
+                    "Inside"
+                ],
                 "parameters": [
                     {
                         "name": "bbox",
@@ -238,6 +273,9 @@
         "/names/near": {
             "get": {
                 "description": "Returns all names, all official names, or notOfficial names near a given point.",
+                "tags": [
+                    "Near"
+                ],
                 "parameters": [
                     {
                         "name": "featurePoint",
@@ -365,6 +403,9 @@
         "/names/decisions/recent": {
             "get": {
                 "description": "____________",
+                "tags": [
+                    "Recent decisions"
+                ],
                 "parameters": [
                     {
                         "name": "days",
@@ -485,6 +526,9 @@
         "/names/changes": {
             "get": {
                 "description": "add description",
+                "tags": [
+                    "Changes"
+                ],
                 "parameters": [
                     {
                         "name": "fromDate",
