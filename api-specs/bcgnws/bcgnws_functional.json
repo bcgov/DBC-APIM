@@ -152,6 +152,138 @@
                 }
             }
         },
+        "/names/soundlike": {
+            "get": {
+                "description": "________________________________________",
+                "tags": [
+                    "Names"
+                ],
+                "parameters": [
+                    {
+                        "name": "name",
+                        "in": "query",
+                        "description": "Feature Name (can include wildcards *)",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "featureClass",
+                        "in": "query",
+                        "description": "BCGNWS Feature Class",
+                        "type": "string",
+                        "required": false,
+                        "default": "undefined",
+                        "enum": [
+                            "undefined",
+                            "1 - Populated"
+                        ]
+                    },
+                    {
+                        "name": "featureCategory",
+                        "in": "query",
+                        "description": "BCGNWS Feature Category",
+                        "type": "string",
+                        "required": false,
+                        "default": "undefined",
+                        "enum": [
+                            "undefined",
+                            "1 - Incorporated"
+                        ]
+                    },
+                    {
+                        "name": "startIndex",
+                        "in": "query",
+                        "description": "Defines 'page' in selected records",
+                        "type": "integer",
+                        "required": false,
+                        "default": 0
+                    },
+                    {
+                        "name": "itemsPerPage",
+                        "in": "query",
+                        "description": "Defines 'page' in selected records",
+                        "type": "integer",
+                        "required": false,
+                        "default": 25,
+                        "enum": [
+                            25,
+                            50,
+                            100,
+                            200
+                        ]
+                    },
+                    {
+                        "name": "outputFormat",
+                        "in": "query",
+                        "description": "Defines output format",
+                        "type": "string",
+                        "required": false,
+                        "default": "json",
+                        "enum": [
+                            "xml",
+                            "csv",
+                            "rdf",
+                            "json",
+                            "kml",
+                            "uri"
+                        ]
+                    },
+                    {
+                        "name": "outputStyle",
+                        "in": "query",
+                        "description": "Defines output style",
+                        "type": "string",
+                        "required": false,
+                        "default": "detail",
+                        "enum": [
+                            "summary",
+                            "detail"
+                        ]
+                    },
+                    {
+                        "name": "outputSRS",
+                        "in": "query",
+                        "description": "Defines output EPSG CRS",
+                        "type": "integer",
+                        "required": false,
+                        "default": 4326,
+                        "enum": [
+                            3005,
+                            3857,
+                            4326,
+                            26907,
+                            26908,
+                            26909,
+                            26910,
+                            26911,
+                            32607,
+                            32608,
+                            32609,
+                            32610,
+                            32611,
+                            26707,
+                            26708,
+                            26709,
+                            26710,
+                            26711
+                        ]
+                    },
+                    {
+                        "name": "sortBy",
+                        "in": "query",
+                        "description": "Sort Results",
+                        "type": "string",
+                        "required": false,
+                        "default": "name"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Soundlike search result"
+                    }
+                }
+            }
+        },
         "/names/official/inside": {
             "get": {
                 "description": "Returns all names, all official names, or notOfficial names inside or intersected by a given bounding box.",
@@ -460,6 +592,8 @@
                             "rdf",
                             "json",
                             "kml",
+                            "rss",
+                            "atom",
                             "uri"
                         ]
                     },
@@ -592,6 +726,8 @@
                             "rdf",
                             "json",
                             "kml",
+                            "rss",
+                            "atom",
                             "uri"
                         ]
                     },
