@@ -51,7 +51,7 @@ paths:
           description: Defines output format
           type: string
           required: false
-          default: xml
+          default: json
           enum:
             - xml
             - csv
@@ -64,7 +64,7 @@ paths:
           description: Defines output format
           type: string
           required: false
-          default: summary
+          default: detail
           enum:
             - summary
             - detail
@@ -73,7 +73,7 @@ paths:
           description: Defines output EPSG CRS
           type: integer
           required: true
-          default: 3005
+          default: 4326
           enum:
             - 3005
             - 3857
@@ -98,7 +98,7 @@ paths:
           description: Sort Results
           type: string
           required: false
-          default: score
+          default: score,name
       responses:
         '200':
           description: Name search result
@@ -108,7 +108,7 @@ paths:
       parameters:
         - name: bbox
           in: query
-          description: 'Bounding box in degrees. Format: bbox=minLon,minLat,maxLon,maxLat'
+          description: 'Bounding box in degrees. Format: bbox=minLon,minLat,maxLon,maxLat. Example: -127.132,50.474,-126.872,50.626'
           type: string
           required: false
         - name: sortBy
@@ -116,7 +116,7 @@ paths:
           description: Sort Results
           type: string
           required: false
-          default: undefined
+          default: name
           enum:
             - undefined
             - name
@@ -138,7 +138,7 @@ paths:
           description: Defines output format
           type: string
           required: false
-          default: xml
+          default: kml
           enum:
             - xml
             - csv
@@ -151,7 +151,7 @@ paths:
           description: Defines output format
           type: string
           required: false
-          default: summary
+          default: detail
           enum:
             - summary
             - detail
@@ -160,7 +160,301 @@ paths:
           description: Defines output EPSG CRS
           type: integer
           required: true
-          default: 3005
+          default: 4326
+          enum:
+            - 3005
+            - 3857
+            - 4326
+            - 26907
+            - 26908
+            - 26909
+            - 26910
+            - 26911
+            - 32607
+            - 32608
+            - 32609
+            - 32610
+            - 32611
+            - 26707
+            - 26708
+            - 26709
+            - 26710
+            - 26711
+      responses:
+        '200':
+          description: Inside search result
+  /names/near:
+    get:
+      description: 'Returns all names, all official names, or notOfficial names near a given point.'
+      parameters:
+        - name: featurePoint
+          in: query
+          description: 'A point. Format: featurePoint=Lon,Lat. Example: -123.307,48.473'
+          type: string
+          required: false
+        - name: distance
+          in: query
+          description: "Search range from featurePoint"
+          type: integer
+          required: true
+          default: 5
+        - name: official
+          in: query
+          description: "official, _________"
+          type: integer
+          required: false
+          default: 1
+        - name: sortBy
+          in: query
+          description: Sort Results
+          type: string
+          required: false
+          default: name
+          enum:
+            - undefined
+            - name
+            - featureType
+            - decisionDate
+        - name: startIndex
+          in: query
+          description: "Defines 'page' in selected records"
+          type: integer
+          required: false
+          default: 1
+        - name: itemsPerPage
+          in: query
+          description: "Defines 'page' in selected records"
+          type: integer
+          required: false
+          default: 25
+          enum:
+            - 25
+            - 50
+            - 100
+            - 200
+        - name: outputFormat
+          in: query
+          description: Defines output format
+          type: string
+          required: false
+          default: kml
+          enum:
+            - xml
+            - csv
+            - rdf
+            - json
+            - kml
+            - uri
+        - name: outputStyle
+          in: query
+          description: Defines output format
+          type: string
+          required: false
+          default: detail
+          enum:
+            - summary
+            - detail
+        - name: outputSRS
+          in: query
+          description: Defines output EPSG CRS
+          type: integer
+          required: true
+          default: 4326
+          enum:
+            - 3005
+            - 3857
+            - 4326
+            - 26907
+            - 26908
+            - 26909
+            - 26910
+            - 26911
+            - 32607
+            - 32608
+            - 32609
+            - 32610
+            - 32611
+            - 26707
+            - 26708
+            - 26709
+            - 26710
+            - 26711
+      responses:
+        '200':
+          description: Inside search result
+  /names/decisions/recent:
+    get:
+      description: '____________'
+      parameters:
+        - name: days
+          in: query
+          description: '_________________'
+          type: integer
+          required: true
+          default: 30
+        - name: official
+          in: query
+          description: "official, _________"
+          type: integer
+          required: false
+          default: 1
+        - name: sortBy
+          in: query
+          description: Sort Results
+          type: string
+          required: false
+          default: decisionDate
+          enum:
+            - undefined
+            - name
+            - featureType
+            - decisionDate
+        - name: startIndex
+          in: query
+          description: "Defines 'page' in selected records"
+          type: integer
+          required: false
+          default: 1
+        - name: itemsPerPage
+          in: query
+          description: "Defines 'page' in selected records"
+          type: integer
+          required: false
+          default: 25
+          enum:
+            - 25
+            - 50
+            - 100
+            - 200
+        - name: outputFormat
+          in: query
+          description: Defines output format
+          type: string
+          required: false
+          default: json
+          enum:
+            - xml
+            - csv
+            - rdf
+            - json
+            - kml
+            - uri
+        - name: outputStyle
+          in: query
+          description: Defines output format
+          type: string
+          required: false
+          default: detail
+          enum:
+            - summary
+            - detail
+        - name: outputSRS
+          in: query
+          description: Defines output EPSG CRS
+          type: integer
+          required: true
+          default: 4326
+          enum:
+            - 3005
+            - 3857
+            - 4326
+            - 26907
+            - 26908
+            - 26909
+            - 26910
+            - 26911
+            - 32607
+            - 32608
+            - 32609
+            - 32610
+            - 32611
+            - 26707
+            - 26708
+            - 26709
+            - 26710
+            - 26711
+      responses:
+        '200':
+          description: Inside search result
+  /names/changes:
+    get:
+      description: 'add description'
+      parameters:
+        - name: fromDate
+          in: query
+          description: 'add description'
+          type: string
+          required: true
+          default: '2016-03-21'
+        - name: toDate
+          in: query
+          description: 'add description'
+          type: string
+          required: true
+          default: '2016-04-21'
+        - name: official
+          in: query
+          description: "official, _________"
+          type: integer
+          required: false
+          default: 1
+        - name: sortBy
+          in: query
+          description: Sort Results
+          type: string
+          required: false
+          default: changeDate
+          enum:
+            - undefined
+            - name
+            - changeDate
+            - featureType
+            - decisionDate
+        - name: startIndex
+          in: query
+          description: "Defines 'page' in selected records"
+          type: integer
+          required: false
+          default: 1
+        - name: itemsPerPage
+          in: query
+          description: "Defines 'page' in selected records"
+          type: integer
+          required: false
+          default: 25
+          enum:
+            - 25
+            - 50
+            - 100
+            - 200
+        - name: outputFormat
+          in: query
+          description: Defines output format
+          type: string
+          required: false
+          default: json
+          enum:
+            - xml
+            - csv
+            - rdf
+            - json
+            - kml
+            - uri
+        - name: outputStyle
+          in: query
+          description: Defines output format
+          type: string
+          required: false
+          default: detail
+          enum:
+            - summary
+            - detail
+        - name: outputSRS
+          in: query
+          description: Defines output EPSG CRS
+          type: integer
+          required: true
+          default: 4326
           enum:
             - 3005
             - 3857
