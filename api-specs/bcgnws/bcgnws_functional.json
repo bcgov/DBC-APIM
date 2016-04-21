@@ -167,30 +167,6 @@
                         "required": true
                     },
                     {
-                        "name": "featureClass",
-                        "in": "query",
-                        "description": "BCGNWS Feature Class",
-                        "type": "string",
-                        "required": false,
-                        "default": "undefined",
-                        "enum": [
-                            "undefined",
-                            "1 - Populated"
-                        ]
-                    },
-                    {
-                        "name": "featureCategory",
-                        "in": "query",
-                        "description": "BCGNWS Feature Category",
-                        "type": "string",
-                        "required": false,
-                        "default": "undefined",
-                        "enum": [
-                            "undefined",
-                            "1 - Incorporated"
-                        ]
-                    },
-                    {
                         "name": "startIndex",
                         "in": "query",
                         "description": "Defines 'page' in selected records",
