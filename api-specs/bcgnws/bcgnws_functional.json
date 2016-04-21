@@ -19,19 +19,7 @@
     },
     "tags": [
         {
-            "name": "Search"
-        },
-        {
-            "name": "Inside"
-        },
-        {
-            "name": "Near"
-        },
-        {
-            "name": "Recent decisions"
-        },
-        {
-            "name": "Changes"
+            "name": "Names"
         }
     ],
     "host": "apps.gov.bc.ca",
@@ -48,7 +36,7 @@
             "get": {
                 "description": "Searches all names or all official names by name; wildcard characters “*” are allowed.",
                 "tags": [
-                    "Search"
+                    "Names"
                 ],
                 "parameters": [
                     {
@@ -168,7 +156,7 @@
             "get": {
                 "description": "Returns all names, all official names, or notOfficial names inside or intersected by a given bounding box.",
                 "tags": [
-                    "Inside"
+                    "Names"
                 ],
                 "parameters": [
                     {
@@ -274,7 +262,7 @@
             "get": {
                 "description": "Returns all names, all official names, or notOfficial names within a given distance (in km) of a given point.",
                 "tags": [
-                    "Near"
+                    "Names"
                 ],
                 "parameters": [
                     {
@@ -404,7 +392,7 @@
             "get": {
                 "description": "Returns all naming decisions made within the last x days.",
                 "tags": [
-                    "Recent decisions"
+                    "Names"
                 ],
                 "parameters": [
                     {
@@ -527,7 +515,7 @@
             "get": {
                 "description": "Returns all names that have changed within the specified date range",
                 "tags": [
-                    "Changes"
+                    "Names"
                 ],
                 "parameters": [
                     {
