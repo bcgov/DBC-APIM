@@ -3,8 +3,25 @@
     "info": {
         "title": "BC Geographical Names Web Service",
         "description": "Geographical names are more than labels on maps and road signs. They can reveal patterns of settlement, exploration and migration, and mirror outside influences to our history - aspects of the heritage and promise of an area that might otherwise be overlooked or forgotten by visitors and later generations.",
-        "version": "1.0.0"
+        "version": "3.1.0",
+        "license": {
+            "name": "Copyright 2016 Province of British Columbia - Access only",
+            "url": "http://www2.gov.bc.ca/gov/content/home/copyright"
+        },
+        "contact": {
+            "name": "BC Geographical Names Office",
+            "email": "geographical.names@gov.bc.ca"
+        }
     },
+    "externalDocs": {
+        "description": "BC Geographical Names Office Webpage",
+        "url": "http://www2.gov.bc.ca/gov/content/governments/celebrating-british-columbia/historic-places/geographical-names"
+    },
+    "tags": [
+        {
+            "name": "Names"
+        }
+    ],
     "host": "apps.gov.bc.ca",
     "basePath": "/pub/bcgnws",
     "schemes": [
@@ -15,16 +32,19 @@
         "text/csv"
     ],
     "paths": {
-        "/names/search": {
+        "/names/official/search": {
             "get": {
                 "description": "Searches all names or all official names by name; wildcard characters “*” are allowed.",
+                "tags": [
+                    "Names"
+                ],
                 "parameters": [
                     {
                         "name": "name",
                         "in": "query",
                         "description": "Feature Name (can include wildcards *)",
                         "type": "string",
-                        "required": false
+                        "required": true
                     },
                     {
                         "name": "exactSpelling",
@@ -39,30 +59,82 @@
                         ]
                     },
                     {
-                        "name": "featureClass",
+                        "name": "startIndex",
                         "in": "query",
-                        "description": "BCGNIS Feature Class",
-                        "type": "string",
+                        "description": "Defines 'page' in selected records",
+                        "type": "integer",
                         "required": false,
-                        "default": "undefined",
+                        "default": 0
+                    },
+                    {
+                        "name": "itemsPerPage",
+                        "in": "query",
+                        "description": "Defines 'page' in selected records",
+                        "type": "integer",
+                        "required": false,
+                        "default": 25,
                         "enum": [
-                            "undefined",
-                            "1 - Populated",
-                            "2 - Administrative Areas",
-                            "3 - Water Features",
-                            "4 - Terrain Features",
-                            "5 - Features Associated with Vegetation",
-                            "6 - Constructed & Other Features",
-                            "7 - Unclassified"
+                            25,
+                            50,
+                            100,
+                            200
                         ]
                     },
                     {
-                        "name": "featureCategory",
+                        "name": "outputFormat",
                         "in": "query",
-                        "description": "BCGNIS Feature Category",
+                        "description": "Defines output format",
                         "type": "string",
                         "required": false,
-                        "default": "undefined"
+                        "default": "json",
+                        "enum": [
+                            "xml",
+                            "csv",
+                            "rdf",
+                            "json",
+                            "kml",
+                            "uri"
+                        ]
+                    },
+                    {
+                        "name": "outputStyle",
+                        "in": "query",
+                        "description": "Defines output style",
+                        "type": "string",
+                        "required": false,
+                        "default": "detail",
+                        "enum": [
+                            "summary",
+                            "detail"
+                        ]
+                    },
+                    {
+                        "name": "outputSRS",
+                        "in": "query",
+                        "description": "Defines output EPSG CRS",
+                        "type": "integer",
+                        "required": false,
+                        "default": 4326,
+                        "enum": [
+                            3005,
+                            3857,
+                            4326,
+                            26907,
+                            26908,
+                            26909,
+                            26910,
+                            26911,
+                            32607,
+                            32608,
+                            32609,
+                            32610,
+                            32611,
+                            26707,
+                            26708,
+                            26709,
+                            26710,
+                            26711
+                        ]
                     },
                     {
                         "name": "sortBy",
@@ -70,290 +142,259 @@
                         "description": "Sort Results",
                         "type": "string",
                         "required": false,
-                        "default": "relevance",
+                        "default": "score,name"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Name search result"
+                    }
+                }
+            }
+        },
+        "/names/soundlike": {
+            "get": {
+                "description": "________________________________________",
+                "tags": [
+                    "Names"
+                ],
+                "parameters": [
+                    {
+                        "name": "name",
+                        "in": "query",
+                        "description": "Feature Name (can include wildcards *)",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "startIndex",
+                        "in": "query",
+                        "description": "Defines 'page' in selected records",
+                        "type": "integer",
+                        "required": false,
+                        "default": 0
+                    },
+                    {
+                        "name": "itemsPerPage",
+                        "in": "query",
+                        "description": "Defines 'page' in selected records",
+                        "type": "integer",
+                        "required": false,
+                        "default": 25,
                         "enum": [
-                            "relevance",
+                            25,
+                            50,
+                            100,
+                            200
+                        ]
+                    },
+                    {
+                        "name": "outputFormat",
+                        "in": "query",
+                        "description": "Defines output format",
+                        "type": "string",
+                        "required": false,
+                        "default": "json",
+                        "enum": [
+                            "xml",
+                            "csv",
+                            "rdf",
+                            "json",
+                            "kml",
+                            "uri"
+                        ]
+                    },
+                    {
+                        "name": "outputStyle",
+                        "in": "query",
+                        "description": "Defines output style",
+                        "type": "string",
+                        "required": false,
+                        "default": "detail",
+                        "enum": [
+                            "summary",
+                            "detail"
+                        ]
+                    },
+                    {
+                        "name": "outputSRS",
+                        "in": "query",
+                        "description": "Defines output EPSG CRS",
+                        "type": "integer",
+                        "required": false,
+                        "default": 4326,
+                        "enum": [
+                            3005,
+                            3857,
+                            4326,
+                            26907,
+                            26908,
+                            26909,
+                            26910,
+                            26911,
+                            32607,
+                            32608,
+                            32609,
+                            32610,
+                            32611,
+                            26707,
+                            26708,
+                            26709,
+                            26710,
+                            26711
+                        ]
+                    },
+                    {
+                        "name": "sortBy",
+                        "in": "query",
+                        "description": "Sort Results",
+                        "type": "string",
+                        "required": false,
+                        "default": "name"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Soundlike search result"
+                    }
+                }
+            }
+        },
+        "/names/official/inside": {
+            "get": {
+                "description": "Returns all names, all official names, or notOfficial names inside or intersected by a given bounding box.",
+                "tags": [
+                    "Names"
+                ],
+                "parameters": [
+                    {
+                        "name": "bbox",
+                        "in": "query",
+                        "description": "Returns all names, all official names, or notOfficial names inside or intersected by a given bounding box. Format: bbox=minLon,minLat,maxLon,maxLat. Example: -127.132,50.474,-126.872,50.626",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "sortBy",
+                        "in": "query",
+                        "description": "Sort Results",
+                        "type": "string",
+                        "required": false,
+                        "default": "name",
+                        "enum": [
+                            "undefined",
                             "name",
                             "featureType",
                             "decisionDate"
                         ]
                     },
                     {
+                        "name": "itemsPerPage",
+                        "in": "query",
+                        "description": "Defines 'page' in selected records",
+                        "type": "integer",
+                        "required": false,
+                        "default": 25,
+                        "enum": [
+                            25,
+                            50,
+                            100,
+                            200
+                        ]
+                    },
+                    {
+                        "name": "outputFormat",
+                        "in": "query",
+                        "description": "Defines output format",
+                        "type": "string",
+                        "required": false,
+                        "default": "kml",
+                        "enum": [
+                            "xml",
+                            "csv",
+                            "rdf",
+                            "json",
+                            "kml",
+                            "uri"
+                        ]
+                    },
+                    {
+                        "name": "outputStyle",
+                        "in": "query",
+                        "description": "Defines output style",
+                        "type": "string",
+                        "required": false,
+                        "default": "detail",
+                        "enum": [
+                            "summary",
+                            "detail"
+                        ]
+                    },
+                    {
+                        "name": "outputSRS",
+                        "in": "query",
+                        "description": "Defines output EPSG CRS",
+                        "type": "integer",
+                        "required": false,
+                        "default": 4326,
+                        "enum": [
+                            3005,
+                            3857,
+                            4326,
+                            26907,
+                            26908,
+                            26909,
+                            26910,
+                            26911,
+                            32607,
+                            32608,
+                            32609,
+                            32610,
+                            32611,
+                            26707,
+                            26708,
+                            26709,
+                            26710,
+                            26711
+                        ]
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Inside search result"
+                    }
+                }
+            }
+        },
+        "/names/near": {
+            "get": {
+                "description": "Returns all names, all official names, or notOfficial names within a given distance (in km) of a given point.",
+                "tags": [
+                    "Names"
+                ],
+                "parameters": [
+                    {
+                        "name": "featurePoint",
+                        "in": "query",
+                        "description": "Compound output consisting of lat and lon or easting and northing in meters (BC Albers, UTM Zones) show in detail mode only for XML and CSV formats. Example: -123.307,48.473",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "distance",
+                        "in": "query",
+                        "description": "in km",
+                        "type": "integer",
+                        "required": true,
+                        "default": 5
+                    },
+                    {
                         "name": "official",
                         "in": "query",
                         "description": "Limit to official or unofficial names",
-                        "type": "string",
-                        "required": false,
-                        "default": "undefined",
-                        "enum": [
-                            "undefined",
-                            "official",
-                            "not official"
-                        ]
-                    },
-                    {
-                        "name": "startIndex",
-                        "in": "query",
-                        "description": "Defines 'page' in selected records",
                         "type": "integer",
                         "required": false,
-                        "default": 0
-                    },
-                    {
-                        "name": "itemsPerPage",
-                        "in": "query",
-                        "description": "Defines 'page' in selected records",
-                        "type": "integer",
-                        "required": false,
-                        "default": 25,
-                        "enum": [
-                            25,
-                            50,
-                            100,
-                            200
-                        ]
-                    },
-                    {
-                        "name": "outputFormat",
-                        "in": "query",
-                        "description": "Defines output format",
-                        "type": "string",
-                        "required": false,
-                        "default": "xml",
-                        "enum": [
-                            "xml",
-                            "csv",
-                            "rdf",
-                            "json",
-                            "kml",
-                            "uri"
-                        ]
-                    },
-                    {
-                        "name": "outputStyle",
-                        "in": "query",
-                        "description": "Defines output format",
-                        "type": "string",
-                        "required": false,
-                        "default": "summary",
-                        "enum": [
-                            "summary",
-                            "detail"
-                        ]
-                    },
-                    {
-                        "name": "outputSRS",
-                        "in": "query",
-                        "description": "Defines output EPSG CRS",
-                        "type": "integer",
-                        "required": true,
-                        "default": 3005,
-                        "enum": [
-                            3005,
-                            3857,
-                            4326,
-                            26907,
-                            26908,
-                            26909,
-                            26910,
-                            26911,
-                            32607,
-                            32608,
-                            32609,
-                            32610,
-                            32611,
-                            26707,
-                            26708,
-                            26709,
-                            26710,
-                            26711
-                        ]
-                    },
-                    {
-                        "name": "asAttachment",
-                        "in": "query",
-                        "description": "Defines set of fields included in results",
-                        "type": "integer",
-                        "required": true,
-                        "default": 0,
-                        "enum": [
-                            0,
-                            1
-                        ]
-                    },
-                    {
-                        "name": "embed",
-                        "in": "query",
-                        "description": "When 1 Feature records are embeded in results",
-                        "type": "integer",
-                        "required": true,
-                        "default": 0,
-                        "enum": [
-                            0,
-                            1
-                        ]
-                    }
-                ],
-                "responses": {
-                    "200": {
-                        "description": "Name search result"
-                    }
-                }
-            }
-        },
-        "/names/official/search": {
-            "get": {
-                "description": "Searches all names or all official names by name; wildcard characters “*” are allowed.",
-                "parameters": [
-                    {
-                        "name": "name",
-                        "in": "query",
-                        "description": "Feature Name (can include wildcards *)",
-                        "type": "string",
-                        "required": false
-                    },
-                    {
-                        "name": "exactSpelling",
-                        "in": "query",
-                        "description": "possible values include: 0 - (default) use partial smart matching, 1 - edit and swap distance matching not performed.",
-                        "type": "integer",
-                        "required": false,
-                        "default": 0,
-                        "enum": [
-                            0,
-                            1
-                        ]
-                    },
-                    {
-                        "name": "startIndex",
-                        "in": "query",
-                        "description": "Defines 'page' in selected records",
-                        "type": "integer",
-                        "required": false,
-                        "default": 0
-                    },
-                    {
-                        "name": "itemsPerPage",
-                        "in": "query",
-                        "description": "Defines 'page' in selected records",
-                        "type": "integer",
-                        "required": false,
-                        "default": 25,
-                        "enum": [
-                            25,
-                            50,
-                            100,
-                            200
-                        ]
-                    },
-                    {
-                        "name": "outputFormat",
-                        "in": "query",
-                        "description": "Defines output format",
-                        "type": "string",
-                        "required": false,
-                        "default": "xml",
-                        "enum": [
-                            "xml",
-                            "csv",
-                            "rdf",
-                            "json",
-                            "kml",
-                            "uri"
-                        ]
-                    },
-                    {
-                        "name": "outputStyle",
-                        "in": "query",
-                        "description": "Defines output format",
-                        "type": "string",
-                        "required": false,
-                        "default": "summary",
-                        "enum": [
-                            "summary",
-                            "detail"
-                        ]
-                    },
-                    {
-                        "name": "outputSRS",
-                        "in": "query",
-                        "description": "Defines output EPSG CRS",
-                        "type": "integer",
-                        "required": true,
-                        "default": 3005,
-                        "enum": [
-                            3005,
-                            3857,
-                            4326,
-                            26907,
-                            26908,
-                            26909,
-                            26910,
-                            26911,
-                            32607,
-                            32608,
-                            32609,
-                            32610,
-                            32611,
-                            26707,
-                            26708,
-                            26709,
-                            26710,
-                            26711
-                        ]
-                    },
-                    {
-                        "name": "sortBy",
-                        "in": "query",
-                        "description": "Sort Results",
-                        "type": "string",
-                        "required": false,
-                        "default": "score"
-                    }
-                ],
-                "responses": {
-                    "200": {
-                        "description": "Name search result"
-                    }
-                }
-            }
-        },
-        "/names/official/soundlike": {
-            "get": {
-                "description": "Ranks the phonetic similarity of each name against the search text, and returns the names ordered by their relevance.",
-                "parameters": [
-                    {
-                        "name": "name",
-                        "in": "query",
-                        "description": "Feature Name (can include wildcards *)",
-                        "type": "string",
-                        "required": false
-                    },
-                    {
-                        "name": "featureClass",
-                        "in": "query",
-                        "description": "BCGNIS Feature Class",
-                        "type": "string",
-                        "required": false,
-                        "default": "undefined",
-                        "enum": [
-                            "undefined",
-                            "1 - Populated",
-                            "2 - Administrative Areas",
-                            "3 - Water Features",
-                            "4 - Terrain Features",
-                            "5 - Features Associated with Vegetation",
-                            "6 - Constructed & Other Features",
-                            "7 - Unclassified"
-                        ]
-                    },
-                    {
-                        "name": "featureCategory",
-                        "in": "query",
-                        "description": "BCGNIS Feature Category",
-                        "type": "string",
-                        "required": false,
-                        "default": "undefined"
+                        "default": 1
                     },
                     {
                         "name": "sortBy",
@@ -375,189 +416,7 @@
                         "description": "Defines 'page' in selected records",
                         "type": "integer",
                         "required": false,
-                        "default": 0
-                    },
-                    {
-                        "name": "itemsPerPage",
-                        "in": "query",
-                        "description": "Defines 'page' in selected records",
-                        "type": "integer",
-                        "required": false,
-                        "default": 25,
-                        "enum": [
-                            25,
-                            50,
-                            100,
-                            200
-                        ]
-                    },
-                    {
-                        "name": "maxResults",
-                        "in": "query",
-                        "description": "Maximum records",
-                        "type": "integer",
-                        "required": false,
-                        "default": 100
-                    },
-                    {
-                        "name": "outputFormat",
-                        "in": "query",
-                        "description": "Defines output format",
-                        "type": "string",
-                        "required": false,
-                        "default": "xml",
-                        "enum": [
-                            "xml",
-                            "csv",
-                            "rdf",
-                            "json",
-                            "kml",
-                            "uri"
-                        ]
-                    },
-                    {
-                        "name": "outputStyle",
-                        "in": "query",
-                        "description": "Defines output format",
-                        "type": "string",
-                        "required": false,
-                        "default": "summary",
-                        "enum": [
-                            "summary",
-                            "detail"
-                        ]
-                    },
-                    {
-                        "name": "outputSRS",
-                        "in": "query",
-                        "description": "Defines output EPSG CRS",
-                        "type": "integer",
-                        "required": true,
-                        "default": 3005,
-                        "enum": [
-                            3005,
-                            3857,
-                            4326,
-                            26907,
-                            26908,
-                            26909,
-                            26910,
-                            26911,
-                            32607,
-                            32608,
-                            32609,
-                            32610,
-                            32611,
-                            26707,
-                            26708,
-                            26709,
-                            26710,
-                            26711
-                        ]
-                    },
-                    {
-                        "name": "asAttachment",
-                        "in": "query",
-                        "description": "Defines set of fields included in results",
-                        "type": "integer",
-                        "required": true,
-                        "default": 0,
-                        "enum": [
-                            0,
-                            1
-                        ]
-                    },
-                    {
-                        "name": "embed",
-                        "in": "query",
-                        "description": "When 1 Feature records are embeded in results",
-                        "type": "integer",
-                        "required": true,
-                        "default": 0,
-                        "enum": [
-                            0,
-                            1
-                        ]
-                    }
-                ],
-                "responses": {
-                    "200": {
-                        "description": "Soundlike search result"
-                    }
-                }
-            }
-        },
-        "/names/inside": {
-            "get": {
-                "description": "Returns all names, all official names, or notOfficial names inside or intersected by a given bounding box.",
-                "parameters": [
-                    {
-                        "name": "bbox",
-                        "in": "query",
-                        "description": "Bounding box in degrees. Format: bbox=minLon,minLat,maxLon,maxLat",
-                        "type": "string",
-                        "required": false
-                    },
-                    {
-                        "name": "featureClass",
-                        "in": "query",
-                        "description": "BCGNIS Feature Class",
-                        "type": "string",
-                        "required": false,
-                        "default": "undefined",
-                        "enum": [
-                            "undefined",
-                            "1 - Populated",
-                            "2 - Administrative Areas",
-                            "3 - Water Features",
-                            "4 - Terrain Features",
-                            "5 - Features Associated with Vegetation",
-                            "6 - Constructed & Other Features",
-                            "7 - Unclassified"
-                        ]
-                    },
-                    {
-                        "name": "featureCategory",
-                        "in": "query",
-                        "description": "BCGNIS Feature Category",
-                        "type": "string",
-                        "required": false,
-                        "default": "undefined"
-                    },
-                    {
-                        "name": "sortBy",
-                        "in": "query",
-                        "description": "Sort Results",
-                        "type": "string",
-                        "required": false,
-                        "default": "undefined",
-                        "enum": [
-                            "undefined",
-                            "name",
-                            "featureType",
-                            "decisionDate"
-                        ]
-                    },
-                    {
-                        "name": "official",
-                        "in": "query",
-                        "description": "Limit to official or unofficial names",
-                        "type": "string",
-                        "required": false,
-                        "default": "undefined",
-                        "enum": [
-                            "undefined",
-                            "official",
-                            "not official"
-                        ]
-                    },
-                    {
-                        "name": "startIndex",
-                        "in": "query",
-                        "description": "Defines 'page' in selected records",
-                        "type": "integer",
-                        "required": false,
-                        "default": 0
+                        "default": 1
                     },
                     {
                         "name": "itemsPerPage",
@@ -579,7 +438,7 @@
                         "description": "Defines output format",
                         "type": "string",
                         "required": false,
-                        "default": "xml",
+                        "default": "kml",
                         "enum": [
                             "xml",
                             "csv",
@@ -592,10 +451,10 @@
                     {
                         "name": "outputStyle",
                         "in": "query",
-                        "description": "Defines output format",
+                        "description": "Defines output style",
                         "type": "string",
                         "required": false,
-                        "default": "summary",
+                        "default": "detail",
                         "enum": [
                             "summary",
                             "detail"
@@ -606,8 +465,8 @@
                         "in": "query",
                         "description": "Defines output EPSG CRS",
                         "type": "integer",
-                        "required": true,
-                        "default": 3005,
+                        "required": false,
+                        "default": 4326,
                         "enum": [
                             3005,
                             3857,
@@ -627,198 +486,6 @@
                             26709,
                             26710,
                             26711
-                        ]
-                    },
-                    {
-                        "name": "asAttachment",
-                        "in": "query",
-                        "description": "Defines set of fields included in results",
-                        "type": "integer",
-                        "required": true,
-                        "default": 0,
-                        "enum": [
-                            0,
-                            1
-                        ]
-                    },
-                    {
-                        "name": "embed",
-                        "in": "query",
-                        "description": "When 1 Feature records are embeded in results",
-                        "type": "integer",
-                        "required": true,
-                        "default": 0,
-                        "enum": [
-                            0,
-                            1
-                        ]
-                    }
-                ],
-                "responses": {
-                    "200": {
-                        "description": "Inside search result"
-                    }
-                }
-            }
-        },
-        "/names/near": {
-            "get": {
-                "description": "Returns all names, all official names, or all notOfficial names within a given distance (in km) of a given point.",
-                "parameters": [
-                    {
-                        "name": "featurePoint",
-                        "in": "query",
-                        "description": "Centre latitude and longitude in decimal degrees. Format: featurePoint=lon,lat",
-                        "type": "string",
-                        "required": false
-                    },
-                    {
-                        "name": "distance",
-                        "in": "query",
-                        "description": "radius in KM (default 10.0 km)",
-                        "type": "integer",
-                        "required": true,
-                        "default": 10
-                    },
-                    {
-                        "name": "featureClass",
-                        "in": "query",
-                        "description": "BCGNIS Feature Class",
-                        "type": "string",
-                        "required": false,
-                        "default": "undefined",
-                        "enum": [
-                            "undefined",
-                            "1 - Populated",
-                            "2 - Administrative Areas",
-                            "3 - Water Features",
-                            "4 - Terrain Features",
-                            "5 - Features Associated with Vegetation",
-                            "6 - Constructed & Other Features",
-                            "7 - Unclassified"
-                        ]
-                    },
-                    {
-                        "name": "featureCategory",
-                        "in": "query",
-                        "description": "BCGNIS Feature Category",
-                        "type": "string",
-                        "required": false,
-                        "default": "undefined"
-                    },
-                    {
-                        "name": "official",
-                        "in": "query",
-                        "description": "Limit to official or unofficial names",
-                        "type": "string",
-                        "required": false,
-                        "default": "undefined",
-                        "enum": [
-                            "undefined",
-                            "official",
-                            "not official"
-                        ]
-                    },
-                    {
-                        "name": "startIndex",
-                        "in": "query",
-                        "description": "Defines 'page' in selected records",
-                        "type": "integer",
-                        "required": false,
-                        "default": 0
-                    },
-                    {
-                        "name": "itemsPerPage",
-                        "in": "query",
-                        "description": "Defines 'page' in selected records",
-                        "type": "integer",
-                        "required": false,
-                        "default": 25,
-                        "enum": [
-                            25,
-                            50,
-                            100,
-                            200
-                        ]
-                    },
-                    {
-                        "name": "outputFormat",
-                        "in": "query",
-                        "description": "Defines output format",
-                        "type": "string",
-                        "required": false,
-                        "default": "xml",
-                        "enum": [
-                            "xml",
-                            "csv",
-                            "rdf",
-                            "json",
-                            "kml",
-                            "uri"
-                        ]
-                    },
-                    {
-                        "name": "outputStyle",
-                        "in": "query",
-                        "description": "Defines output format",
-                        "type": "string",
-                        "required": false,
-                        "default": "summary",
-                        "enum": [
-                            "summary",
-                            "detail"
-                        ]
-                    },
-                    {
-                        "name": "outputSRS",
-                        "in": "query",
-                        "description": "Defines output EPSG CRS",
-                        "type": "integer",
-                        "required": true,
-                        "default": 3005,
-                        "enum": [
-                            3005,
-                            3857,
-                            4326,
-                            26907,
-                            26908,
-                            26909,
-                            26910,
-                            26911,
-                            32607,
-                            32608,
-                            32609,
-                            32610,
-                            32611,
-                            26707,
-                            26708,
-                            26709,
-                            26710,
-                            26711
-                        ]
-                    },
-                    {
-                        "name": "asAttachment",
-                        "in": "query",
-                        "description": "Defines set of fields included in results",
-                        "type": "integer",
-                        "required": true,
-                        "default": 0,
-                        "enum": [
-                            0,
-                            1
-                        ]
-                    },
-                    {
-                        "name": "embed",
-                        "in": "query",
-                        "description": "When 1 Feature records are embeded in results",
-                        "type": "integer",
-                        "required": true,
-                        "default": 0,
-                        "enum": [
-                            0,
-                            1
                         ]
                     }
                 ],
@@ -829,55 +496,41 @@
                 }
             }
         },
-        "/names/decisions": {
+        "/names/decisions/recent": {
             "get": {
                 "description": "Returns all naming decisions made within the last x days.",
+                "tags": [
+                    "Names"
+                ],
                 "parameters": [
                     {
                         "name": "days",
                         "in": "query",
-                        "description": "Maximum age of decision in days (default 30) ",
+                        "description": "Maximum age of decision in days (default 30)",
                         "type": "integer",
                         "required": true,
                         "default": 30
                     },
                     {
-                        "name": "featureClass",
-                        "in": "query",
-                        "description": "BCGNIS Feature Class",
-                        "type": "string",
-                        "required": false,
-                        "default": "undefined",
-                        "enum": [
-                            "undefined",
-                            "1 - Populated",
-                            "2 - Administrative Areas",
-                            "3 - Water Features",
-                            "4 - Terrain Features",
-                            "5 - Features Associated with Vegetation",
-                            "6 - Constructed & Other Features",
-                            "7 - Unclassified"
-                        ]
-                    },
-                    {
-                        "name": "featureCategory",
-                        "in": "query",
-                        "description": "BCGNIS Feature Category",
-                        "type": "string",
-                        "required": false,
-                        "default": "undefined"
-                    },
-                    {
                         "name": "official",
                         "in": "query",
                         "description": "Limit to official or unofficial names",
+                        "type": "integer",
+                        "required": false,
+                        "default": 1
+                    },
+                    {
+                        "name": "sortBy",
+                        "in": "query",
+                        "description": "Sort Results",
                         "type": "string",
                         "required": false,
-                        "default": "undefined",
+                        "default": "decisionDate",
                         "enum": [
                             "undefined",
-                            "official",
-                            "not official"
+                            "name",
+                            "featureType",
+                            "decisionDate"
                         ]
                     },
                     {
@@ -886,7 +539,7 @@
                         "description": "Defines 'page' in selected records",
                         "type": "integer",
                         "required": false,
-                        "default": 0
+                        "default": 1
                     },
                     {
                         "name": "itemsPerPage",
@@ -908,23 +561,25 @@
                         "description": "Defines output format",
                         "type": "string",
                         "required": false,
-                        "default": "xml",
+                        "default": "json",
                         "enum": [
                             "xml",
                             "csv",
                             "rdf",
                             "json",
                             "kml",
+                            "rss",
+                            "atom",
                             "uri"
                         ]
                     },
                     {
                         "name": "outputStyle",
                         "in": "query",
-                        "description": "Defines output format",
+                        "description": "Defines output style",
                         "type": "string",
                         "required": false,
-                        "default": "summary",
+                        "default": "detail",
                         "enum": [
                             "summary",
                             "detail"
@@ -935,8 +590,8 @@
                         "in": "query",
                         "description": "Defines output EPSG CRS",
                         "type": "integer",
-                        "required": true,
-                        "default": 3005,
+                        "required": false,
+                        "default": 4326,
                         "enum": [
                             3005,
                             3857,
@@ -957,257 +612,59 @@
                             26710,
                             26711
                         ]
-                    },
-                    {
-                        "name": "asAttachment",
-                        "in": "query",
-                        "description": "Defines set of fields included in results",
-                        "type": "integer",
-                        "required": true,
-                        "default": 0,
-                        "enum": [
-                            0,
-                            1
-                        ]
-                    },
-                    {
-                        "name": "embed",
-                        "in": "query",
-                        "description": "When 1 Feature records are embeded in results",
-                        "type": "integer",
-                        "required": true,
-                        "default": 0,
-                        "enum": [
-                            0,
-                            1
-                        ]
                     }
                 ],
                 "responses": {
                     "200": {
-                        "description": "Decisions search result"
-                    }
-                }
-            }
-        },
-        "/names/decisions/year": {
-            "get": {
-                "description": "Returns all naming decisions made in a given year. Note, this resource only reports decisions by the BC Geographical Names Office, and therefore does not offer the ‘nameAuthority’ filter.",
-                "parameters": [
-                    {
-                        "name": "year",
-                        "in": "query",
-                        "description": "Given year in yyyy form",
-                        "type": "integer",
-                        "required": true,
-                        "default": 2016
-                    },
-                    {
-                        "name": "featureClass",
-                        "in": "query",
-                        "description": "BCGNIS Feature Class",
-                        "type": "string",
-                        "required": false,
-                        "default": "undefined",
-                        "enum": [
-                            "undefined",
-                            "1 - Populated",
-                            "2 - Administrative Areas",
-                            "3 - Water Features",
-                            "4 - Terrain Features",
-                            "5 - Features Associated with Vegetation",
-                            "6 - Constructed & Other Features",
-                            "7 - Unclassified"
-                        ]
-                    },
-                    {
-                        "name": "featureCategory",
-                        "in": "query",
-                        "description": "BCGNIS Feature Category",
-                        "type": "string",
-                        "required": false,
-                        "default": "undefined"
-                    },
-                    {
-                        "name": "official",
-                        "in": "query",
-                        "description": "Limit to official or unofficial names",
-                        "type": "string",
-                        "required": false,
-                        "default": "undefined",
-                        "enum": [
-                            "undefined",
-                            "official",
-                            "not official"
-                        ]
-                    },
-                    {
-                        "name": "startIndex",
-                        "in": "query",
-                        "description": "Defines 'page' in selected records",
-                        "type": "integer",
-                        "required": false,
-                        "default": 0
-                    },
-                    {
-                        "name": "itemsPerPage",
-                        "in": "query",
-                        "description": "Defines 'page' in selected records",
-                        "type": "integer",
-                        "required": false,
-                        "default": 25,
-                        "enum": [
-                            25,
-                            50,
-                            100,
-                            200
-                        ]
-                    },
-                    {
-                        "name": "outputFormat",
-                        "in": "query",
-                        "description": "Defines output format",
-                        "type": "string",
-                        "required": false,
-                        "default": "xml",
-                        "enum": [
-                            "xml",
-                            "csv",
-                            "rdf",
-                            "json",
-                            "kml",
-                            "uri"
-                        ]
-                    },
-                    {
-                        "name": "outputStyle",
-                        "in": "query",
-                        "description": "Defines output format",
-                        "type": "string",
-                        "required": false,
-                        "default": "summary",
-                        "enum": [
-                            "summary",
-                            "detail"
-                        ]
-                    },
-                    {
-                        "name": "outputSRS",
-                        "in": "query",
-                        "description": "Defines output EPSG CRS",
-                        "type": "integer",
-                        "required": true,
-                        "default": 3005,
-                        "enum": [
-                            3005,
-                            3857,
-                            4326,
-                            26907,
-                            26908,
-                            26909,
-                            26910,
-                            26911,
-                            32607,
-                            32608,
-                            32609,
-                            32610,
-                            32611,
-                            26707,
-                            26708,
-                            26709,
-                            26710,
-                            26711
-                        ]
-                    },
-                    {
-                        "name": "asAttachment",
-                        "in": "query",
-                        "description": "Defines set of fields included in results",
-                        "type": "integer",
-                        "required": true,
-                        "default": 0,
-                        "enum": [
-                            0,
-                            1
-                        ]
-                    },
-                    {
-                        "name": "embed",
-                        "in": "query",
-                        "description": "When 1 Feature records are embeded in results",
-                        "type": "integer",
-                        "required": true,
-                        "default": 0,
-                        "enum": [
-                            0,
-                            1
-                        ]
-                    }
-                ],
-                "responses": {
-                    "200": {
-                        "description": "Year search result"
+                        "description": "Recent decisions search result"
                     }
                 }
             }
         },
         "/names/changes": {
             "get": {
-                "description": "Returns all names that have changed within the specified date range. ",
+                "description": "Returns all names that have changed within the specified date range",
+                "tags": [
+                    "Names"
+                ],
                 "parameters": [
                     {
                         "name": "fromDate",
                         "in": "query",
-                        "description": "Given year in yyyy form",
+                        "description": "The oldest change date for which to fetch names",
                         "type": "string",
                         "required": true,
-                        "default": "2012-06-01"
+                        "default": "2016-03-21"
                     },
                     {
                         "name": "toDate",
                         "in": "query",
-                        "description": "Given year in yyyy form",
-                        "type": "string",
-                        "required": true,
-                        "default": "2016-03-01"
-                    },
-                    {
-                        "name": "featureClass",
-                        "in": "query",
-                        "description": "BCGNIS Feature Class",
+                        "description": "The most recent change date for which to fetch names ",
                         "type": "string",
                         "required": false,
-                        "default": "undefined",
-                        "enum": [
-                            "undefined",
-                            "1 - Populated",
-                            "2 - Administrative Areas",
-                            "3 - Water Features",
-                            "4 - Terrain Features",
-                            "5 - Features Associated with Vegetation",
-                            "6 - Constructed & Other Features",
-                            "7 - Unclassified"
-                        ]
-                    },
-                    {
-                        "name": "featureCategory",
-                        "in": "query",
-                        "description": "BCGNIS Feature Category",
-                        "type": "string",
-                        "required": false,
-                        "default": "undefined"
+                        "default": "2016-04-21"
                     },
                     {
                         "name": "official",
                         "in": "query",
                         "description": "Limit to official or unofficial names",
+                        "type": "integer",
+                        "required": false,
+                        "default": 1
+                    },
+                    {
+                        "name": "sortBy",
+                        "in": "query",
+                        "description": "Sort Results",
                         "type": "string",
                         "required": false,
-                        "default": "undefined",
+                        "default": "changeDate",
                         "enum": [
                             "undefined",
-                            "official",
-                            "not official"
+                            "name",
+                            "changeDate",
+                            "featureType",
+                            "decisionDate"
                         ]
                     },
                     {
@@ -1216,7 +673,7 @@
                         "description": "Defines 'page' in selected records",
                         "type": "integer",
                         "required": false,
-                        "default": 0
+                        "default": 1
                     },
                     {
                         "name": "itemsPerPage",
@@ -1238,23 +695,25 @@
                         "description": "Defines output format",
                         "type": "string",
                         "required": false,
-                        "default": "xml",
+                        "default": "json",
                         "enum": [
                             "xml",
                             "csv",
                             "rdf",
                             "json",
                             "kml",
+                            "rss",
+                            "atom",
                             "uri"
                         ]
                     },
                     {
                         "name": "outputStyle",
                         "in": "query",
-                        "description": "Defines output format",
+                        "description": "Defines output style",
                         "type": "string",
                         "required": false,
-                        "default": "summary",
+                        "default": "detail",
                         "enum": [
                             "summary",
                             "detail"
@@ -1265,8 +724,8 @@
                         "in": "query",
                         "description": "Defines output EPSG CRS",
                         "type": "integer",
-                        "required": true,
-                        "default": 3005,
+                        "required": false,
+                        "default": 4326,
                         "enum": [
                             3005,
                             3857,
@@ -1286,30 +745,6 @@
                             26709,
                             26710,
                             26711
-                        ]
-                    },
-                    {
-                        "name": "asAttachment",
-                        "in": "query",
-                        "description": "Defines set of fields included in results",
-                        "type": "integer",
-                        "required": true,
-                        "default": 0,
-                        "enum": [
-                            0,
-                            1
-                        ]
-                    },
-                    {
-                        "name": "embed",
-                        "in": "query",
-                        "description": "When 1 Feature records are embeded in results",
-                        "type": "integer",
-                        "required": true,
-                        "default": 0,
-                        "enum": [
-                            0,
-                            1
                         ]
                     }
                 ],
