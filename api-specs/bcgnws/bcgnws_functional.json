@@ -44,7 +44,7 @@
                         "in": "query",
                         "description": "Feature Name (can include wildcards *)",
                         "type": "string",
-                        "required": false
+                        "required": true
                     },
                     {
                         "name": "exactSpelling",
@@ -164,7 +164,7 @@
                         "in": "query",
                         "description": "Returns all names, all official names, or notOfficial names inside or intersected by a given bounding box. Format: bbox=minLon,minLat,maxLon,maxLat. Example: -127.132,50.474,-126.872,50.626",
                         "type": "string",
-                        "required": false
+                        "required": true
                     },
                     {
                         "name": "sortBy",
@@ -270,7 +270,7 @@
                         "in": "query",
                         "description": "Compound output consisting of lat and lon or easting and northing in meters (BC Albers, UTM Zones) show in detail mode only for XML and CSV formats. Example: -123.307,48.473",
                         "type": "string",
-                        "required": false
+                        "required": true
                     },
                     {
                         "name": "distance",
