@@ -125,7 +125,7 @@
                         "in": "query",
                         "description": "Defines output EPSG CRS",
                         "type": "integer",
-                        "required": true,
+                        "required": false,
                         "default": 4326,
                         "enum": [
                             3005,
@@ -239,7 +239,7 @@
                         "in": "query",
                         "description": "Defines output EPSG CRS",
                         "type": "integer",
-                        "required": true,
+                        "required": false,
                         "default": 4326,
                         "enum": [
                             3005,
@@ -280,7 +280,7 @@
                     {
                         "name": "featurePoint",
                         "in": "query",
-                        "description": "______________________ Format: featurePoint=Lon,Lat. Example: -123.307,48.473",
+                        "description": "Compound output consisting of lat and lon or easting and northing in meters (BC Albers, UTM Zones) show in detail mode only for XML and CSV formats. Example: -123.307,48.473",
                         "type": "string",
                         "required": false
                     },
@@ -369,7 +369,7 @@
                         "in": "query",
                         "description": "Defines output EPSG CRS",
                         "type": "integer",
-                        "required": true,
+                        "required": false,
                         "default": 4326,
                         "enum": [
                             3005,
@@ -492,7 +492,7 @@
                         "in": "query",
                         "description": "Defines output EPSG CRS",
                         "type": "integer",
-                        "required": true,
+                        "required": false,
                         "default": 4326,
                         "enum": [
                             3005,
@@ -543,7 +543,7 @@
                         "in": "query",
                         "description": "The most recent change date for which to fetch names ",
                         "type": "string",
-                        "required": true,
+                        "required": false,
                         "default": "2016-04-21"
                     },
                     {
@@ -624,7 +624,7 @@
                         "in": "query",
                         "description": "Defines output EPSG CRS",
                         "type": "integer",
-                        "required": true,
+                        "required": false,
                         "default": 4326,
                         "enum": [
                             3005,
