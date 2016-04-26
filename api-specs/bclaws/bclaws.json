@@ -25,8 +25,8 @@
             "name": "search"
         }
     ],
-    "host": "api.gov.bc.ca",
-    "basePath": "/bclaws/1.0.0",
+    "host": "http://www.bclaws.ca",
+    "basePath": "/civix/content",
     "schemes": [
         "http",
         "https"
