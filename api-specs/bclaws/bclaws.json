@@ -26,7 +26,7 @@
         }
     ],
     "host": "www.bclaws.ca",
-    "basePath": "/civix/content",
+    "basePath": "/civix",
     "schemes": [
         "http",
         "https"
